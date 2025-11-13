@@ -1,4 +1,4 @@
-name: Build LaTeX document
+name: Build LaTeX forallx
 
 on:
   push:
@@ -12,9 +12,9 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Install LaTeX
+      - name: Install LaTeX (TeX Live)
         uses: xu-cheng/texlive-action@v2
         with:
           packages: >
@@ -24,12 +24,12 @@ jobs:
             collection-bibtexextra
             collection-langenglish
 
-      - name: Compile LaTeX
+      - name: Compile forallx.tex
         run: |
           latexmk -pdf -interaction=nonstopmode forallx.tex
 
-      - name: Upload PDF
-        uses: actions/upload-artifact@v3
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
         with:
           name: forallx-pdf
           path: forallx.pdf
