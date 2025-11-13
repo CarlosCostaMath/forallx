@@ -14,17 +14,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install LaTeX (TeX Live)
-        uses: xu-cheng/texlive-action@v2
-        with:
-          packages: >
-            collection-latexrecommended
-            collection-fontsrecommended
-            collection-latexextra
-            collection-bibtexextra
-            collection-langenglish
+      - name: Install TeX Live
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            texlive-latex-base \
+            texlive-latex-recommended \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-fonts-extra \
+            texlive-lang-english \
+            texlive-lang-portuguese \
+            latexmk
 
-      - name: Compile forallx.tex
+      - name: Compile forallx.tex with latexmk
         run: |
           latexmk -pdf -interaction=nonstopmode forallx.tex
 
