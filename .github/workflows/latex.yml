@@ -2,6 +2,9 @@ name: Build and Commit PDF
 
 on:
   push:
+    branches:
+      - main
+      - master
   workflow_dispatch:
 
 jobs:
@@ -17,7 +20,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install TeX Live
+      - name: Install TeX Live with XeLaTeX
         run: |
           sudo apt-get update
           sudo apt-get install -y \
@@ -28,11 +31,12 @@ jobs:
             texlive-fonts-extra \
             texlive-lang-english \
             texlive-lang-portuguese \
+            texlive-xetex \
             latexmk
 
-      - name: Compile LaTeX
+      - name: Compile forallx.tex with XeLaTeX
         run: |
-          latexmk -pdf -interaction=nonstopmode forallx.tex
+          latexmk -xelatex -interaction=nonstopmode forallx.tex
 
       - name: Commit updated PDF
         run: |
