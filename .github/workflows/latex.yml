@@ -1,0 +1,35 @@
+name: Build LaTeX document
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install LaTeX
+        uses: xu-cheng/texlive-action@v2
+        with:
+          packages: >
+            collection-latexrecommended
+            collection-fontsrecommended
+            collection-latexextra
+            collection-bibtexextra
+            collection-langenglish
+
+      - name: Compile LaTeX
+        run: |
+          latexmk -pdf -interaction=nonstopmode forallx.tex
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v3
+        with:
+          name: forallx-pdf
+          path: forallx.pdf
