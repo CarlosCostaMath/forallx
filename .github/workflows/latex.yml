@@ -1,18 +1,22 @@
-name: Build LaTeX forallx
+name: Build and Commit PDF
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
   workflow_dispatch:
 
 jobs:
-  build_latex:
+  build:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write   # permite o GitHub Actions commitar no repo
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Install TeX Live
         run: |
@@ -27,12 +31,14 @@ jobs:
             texlive-lang-portuguese \
             latexmk
 
-      - name: Compile forallx.tex with latexmk
+      - name: Compile LaTeX
         run: |
           latexmk -pdf -interaction=nonstopmode forallx.tex
 
-      - name: Upload PDF artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: forallx-pdf
-          path: forallx.pdf
+      - name: Commit updated PDF
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add forallx.pdf
+          git commit -m "Update PDF [skip ci]" || echo "No changes to commit"
+          git push
