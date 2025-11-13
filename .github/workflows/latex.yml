@@ -2,9 +2,6 @@ name: Build and Commit PDF
 
 on:
   push:
-    branches:
-      - main
-      - master
   workflow_dispatch:
 
 jobs:
