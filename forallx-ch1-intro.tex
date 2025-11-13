@@ -1,110 +1,110 @@
 %!TEX root = forallx.tex
-\chapter{What is logic?}
+\chapter{O que é lógica?}
 \label{ch.intro}
 
-Logic is the business of evaluating arguments, sorting good ones from bad ones. In everyday language, we sometimes use the word `argument' to refer to belligerent shouting matches. If you and a friend have an argument in this sense, things are not going well between the two of you.
+A lógica é o estudo da avaliação de argumentos, separando os bons dos ruins. Na linguagem do dia a dia, às vezes usamos a palavra `argumento' para nos referir a brigas barulhentas e cheias de hostilidade. Se você e uma amiga têm um argumento nesse sentido, as coisas não vão bem entre vocês duas.
 
-In logic, we are not interested in the teeth-gnashing, hair-pulling kind of argument. A logical argument is structured to give someone a reason to believe some conclusion. Here is one such argument:
+Em lógica, não estamos interessados nesse tipo de argumento com gritos e arrancar de cabelos. Um argumento lógico é estruturado para dar a alguém uma razão para acreditar em uma certa conclusão. Eis um exemplo de argumento:
 
 \label{argRaining}
 \begin{earg}
-\item[(1)] It is raining heavily.
-\item[(2)] If you do not take an umbrella, you will get soaked.
-\item[\therefore] You should take an umbrella.
+\item[(1)] Está chovendo forte.
+\item[(2)] Se você não levar um guarda-chuva, vai ficar encharcado.
+\item[\therefore] Você deve levar um guarda-chuva.
 \end{earg}
 
-The three dots on the third line of the argument mean `Therefore' and they indicate that the final sentence is the \emph{conclusion} of the argument. The other sentences are \emph{premises} of the argument. If you believe the premises, then the argument provides you with a reason to believe the conclusion.
+Os três pontos na terceira linha do argumento significam `Portanto' e indicam que a frase final é a \emph{conclusão} do argumento. As outras frases são as \emph{premissas} do argumento. Se você acredita nas premissas, então o argumento lhe fornece uma razão para acreditar na conclusão.
 
-This chapter discusses some basic logical notions that apply to arguments in a natural language like English. It is important to begin with a clear understanding of what arguments are and of what it means for an argument to be valid. Later we will translate arguments from English into a formal language. We want formal validity, as defined in the formal language, to have at least some of the important features of natural-language validity.
+Este capítulo discute algumas noções lógicas básicas que se aplicam a argumentos em uma linguagem natural como o inglês. É importante começar com uma compreensão clara do que são argumentos e do que significa um argumento ser válido. Mais adiante, traduziremos argumentos do inglês para uma linguagem formal. Queremos que a validade formal, tal como será definida na linguagem formal, preserve pelo menos algumas das características importantes da validade em linguagem natural.
 
-\section{Arguments}
-When people mean to give arguments, they typically often use words like `therefore' and `because.' When analyzing an argument, the first thing to do is to separate the premises from the conclusion. Words like these are a clue to what the argument is supposed to be, especially if--- in the argument as given--- the conclusion comes at the beginning or in the middle of the argument.
+\section{Argumentos}
+Quando as pessoas querem apresentar argumentos, elas frequentemente usam palavras como `portanto' e `porque'. Ao analisar um argumento, a primeira coisa a fazer é separar as premissas da conclusão. Palavras como essas são uma pista do que o argumento pretende ser, especialmente se --- na forma como o argumento é apresentado --- a conclusão vier no início ou no meio do argumento.
 
 \begin{description}
-\item[premise indicators:] since, because, given that
-\item[conclusion indicators:] therefore, hence, thus, then, so
+\item[indicadores de premissa:] já que, porque, dado que
+\item[indicadores de conclusão:] portanto, logo, assim, então
 \end{description}
-\nix{could expand this list}
+\nix{poderíamos ampliar esta lista}
 
 
 
-To be perfectly general, we can define an \define{argument} as a series of sentences. The sentences at the beginning of the series are premises. The final sentence in the series is the conclusion. If the premises are true and the argument is a good one, then you have a reason to accept the conclusion.
+Para sermos perfeitamente gerais, podemos definir um \define{argumento} como uma sequência de sentenças. As sentenças no início da sequência são as premissas. A última sentença da sequência é a conclusão. Se as premissas forem verdadeiras e o argumento for bom, então você tem uma razão para aceitar a conclusão.
 
-Notice that this definition is quite general. Consider this example:
+Perceba que essa definição é bastante geral. Considere este exemplo:
 \begin{earg}
-\item[] There is coffee in the coffee pot.
-\item[] There is a dragon playing bassoon on the armoire.
-\item[\therefore] Salvador Dali was a poker player.
+\item[] Há café na cafeteira.
+\item[] Há um dragão tocando fagote em cima do armário.
+\item[\therefore] Salvador Dalí jogava pôquer.
 \end{earg}
-It may seem odd to call this an argument, but that is because it would be a {terrible} argument. The two premises have nothing at all to do with the conclusion. Nevertheless, given our definition, it still counts as an argument--- albeit a bad one.
+Pode parecer estranho chamar isso de argumento, mas isso acontece porque seria um argumento {péssimo}. As duas premissas não têm absolutamente nada a ver com a conclusão. Ainda assim, dada a nossa definição, isso continua contando como um argumento — embora um argumento ruim. 
 
 
-\section{Sentences}
+\section{Sentenças}
 \label{intro.sentences}
-In logic, we are only interested in sentences that can figure as a premise or conclusion of an argument. So we will say that a \define{sentence} is something that can be true or false.
+Em lógica, estamos interessados apenas em sentenças que possam aparecer como premissa ou conclusão de um argumento. Assim, diremos que uma \define{sentença} é algo que pode ser verdadeiro ou falso.
 
-You should not confuse the idea of a sentence that can be true or false with the difference between fact and opinion. Often, sentences in logic will express things that would count as facts--- such as `Kierkegaard was a hunchback' or `Kierkegaard liked almonds.' They can also express things that you might think of as matters of opinion--- such as, `Almonds are yummy.'
+Você não deve confundir a ideia de uma sentença que pode ser verdadeira ou falsa com a diferença entre fato e opinião. Com frequência, as sentenças em lógica expressarão coisas que normalmente contaríamos como fatos — como `Kierkegaard era corcunda' ou `Kierkegaard gostava de amêndoas'. Elas também podem expressar coisas que você talvez considere como questões de opinião — como `Amêndoas são deliciosas.'
 
-Also, there are things that would count as `sentences' in a linguistics or grammar course that we will not count as sentences in logic.
+Além disso, há coisas que contariam como `sentenças' em um curso de linguística ou gramática e que nós não consideraremos como sentenças em lógica.
 
-\paragraph{Questions} In a grammar class, `Are you sleepy yet?' would count as an interrogative sentence. Although you might be sleepy or you might be alert, the question itself is neither true nor false. For this reason, questions will not count as sentences in logic. Suppose you answer the question: `I am not sleepy.' This is either true or false, and so it is a sentence in the logical sense. Generally, \emph{questions} will not count as sentences, but \emph{answers} will. 
+\paragraph{Perguntas} Em uma aula de gramática, `Você já está com sono?' contaria como uma sentença interrogativa. Embora você possa estar com sono ou acordado, a própria pergunta não é nem verdadeira nem falsa. Por essa razão, perguntas não contarão como sentenças em lógica. Suponha que você responda à pergunta: `Eu não estou com sono.' Isso é verdadeiro ou falso, e portanto é uma sentença no sentido lógico. Em geral, \emph{perguntas} não contam como sentenças, mas \emph{respostas} sim.
 
-`What is this course about?' is not a sentence. `No one knows what this course is about' is a sentence.
+`Sobre o que é este curso?' não é uma sentença. `Ninguém sabe sobre o que é este curso' é uma sentença.
 
-\paragraph{Imperatives} Commands are often phrased as imperatives like `Wake up!', `Sit up straight', and so on. In a grammar class, these would count as imperative sentences. Although it might be good for you to sit up straight or it might not, the command is neither true nor false. Note, however, that commands are not always phrased as imperatives. `You will respect my authority' \emph{is} either true or false--- either you will or you will not--- and so it counts as a sentence in the logical sense.
+\paragraph{Imperativos} Ordens são muitas vezes formuladas como imperativos, como `Acorde!', `Sente-se direito' e assim por diante. Em uma aula de gramática, essas contariam como sentenças imperativas. Embora possa ser bom ou não você sentar-se direito, a ordem em si não é nem verdadeira nem falsa. Note, porém, que comandos nem sempre são formulados como imperativos. `Você vai respeitar minha autoridade' \emph{é} verdadeira ou falsa — ou você vai, ou não vai — e por isso conta como uma sentença no sentido lógico.
 
-\paragraph{Exclamations} `Ouch!' is sometimes called an exclamatory sentence, but it is neither true nor false. We will treat `Ouch, I hurt my toe!' as meaning the same thing as `I hurt my toe.' The `ouch' does not add anything that could be true or false.
-
-
+\paragraph{Exclamações} `Ai!' às vezes é chamado de sentença exclamativa, mas não é nem verdadeiro nem falso. Trataremos `Ai, machuquei meu dedo!' como significando a mesma coisa que `Machuquei meu dedo.' O `ai' não acrescenta nada que possa ser verdadeiro ou falso.
 
 
-\section{Two ways that arguments can go wrong}
-Consider the argument that you should take an umbrella (on p.~\pageref{argRaining}, above). If premise (1) is false--- if it is sunny outside--- then the argument gives you no reason to carry an umbrella. Even if it is raining outside, you might not need an umbrella. You might wear a rain poncho or keep to covered walkways. In these cases, premise (2) would be false, since you could go out without an umbrella and still avoid getting soaked.
 
-Suppose for a moment that both the premises are true. You do not own a rain poncho. You need to go places where there are no covered walkways. Now does the argument show you that you should take an umbrella? Not necessarily. Perhaps you enjoy walking in the rain, and you would like to get soaked. In that case, even though the premises were true, the conclusion would be false.
 
-For any argument, there are two ways that it could be weak. First, one or more of the premises might be false. An argument gives you a reason to believe its conclusion only if you believe its premises. Second, the premises might fail to support the conclusion. Even if the premises were true, the form of the argument might be weak. The example we just considered is weak in both ways.
+\section{Duas maneiras pelas quais argumentos podem falhar}
+Considere o argumento de que você deveria levar um guarda-chuva (na p.~\pageref{argRaining}, acima). Se a premissa (1) for falsa — se estiver ensolarado — então o argumento não lhe dá razão alguma para carregar um guarda-chuva. Mesmo que esteja chovendo, você pode não precisar de um guarda-chuva. Você pode estar usando uma capa de chuva, ou pode andar apenas por passagens cobertas. Nesses casos, a premissa (2) seria falsa, já que você poderia sair sem guarda-chuva e ainda assim evitar ficar encharcado.
 
-When an argument is weak in the second way, there is something wrong with the \emph{logical form} of the argument: Premises of the kind given do not necessarily lead to a conclusion of the kind given. We will be interested primarily in the logical form of arguments.
+Suponha, por um momento, que ambas as premissas sejam verdadeiras. Você não tem capa de chuva. Você precisa ir a lugares onde não há passagens cobertas. O argumento mostra então que você deve levar um guarda-chuva? Não necessariamente. Talvez você goste de caminhar na chuva e queira ficar encharcado. Nesse caso, mesmo que as premissas sejam verdadeiras, a conclusão seria falsa.
 
-Consider another example:
+Para qualquer argumento, há duas maneiras pelas quais ele pode ser fraco. Primeiro, uma ou mais premissas podem ser falsas. Um argumento só lhe dá razão para acreditar na conclusão se você aceitar as premissas. Segundo, as premissas podem falhar em apoiar a conclusão. Mesmo que as premissas sejam verdadeiras, a forma do argumento pode ser fraca. O exemplo que acabamos de considerar é fraco nos dois sentidos.
+
+Quando um argumento é fraco no segundo sentido, há algo errado com a \emph{forma lógica} do argumento: premissas desse tipo não levam necessariamente a uma conclusão desse tipo. Estaremos interessados principalmente na forma lógica dos argumentos.
+
+Considere outro exemplo:
 \begin{earg}
-\item[] You are reading this book.
-\item[] This is a logic book.
-\item[\therefore] You are a logic student.
+\item[] Você está lendo este livro.
+\item[] Este é um livro de lógica.
+\item[\therefore] Você é estudante de lógica.
 \end{earg}
-This is not a terrible argument. Most people who read this book are logic students. Yet, it is possible for someone besides a logic student to read this book. If your roommate picked up the book and thumbed through it, they would not immediately become a logic student. So the premises of this argument, even though they are true, do not guarantee the truth of the conclusion. Its logical form is less than perfect.
+Este não é um argumento terrível. A maior parte das pessoas que lê este livro é estudante de lógica. Ainda assim, é possível que alguém que não seja estudante de lógica leia este livro. Se seu colega de quarto pegar o livro e folheá-lo, ele não se torna automaticamente um estudante de lógica. Assim, as premissas desse argumento, mesmo sendo verdadeiras, não garantem a verdade da conclusão. Sua forma lógica está longe de ser perfeita.
 
-An argument that had no weakness of the second kind would have perfect logical form. If its premises were true, then its conclusion would \emph{necessarily} be true. We call such an argument `deductively valid' or just `valid.'
+Um argumento que não tivesse fraqueza do segundo tipo teria uma forma lógica perfeita. Se as suas premissas fossem verdadeiras, então a sua conclusão seria \emph{necessariamente} verdadeira. Chamamos um argumento assim de `dedutivamente válido' ou simplesmente `válido'.
 
-Even though we might count the argument above as a good argument in some sense, it is not valid; that is, it is `invalid.' One important task of logic is to sort valid arguments from invalid arguments.
+Embora possamos considerar o argumento acima como um bom argumento em certo sentido, ele não é válido; isto é, ele é `inválido'. Uma das tarefas importantes da lógica é separar argumentos válidos de argumentos inválidos.
 
 
 
-\section{Deductive validity}
-An argument is deductively \define{valid} if and only if it is impossible for the premises to be true and the conclusion false.
+\section{Validade dedutiva}
+Um argumento é dedutivamente \define{válido} se, e somente se, for impossível que as premissas sejam verdadeiras e a conclusão falsa.
 
-The crucial thing about a valid argument is that it is impossible for the premises to be true \emph{at the same time} that the conclusion is false. Consider this example:
-
-\begin{earg}
-\item[] Oranges are either fruits or musical instruments.
-\item[] Oranges are not fruits.
-\item[\therefore] Oranges are musical instruments.
-\end{earg}
-
-The conclusion of this argument is ridiculous. Nevertheless, it follows validly from the premises. This is a valid argument. \emph{If} both premises were true, \emph{then} the conclusion would necessarily be true.
-
-This shows that a deductively valid argument does not need to have true premises or a true conclusion. Conversely, having true premises and a true conclusion is not enough to make an argument valid. Consider this example:
+O ponto crucial sobre um argumento válido é que é impossível que as premissas sejam verdadeiras \emph{ao mesmo tempo} em que a conclusão é falsa. Considere este exemplo:
 
 \begin{earg}
-\item[] London is in England.
-\item[] Beijing is in China.
-\item[\therefore] Paris is in France.
+\item[] Laranjas são ou frutas ou instrumentos musicais.
+\item[] Laranjas não são frutas.
+\item[\therefore] Laranjas são instrumentos musicais.
 \end{earg}
 
-The premises and conclusion of this argument are, as a matter of fact, all true. This is a terrible argument, however, because the premises have nothing to do with the conclusion. Imagine what would happen if Paris declared independence from the rest of France. Then the conclusion would be false, even though the premises would both still be true. Thus, it is \emph{logically possible} for the premises of this argument to be true and the conclusion false. The argument is invalid.
+A conclusão desse argumento é ridícula. Ainda assim, ela decorre validamente das premissas. Este é um argumento válido. \emph{Se} ambas as premissas fossem verdadeiras, \emph{então} a conclusão seria necessariamente verdadeira.
 
-The important thing to remember is that validity is not about the actual truth or falsity of the sentences in the argument. Instead, it is about the form of the argument: The truth of the premises is incompatible with the falsity of the conclusion.
+Isso mostra que um argumento dedutivamente válido não precisa ter premissas verdadeiras nem conclusão verdadeira. Por outro lado, ter premissas verdadeiras e conclusão verdadeira não basta para tornar um argumento válido. Considere este exemplo:
+
+\begin{earg}
+\item[] Londres fica na Inglaterra.
+\item[] Pequim fica na China.
+\item[\therefore] Paris fica na França.
+\end{earg}
+
+As premissas e a conclusão desse argumento são, de fato, todas verdadeiras. No entanto, este é um argumento péssimo, porque as premissas não têm nada a ver com a conclusão. Imagine o que aconteceria se Paris declarasse independência do restante da França. Então a conclusão seria falsa, embora ambas as premissas continuassem verdadeiras. Assim, é \emph{logicamente possível} que as premissas desse argumento sejam verdadeiras e a conclusão falsa. O argumento é inválido.
+
+A coisa importante a lembrar é que a validade não diz respeito à verdade ou falsidade efetivas das sentenças no argumento. Em vez disso, ela diz respeito à forma do argumento: a verdade das premissas é incompatível com a falsidade da conclusão.
 
 
 %\begin{earg}
@@ -134,217 +134,217 @@ The important thing to remember is that validity is not about the actual truth o
 %\end{earg}
 
 
-\subsection{Inductive arguments}
+\subsection{Argumentos indutivos}
 
-There can be good arguments which nevertheless fail to be deductively valid. Consider this one:
+Podem existir bons argumentos que, ainda assim, não são dedutivamente válidos. Considere este:
 
 \begin{earg}
-\item[] In January 1997, it rained in San Diego.
-\item[] In January 1998, it rained in San Diego.
-\item[] In January 1999, it rained in San Diego.
-\item[\therefore] It rains every January in San Diego.
+\item[] Em janeiro de 1997, choveu em San Diego.
+\item[] Em janeiro de 1998, choveu em San Diego.
+\item[] Em janeiro de 1999, choveu em San Diego.
+\item[\therefore] Chove todo mês de janeiro em San Diego.
 \end{earg}
 
-This is an \define{inductive} argument, because it generalizes from many cases to a conclusion about all cases.
+Este é um argumento \define{indutivo}, porque ele generaliza a partir de muitos casos para uma conclusão sobre todos os casos.
 
-Certainly, the argument could be made stronger by adding additional premises: In January 2000, it rained in San Diego. In January 2001$\ldots$ and so on. Regardless of how many premises we add, however, the argument will still not be deductively valid. It is possible, although unlikely, that it will fail to rain next January in San Diego. Moreover, we know that the weather can be fickle. No amount of evidence should convince us that it rains there \emph{every} January. Who is to say that some year will not be a freakish year in which there is no rain in January in San Diego; even a single counter-example is enough to make the conclusion of the argument false.
+Certamente, o argumento poderia ser fortalecido adicionando outras premissas: em janeiro de 2000, choveu em San Diego; em janeiro de 2001, choveu em San Diego; e assim por diante. Não importa quantas premissas acrescentemos, contudo, o argumento ainda não será dedutivamente válido. É possível, embora improvável, que não chova em San Diego no próximo mês de janeiro. Além disso, sabemos que o clima pode ser caprichoso. Nenhuma quantidade de evidência deveria nos convencer de que chove lá em \emph{todo} janeiro. Quem pode garantir que não haverá algum ano excepcional em que não chova em janeiro em San Diego? Um único contraexemplo já basta para tornar falsa a conclusão do argumento.
 
-Inductive arguments, even good inductive arguments, are not deductively valid. We will not be interested in inductive arguments in this book.
+Argumentos indutivos, mesmo bons argumentos indutivos, não são dedutivamente válidos. Não estaremos interessados em argumentos indutivos neste livro.
 
 
-\section{Other logical notions}
+\section{Outras noções lógicas}
 
-In addition to deductive validity, we will be interested in some other logical concepts.
+Além da validade dedutiva, estaremos interessados em alguns outros conceitos lógicos.
 
-\subsection{Truth-values}
-True or false is said to be the \define{truth-value} of a sentence. We defined sentences as things that could be true or false; we could have said instead that sentences are things that can have truth-values.
+\subsection{Valores de verdade}
+Verdadeiro ou falso é o que se chama o \define{valor de verdade} de uma sentença. Definimos sentenças como coisas que podem ser verdadeiras ou falsas; poderíamos ter dito, em vez disso, que sentenças são coisas que podem ter valores de verdade.
 
-\subsection{Logical truth}
+\subsection{Verdade lógica}
 
-In considering arguments formally, we care about what would be true \emph{if} the premises were true. Generally, we are not concerned with the actual truth value of any particular sentences--- whether they are \emph{actually} true or false. Yet there are some sentences that must be true, just as a matter of logic.
+Ao considerar argumentos formalmente, nos preocupamos com o que seria verdadeiro \emph{se} as premissas fossem verdadeiras. Em geral, não nos interessa o valor de verdade efetivo de sentenças particulares — se elas são \emph{de fato} verdadeiras ou falsas. Ainda assim, há sentenças que precisam ser verdadeiras, simplesmente por uma questão de lógica.
 
-Consider these sentences:
+Considere estas sentenças:
 \begin{earg}
-\item[\ex{Acontingent}] It is raining.
-\item[\ex{Atautology}] Either it is raining, or it is not.
-\item[\ex{Acontradiction}] It is both raining and not raining.
+\item[\ex{Acontingent}] Está chovendo.
+\item[\ex{Atautology}] Ou está chovendo, ou não está.
+\item[\ex{Acontradiction}] Está chovendo e não está chovendo ao mesmo tempo.
 \end{earg}
-In order to know if sentence \ref{Acontingent} is true, you would need to look outside or check the weather channel. Logically speaking, it might be either true or false. Sentences like this are called \emph{contingent} sentences.
+Para saber se a sentença \ref{Acontingent} é verdadeira, você precisaria olhar pela janela ou consultar a previsão do tempo. Do ponto de vista lógico, ela pode ser verdadeira ou falsa. Sentenças como essa são chamadas de sentenças \emph{contingentes}.
 
-Sentence \ref{Atautology} is different. You do not need to look outside to know that it is true. Regardless of what the weather is like, it is either raining or not. This sentence is \emph{logically true}; it is true merely as a matter of logic, regardless of what the world is actually like. A logically true sentence is called a \define{tautology}.
+A sentença \ref{Atautology} é diferente. Você não precisa olhar para fora para saber que ela é verdadeira. Independentemente de como estiver o tempo, ou está chovendo ou não está. Essa sentença é \emph{logicamente verdadeira}; ela é verdadeira apenas em virtude da lógica, não importando como o mundo de fato seja. Uma sentença logicamente verdadeira é chamada de \define{tautologia}.
 
-You do not need to check the weather to know about sentence \ref{Acontradiction}, either. It must be false, simply as a matter of logic. It might be raining here and not raining across town, it might be raining now but stop raining even as you read this, but it is impossible for it to be both raining and not raining here at this moment. The third sentence is \emph{logically false}; it is false regardless of what the world is like. A logically false sentence is called a \define{contradiction}.
+Você também não precisa verificar o tempo para decidir a respeito da sentença \ref{Acontradiction}. Ela precisa ser falsa, simplesmente por uma questão de lógica. Pode estar chovendo aqui e não chovendo em outra cidade; pode estar chovendo agora e parar de chover enquanto você lê isto; mas é impossível que esteja ao mesmo tempo chovendo e não chovendo aqui, neste exato momento. A terceira sentença é \emph{logicamente falsa}; ela é falsa independentemente de como o mundo seja. Uma sentença logicamente falsa é chamada de \define{contradição}.
 
-To be precise, we can define a \define{contingent sentence} as a sentence that is neither a tautology nor a contradiction.
+Para sermos precisos, podemos definir uma \define{sentença contingente} como uma sentença que não é nem uma tautologia nem uma contradição.
 
-A sentence might \emph{always} be true and still be contingent. For instance, if there never were a time when the universe contained fewer than seven things, then the sentence `At least seven things exist' would always be true. Yet the sentence is contingent; its truth is not a matter of logic. There is no contradiction in considering a possible world in which there are fewer than seven things. The important question is whether the sentence \emph{must} be true, just on account of logic.
+Uma sentença pode ser \emph{sempre} verdadeira e ainda assim ser contingente. Por exemplo, se nunca houve um momento em que o universo tivesse menos do que sete coisas, então a sentença `Existem pelo menos sete coisas' será sempre verdadeira. Mesmo assim, a sentença é contingente; a sua verdade não é uma questão de lógica. Não há contradição em considerar um mundo possível em que existam menos que sete coisas. A questão importante é se a sentença \emph{precisa} ser verdadeira, apenas em virtude da lógica.
 
-\subsection{Logical equivalence}
-We can also ask about the logical relations \emph{between} two sentences. For example:
+\subsection{Equivalência lógica}
+Também podemos perguntar sobre as relações lógicas \emph{entre} duas sentenças. Por exemplo:
 \begin{earg}
-\item[] John went to the store after he washed the dishes.
-\item[] John washed the dishes before he went to the store.
+\item[] João foi ao mercado depois de lavar a louça.
+\item[] João lavou a louça antes de ir ao mercado.
 \end{earg}
-These two sentences are both contingent, since John might not have gone to the store or washed dishes at all. Yet they must have the same truth-value. If either of the sentences is true, then they both are; if either of the sentences is false, then they both are. When two sentences necessarily have the same truth value, we say that they are \define{logically equivalent}.
+Essas duas sentenças são ambas contingentes, já que João poderia não ter ido ao mercado nem lavado a louça. Ainda assim, elas precisam ter o mesmo valor de verdade. Se uma delas for verdadeira, então a outra também é; se uma delas for falsa, então a outra também é. Quando duas sentenças necessariamente têm o mesmo valor de verdade, dizemos que elas são \define{logicamente equivalentes}.
 
-\subsection{Consistency}
-Consider these two sentences:
+\subsection{Consistência}
+Considere estas duas sentenças:
 \begin{ekey}
-\item[B1] My only brother is taller than I am.
-\item[B2] My only brother is shorter than I am.
+\item[B1] Meu único irmão é mais alto do que eu.
+\item[B2] Meu único irmão é mais baixo do que eu.
 \end{ekey}
-Logic alone cannot tell us which, if either, of these sentences is true. Yet we can say that \emph{if} the first sentence (B1) is true, \emph{then} the second sentence (B2) must be false. And if B2 is true, then B1 must be false. It cannot be the case that both of these sentences are true.
+A lógica, por si só, não pode nos dizer qual dessas sentenças é verdadeira, se é que alguma delas é. Ainda assim, podemos dizer que \emph{se} a primeira sentença (B1) for verdadeira, \emph{então} a segunda (B2) deve ser falsa. E se B2 for verdadeira, então B1 deve ser falsa. Não pode acontecer de ambas as sentenças serem verdadeiras ao mesmo tempo.
 
-If a set of sentences could not all be true at the same time, like B1--B2, they are said to be \define{inconsistent}. Otherwise, they are \define{consistent}.
+Se um conjunto de sentenças não puder ser verdadeiro em sua totalidade, como B1–B2, dizemos que ele é \define{inconsistente}. Caso contrário, dizemos que é \define{consistente}.
 
-We can ask about the consistency of any number of sentences. For example, consider the following list of sentences:
+Podemos perguntar sobre a consistência de qualquer quantidade de sentenças. Por exemplo, considere a seguinte lista:
 \label{MartianGiraffes}
 \begin{ekey}
-\item[G1] There are at least four giraffes at the wild animal park.
-\item[G2] There are exactly seven gorillas at the wild animal park.
-\item[G3] There are not more than two martians at the wild animal park.
-\item[G4] Every giraffe at the wild animal park is a martian.
+\item[G1] Há pelo menos quatro girafas no parque de animais selvagens.
+\item[G2] Há exatamente sete gorilas no parque de animais selvagens.
+\item[G3] Não há mais do que dois marcianos no parque de animais selvagens.
+\item[G4] Toda girafa no parque de animais selvagens é marciana.
 \end{ekey}
-G1 and G4 together imply that there are at least four martian giraffes at the park. This conflicts with G3, which implies that there are no more than two martian giraffes there. So the set of sentences G1--G4 is inconsistent. Notice that the inconsistency has nothing at all to do with G2. G2 just happens to be part of an inconsistent set.
+G1 e G4, juntas, implicam que há pelo menos quatro girafas marcianas no parque. Isso entra em conflito com G3, que implica que não há mais do que duas girafas marcianas lá. Então o conjunto de sentenças G1–G4 é inconsistente. Note que a inconsistência não tem nada a ver com G2. G2 apenas acaba fazendo parte de um conjunto inconsistente.
 
-Sometimes, people will say that an inconsistent set of sentences `contains a contradiction.' By this, they mean that it would be logically impossible for all of the sentences to be true at once. A set might be inconsistent even if each of the sentences in it is either contingent or tautologous. When a single sentence is a contradiction, then that sentence alone cannot be true.
+Às vezes, as pessoas dizem que um conjunto inconsistente de sentenças `contém uma contradição'. Com isso, querem dizer que seria logicamente impossível que todas as sentenças fossem verdadeiras ao mesmo tempo. Um conjunto pode ser inconsistente mesmo que cada sentença nele seja contingente ou tautológica. Quando uma única sentença é uma contradição, então essa sentença sozinha não pode ser verdadeira.
 
 
 
-\section{Formal languages}
+\section{Linguagens formais}
 
-Here is a famous valid argument:
+Aqui está um argumento famoso e válido:
 \begin{earg}
-\item[] Socrates is a man.
-\item[] All men are mortal.
-\item[\therefore] Socrates is mortal.
+\item[] Sócrates é um homem.
+\item[] Todos os homens são mortais.
+\item[\therefore] Sócrates é mortal.
 \end{earg}
-This is an iron-clad argument. The only way you could challenge the conclusion is by denying one of the premises--- the logical form is impeccable. What about this next argument?
-
-\begin{earg}
-\item[] Socrates is a man.
-\item[] All men are carrots.
-\item[\therefore] Socrates is a carrot.
-\end{earg}
-
-This argument might be less interesting than the first, because the second premise is obviously false. There is no clear sense in which all men are carrots. Yet the argument is valid. To see this, notice that both arguments have this form:
+Este é um argumento irrefutável. A única maneira de contestar a conclusão é negando uma das premissas — a forma lógica é impecável. E quanto ao argumento seguinte?
 
 \begin{earg}
-\item[] $S$ is $M$.
-\item[] All $M$s are $C$s.
-\item[\therefore] $S$ is $C$.
+\item[] Sócrates é um homem.
+\item[] Todos os homens são cenouras.
+\item[\therefore] Sócrates é uma cenoura.
 \end{earg}
 
-In both arguments $S$ stands for Socrates and $M$ stands for man. In the first argument, $C$ stands for mortal; in the second, $C$ stands for carrot. Both arguments have this form, and every argument of this form is valid. So both arguments are valid.
+Esse argumento talvez seja menos interessante que o primeiro, porque a segunda premissa é obviamente falsa. Não há nenhum sentido claro em que todos os homens sejam cenouras. Ainda assim, o argumento é válido. Para ver isso, note que ambos os argumentos têm a seguinte forma:
+
+\begin{earg}
+\item[] $S$ é $M$.
+\item[] Todos os $M$s são $C$s.
+\item[\therefore] $S$ é $C$.
+\end{earg}
+
+Nos dois argumentos, $S$ representa Sócrates e $M$ representa homem. No primeiro argumento, $C$ representa mortal; no segundo, $C$ representa cenoura. Ambos os argumentos têm essa forma, e todo argumento dessa forma é válido. Logo, ambos os argumentos são válidos.
 
 %\subsection{Aristotelian logic}
 
-What we did here was replace words like `man' or `carrot' with symbols like `M' or `C' so as to make the logical form explicit. This is the central idea behind formal logic. We want to remove irrelevant or distracting features of the argument to make the logical form more perspicuous.
+O que fizemos aqui foi substituir palavras como `homem' ou `cenoura' por símbolos como `M' ou `C' para tornar explícita a forma lógica. Essa é a ideia central por trás da lógica formal. Queremos remover aspectos irrelevantes ou distrações do argumento para tornar a forma lógica mais transparente.
 
-Starting with an argument in a \emph{natural language} like English, we translate the argument into a \emph{formal language}. Parts of the English sentences are replaced with letters and symbols. The goal is to reveal the formal structure of the argument, as we did with these two.
+Partindo de um argumento em uma \emph{linguagem natural} como o inglês, traduzimos o argumento para uma \emph{linguagem formal}. Partes das sentenças em inglês são substituídas por letras e símbolos. O objetivo é revelar a estrutura formal do argumento, como fizemos com esses dois exemplos.
 
-There are formal languages that work like the symbolization we gave for these two arguments. A logic like this was developed by Aristotle, a philosopher who lived in Greece during the 4th century BC. Aristotle was a student of Plato and the tutor of Alexander the Great. Aristotle's logic, with some revisions, was the dominant logic in the western world for more than two millennia.
+Existem linguagens formais que funcionam de modo semelhante à simbolização que demos para esses dois argumentos. Uma lógica desse tipo foi desenvolvida por Aristóteles, um filósofo que viveu na Grécia no século IV a.C. Aristóteles foi aluno de Platão e tutor de Alexandre, o Grande. A lógica aristotélica, com algumas revisões, foi a lógica dominante no mundo ocidental por mais de dois milênios.
 
-In Aristotelian logic, categories are replaced with capital letters. Every sentence of an argument is then represented as having one of four forms, which medieval logicians labeled in this way: (A) All $A$s are $B$s. (E) No $A$s are $B$s. (I) Some $A$ is $B$. (O) Some $A$ is not $B$.
+Na lógica aristotélica, categorias são representadas por letras maiúsculas. Cada sentença de um argumento é então representada como tendo uma das quatro formas, que os lógicos medievais nomearam assim: (A) Todos os $A$s são $B$s. (E) Nenhum $A$ é $B$. (I) Algum $A$ é $B$. (O) Algum $A$ não é $B$.
 
-It is then possible to describe valid \emph{syllogisms}, three-line arguments like the two we considered above. Medieval logicians gave mnemonic names to all of the valid argument forms. The form of our two arguments, for instance, was called \emph{Barbara}. The vowels in the name, all As, represent the fact that the two premises and the conclusion are all (A) form sentences.
+Isso permite descrever \emph{silogismos} válidos, isto é, argumentos de três linhas como os dois que consideramos acima. Lógicos medievais deram nomes mnemônicos a todas as formas de argumento válidas. A forma dos nossos dois argumentos, por exemplo, era chamada de \emph{Barbara}. As vogais no nome, todas As, indicam que as duas premissas e a conclusão são sentenças da forma (A).
 
-There are many limitations to Aristotelian logic. One is that it makes no distinction between kinds and individuals. So the first premise might just as well be written `All $S$s are $M$s': All Socrateses are men. Despite its historical importance, Aristotelian logic has been superseded. The remainder of this book will develop two formal languages.
+Existem muitas limitações na lógica aristotélica. Uma delas é que ela não distingue claramente entre tipos (espécies, classes) e indivíduos. Assim, a primeira premissa poderia ser escrita igualmente como `Todos os $S$s são $M$s': todos os Sócrates são homens. Apesar de sua importância histórica, a lógica aristotélica foi superada. O restante deste livro desenvolverá duas linguagens formais.
 
-The first is SL, which stands for \emph{sentential logic}. In SL, the smallest units are sentences themselves. Simple sentences are represented as letters and connected with {logical connectives} like `and' and `not' to make more complex sentences.
+A primeira é SL, que significa \emph{lógica sentencial} (\emph{sentential logic}). Em SL, as menores unidades são as próprias sentenças. Sentenças simples são representadas por letras e conectadas por {conectivos lógicos} como `e' e `não' para formar sentenças mais complexas.
 
-The second is QL, which stands for \emph{quantified logic}. In QL, the basic units are objects, properties of objects, and relations between objects.
+A segunda é QL, que significa \emph{lógica quantificada} (\emph{quantified logic}). Em QL, as unidades básicas são objetos, propriedades de objetos e relações entre objetos.
 
 
 
 
 %\subsection{Why there are different formal languages}
-When we translate an argument into a formal language, we hope to make its logical structure clearer. We want to include enough of the structure of the English language argument so that we can judge whether the argument is valid or invalid. If we included every feature of the English language, all of the subtlety and nuance, then there would be no advantage in translating to a formal language. We might as well think about the argument in English.
+Quando traduzimos um argumento para uma linguagem formal, esperamos tornar sua estrutura lógica mais clara. Queremos incluir o suficiente da estrutura do argumento em língua inglesa para podermos julgar se o argumento é válido ou inválido. Se incluíssemos todo o conteúdo da linguagem inglesa, com toda a sua sutileza e nuance, então não haveria vantagem em traduzir para uma linguagem formal. Seria melhor simplesmente pensar sobre o argumento diretamente em inglês.
 
-At the same time, we would like a formal language that allows us to represent many kinds of English language arguments. This is one reason to prefer QL to Aristotelian logic; QL can represent every valid argument of Aristotelian logic and more.
+Ao mesmo tempo, gostaríamos de ter uma linguagem formal que nos permita representar muitos tipos diferentes de argumentos em inglês. Essa é uma razão para preferir QL à lógica aristotélica; QL pode representar todos os argumentos válidos da lógica aristotélica e ainda mais.
 
-So when deciding on a formal language, there is inevitably a tension between wanting to capture as much structure as possible and wanting a simple formal language--- simpler formal languages leave out more. This means that there is no perfect formal language. Some will do a better job than others in translating particular English-language arguments.
+Assim, ao decidir sobre uma linguagem formal, há inevitavelmente uma tensão entre querer captar o máximo possível de estrutura e querer uma linguagem formal simples — linguagens formais mais simples deixam de fora mais detalhes. Isso significa que não existe uma linguagem formal perfeita. Algumas farão um trabalho melhor do que outras ao traduzir certos tipos de argumentos em linguagem natural.
 
-In this book, we make the assumption that \emph{true} and \emph{false} are the only possible truth-values. Logical languages that make this assumption are called \emph{bivalent}, which means \emph{two-valued}. Aristotelian logic, SL, and QL are all bivalent, but there are limits to the power of bivalent logic. For instance, some philosophers have claimed that the future is not yet determined. If they are right, then sentences about \emph{what will be the case} are not yet true or false.
-Some formal languages accommodate this by allowing for sentences that are neither true nor false, but something in between.
-Other formal languages, so-called paraconsistent logics, allow for sentences that are both true \emph{and} false.
+Neste livro, assumimos que \emph{verdadeiro} e \emph{falso} são os únicos valores de verdade possíveis. Linguagens lógicas que fazem essa suposição são chamadas de \emph{bivalentes}, o que significa \emph{com dois valores}. A lógica aristotélica, SL e QL são todas bivalentes, mas há limites para o poder de lógicas bivalentes. Por exemplo, alguns filósofos afirmaram que o futuro ainda não está determinado. Se eles estiverem certos, então sentenças sobre \emph{o que virá a ser o caso} ainda não são verdadeiras nem falsas.
+Algumas linguagens formais levam isso em conta permitindo sentenças que não são nem verdadeiras nem falsas, mas algo intermediário.
+Outras linguagens formais, as chamadas lógicas paraconsistentes, permitem sentenças que são ao mesmo tempo verdadeiras \emph{e} falsas.
 
-The languages presented in this book are not the only possible formal languages. However, most nonstandard logics extend on the basic formal structure of the bivalent logics discussed in this book. So this is a good place to start.
+As linguagens apresentadas neste livro não são as únicas linguagens formais possíveis. No entanto, a maior parte das lógicas não padrão estende a estrutura formal básica das lógicas bivalentes discutidas aqui. Por isso, este é um bom lugar para começar.
 
 
-\section*{Summary of logical notions}
+\section*{Resumo das noções lógicas}
 \begin{itemize}
-\item An argument is (deductively) \define{valid} if it is impossible for the premises to be true and the conclusion false; it is \define{invalid} otherwise.
+\item Um argumento é (dedutivamente) \define{válido} se for impossível que as premissas sejam verdadeiras e a conclusão falsa; é \define{inválido} caso contrário.
 
-\item A \define{tautology} is a sentence that must be true, as a matter of logic.
+\item Uma \define{tautologia} é uma sentença que, por força da lógica, deve ser verdadeira.
 
-\item A \define{contradiction} is a sentence that must be false, as a matter of logic.
+\item Uma \define{contradição} é uma sentença que, por força da lógica, deve ser falsa.
 
-\item A \define{contingent sentence} is neither a tautology nor a contradiction.
+\item Uma \define{sentença contingente} não é nem uma tautologia nem uma contradição.
 
-\item Two sentences are \define{logically equivalent} if they necessarily have the same truth value.
+\item Duas sentenças são \define{logicamente equivalentes} se necessariamente tiverem o mesmo valor de verdade.
 
-\item A set of sentences is \define{consistent} if it is logically possible for all the members of the set to be true at the same time; it is \define{inconsistent} otherwise.
+\item Um conjunto de sentenças é \define{consistente} se for logicamente possível que todos os membros do conjunto sejam verdadeiros ao mesmo tempo; é \define{inconsistente} caso contrário.
 \end{itemize}
 
 
 
 \practiceproblems
-At the end of each chapter, you will find a series of practice problems that review and explore the material covered in the chapter. There is no substitute for actually working through some problems, because logic is more about a way of thinking than it is about memorizing facts. The answers to some of the problems are provided at the end of the book in appendix \ref{app.solutions}; the problems that are solved in the appendix are marked with a \solutions.
+Ao final de cada capítulo, você encontrará uma série de exercícios que revisam e exploram o conteúdo tratado no capítulo. Não há substituto para realmente resolver problemas, porque lógica diz mais respeito a um modo de pensar do que a memorizar fatos. As respostas de alguns dos exercícios são fornecidas ao final do livro, no apêndice \ref{app.solutions}; os exercícios que têm solução no apêndice são marcados com um \solutions.
 
 \problempart
-Which of the following are `sentences' in the logical sense?
+Quais das sentenças a seguir são `sentenças' no sentido lógico?
 \begin{earg}
-\item England is smaller than China.
-\item Greenland is south of Jerusalem.
-\item Is New Jersey east of Wisconsin?
-\item The atomic number of helium is 2.
-\item The atomic number of helium is $\pi$.
-\item I hate overcooked noodles.
-\item Blech! Overcooked noodles!
-\item Overcooked noodles are disgusting.
-\item Take your time.
-\item This is the last question.
+\item A Inglaterra é menor do que a China.
+\item A Groenlândia fica ao sul de Jerusalém.
+\item Nova Jersey fica a leste de Wisconsin?
+\item O número atômico do hélio é 2.
+\item O número atômico do hélio é $\pi$.
+\item Eu odeio macarrão passado do ponto.
+\item Eca! Macarrão passado do ponto!
+\item Macarrão passado do ponto é nojento.
+\item Vá com calma.
+\item Esta é a última questão.
 \end{earg}
 
 
 \problempart
 \label{pr.EnglishTautology}
-For each of the following: Is it a tautology, a contradiction, or a contingent sentence?
+Para cada uma das sentenças a seguir: ela é uma tautologia, uma contradição ou uma sentença contingente?
 \begin{earg}
-\item Caesar crossed the Rubicon.
-\item Someone once crossed the Rubicon.
-\item No one has ever crossed the Rubicon.
-\item If Caesar crossed the Rubicon, then someone has.
-\item Even though Caesar crossed the Rubicon, no one has ever crossed the Rubicon.
-\item If anyone has ever crossed the Rubicon, it was Caesar.
+\item César atravessou o Rubicão.
+\item Alguém já atravessou o Rubicão.
+\item Ninguém jamais atravessou o Rubicão.
+\item Se César atravessou o Rubicão, então alguém o atravessou.
+\item Embora César tenha atravessado o Rubicão, ninguém jamais atravessou o Rubicão.
+\item Se alguém já atravessou o Rubicão, então foi César.
 \end{earg}
 
 \solutions
 \problempart
 \label{pr.MartianGiraffes}
-Look back at the sentences G1--G4 on p.~\pageref{MartianGiraffes}, and consider each of the following sets of sentences. Which are consistent? Which are inconsistent?
+Retome as sentenças G1–G4 na p.~\pageref{MartianGiraffes} e considere cada um dos seguintes conjuntos de sentenças. Quais são consistentes? Quais são inconsistentes?
 \begin{earg}
-\item G2, G3, and G4
-\item G1, G3, and G4
-\item G1, G2, and G4
-\item G1, G2, and G3
+\item G2, G3 e G4
+\item G1, G3 e G4
+\item G1, G2 e G4
+\item G1, G2 e G3
 \end{earg}
 
 
 \solutions
 \problempart
 \label{pr.EnglishCombinations}
-Which of the following is possible? If it is possible, give an example. If it is not possible, explain why.
+Quais das situações a seguir são possíveis? Se for possível, dê um exemplo. Se não for possível, explique por quê.
 \begin{earg}
-\item A valid argument that has one false premise and one true premise
-\item A valid argument that has a false conclusion
-\item A valid argument, the conclusion of which is a contradiction
-\item An invalid argument, the conclusion of which is a tautology
-\item A tautology that is contingent
-\item Two logically equivalent sentences, both of which are tautologies
-\item Two logically equivalent sentences, one of which is a tautology and one of which is contingent
-\item Two logically equivalent sentences that together are an inconsistent set
-\item A consistent set of sentences that contains a contradiction
-\item An inconsistent set of sentences that contains a tautology
+\item Um argumento válido que tenha uma premissa falsa e uma premissa verdadeira
+\item Um argumento válido que tenha uma conclusão falsa
+\item Um argumento válido cuja conclusão seja uma contradição
+\item Um argumento inválido cuja conclusão seja uma tautologia
+\item Uma tautologia que seja contingente
+\item Duas sentenças logicamente equivalentes, ambas tautologias
+\item Duas sentenças logicamente equivalentes, uma das quais é uma tautologia e a outra é contingente
+\item Duas sentenças logicamente equivalentes que, juntas, formem um conjunto inconsistente
+\item Um conjunto consistente de sentenças que contenha uma contradição
+\item Um conjunto inconsistente de sentenças que contenha uma tautologia
 \end{earg}
