@@ -5,7 +5,7 @@
 
 Na história da lógica formal, diferentes símbolos foram usados em diferentes épocas e por diferentes autores. Muitas vezes, os autores eram forçados a usar notação que seus impressores pudessem compor.
 
-Em um sentido, os símbolos usados para várias constantes lógicas são arbitrários. Não há nada escrito no céu que diga que `\enot' deve ser o símbolo para negação verofuncional. Poderíamos ter especificado um símbolo diferente para desempenhar esse papel. Uma vez que demos definições para fórmulas bem formadas (fbf) e para verdade em nossas linguagens lógicas, no entanto, usar `\enot' não é mais arbitrário. Esse é o símbolo para negação neste livro, e portanto é o símbolo para negação ao escrever sentenças em nossas linguagens LV ou LQ.
+Em um sentido, os símbolos usados para várias constantes lógicas são arbitrários. Não há nada escrito no céu que diga que `\enot' deve ser o símbolo para negação verofuncional. Poderíamos ter especificado um símbolo diferente para desempenhar esse papel. Uma vez que demos definições para fórmulas bem formadas (fbf) e para verdade em nossas linguagens lógicas, no entanto, usar `\enot' não é mais arbitrário. Esse é o símbolo para negação neste livro, e portanto é o símbolo para negação ao escrever sentenças em nossas linguagens LS ou LQ.
 
 Este apêndice apresenta alguns símbolos comuns, para que você possa reconhecê-los se os encontrar em um artigo ou em outro livro.
 \marginpar{
@@ -21,7 +21,7 @@ bicondicional & $\leftrightarrow$, $\equiv$
 
 \paragraph{Negação} Dois símbolos comumente usados são a \emph{enxada}, `$\neg$', e o \emph{til}, `${\sim}$.' Em alguns sistemas formais mais avançados é necessário distinguir entre dois tipos de negação; a distinção é às vezes representada usando ambos `$\neg$' e `${\sim}$.'
 
-\paragraph{Disjunção} O símbolo `$\vee$' é tipicamente usado para simbolizar disjunção inclusiva. %Em alguns sistemas, a disjunção é escrita como adição.
+\paragraph{Disjunção} O símbolo `$\vee$' é tipicamente usado para simbolizar disjunção inclusiva.
 
 \paragraph{Conjunção}
 A conjunção é frequentemente simbolizada com o \emph{e comercial}, `{\&}.' O e comercial é na verdade uma forma decorativa da palavra latina `et' que significa `e'; é comumente usado na escrita em português. Como um símbolo em um sistema formal, o e comercial não é a palavra `e'; seu significado é dado pela semântica formal da linguagem. Talvez para evitar essa confusão, alguns sistemas usam um símbolo diferente para conjunção. Por exemplo, `$\wedge$' é uma contraparte do símbolo usado para disjunção. Às vezes um ponto único, `{\scriptsize\textbullet}', é usado. Em alguns textos mais antigos, não há símbolo para conjunção; `$A$ e $B$' é simplesmente escrito `$AB$.'
@@ -34,9 +34,6 @@ A conjunção é frequentemente simbolizada com o \emph{e comercial}, `{\&}.' O 
 
 Em alguns sistemas, os quantificadores são simbolizados com versões maiores dos símbolos usados para conjunção e disjunção. Embora expressões quantificadas não possam ser traduzidas em expressões sem quantificadores, há uma conexão conceitual entre o quantificador universal e a conjunção e entre o quantificador existencial e a disjunção. Considere a sentença $\exists x Px$, por exemplo. Ela significa que \emph{ou} o primeiro membro do UD é um $P$, \emph{ou} o segundo é, \emph{ou} o terceiro é, {\ldots}. Tal sistema usa o símbolo `$\bigvee$' em vez de `$\exists$.'
 
-
-
-
 \section*{Notação polonesa}
 
 Esta seção discute brevemente a lógica sentencial na notação polonesa, um sistema de notação introduzido no final dos anos 1920 pelo lógico polonês Jan {\L}ukasiewicz.
@@ -45,7 +42,7 @@ Letras minúsculas são usadas como letras de sentença. A letra maiúscula $N$ 
 \marginpar{
 \begin{tabular}{cc}
 notação & notação polonesa\\
-de LV & \\
+de LS & \\
 \enot & $N$\\
 \eand & $K$\\
 \eor & $A$\\
@@ -54,8 +51,8 @@ de LV & \\
 \end{tabular}
 }
 
-Na notação polonesa, um conectivo binário é escrito \emph{antes} das duas sentenças que ele conecta. Por exemplo, a sentença $A\eand B$ de LV seria escrita $Kab$ em notação polonesa.
+Na notação polonesa, um conectivo binário é escrito \emph{antes} das duas sentenças que ele conecta. Por exemplo, a sentença $A\eand B$ de LS seria escrita $Kab$ em notação polonesa.
 
-As sentenças $\enot A\eif B$ e $\enot (A\eif B)$ são muito diferentes; o operador lógico principal da primeira é o condicional, mas o conectivo principal da segunda é a negação. Em LV, mostramos isso colocando parênteses em torno do condicional na segunda sentença. Na notação polonesa, parênteses nunca são necessários. O conectivo mais à esquerda é sempre o conectivo principal. A primeira sentença seria simplesmente escrita $CNab$ e a segunda $NCab$.
+As sentenças $\enot A\eif B$ e $\enot (A\eif B)$ são muito diferentes; o operador lógico principal da primeira é o condicional, mas o conectivo principal da segunda é a negação. Em LS, mostramos isso colocando parênteses em torno do condicional na segunda sentença. Na notação polonesa, parênteses nunca são necessários. O conectivo mais à esquerda é sempre o conectivo principal. A primeira sentença seria simplesmente escrita $CNab$ e a segunda $NCab$.
 
-Essa característica da notação polonesa significa que é possível avaliar sentenças simplesmente trabalhando através dos símbolos da direita para a esquerda. Se você estivesse construindo uma tabela-verdade para $NKab$, por exemplo, você primeiro consideraria os valores-verdade atribuídos a $b$ e $a$, então consideraria sua conjunção, e então negaria o resultado. A regra geral para o que avaliar a seguir em LV não é nem de longe tão simples. Em LV, a tabela-verdade para $\enot(A\eand B)$ requer olhar para $A$ e $B$, então olhar no meio da sentença para a conjunção, e então no início da sentença para a negação. Como a ordem das operações pode ser especificada mais mecanicamente na notação polonesa, variantes da notação polonesa são usadas como a estrutura interna para muitas linguagens de programação de computador.
+Essa característica da notação polonesa significa que é possível avaliar sentenças simplesmente trabalhando através dos símbolos da direita para a esquerda. Se você estivesse construindo uma tabela-verdade para $NKab$, por exemplo, você primeiro consideraria os valores-verdade atribuídos a $b$ e $a$, então consideraria sua conjunção, e então negaria o resultado. A regra geral para o que avaliar a seguir em LS não é nem de longe tão simples. Em LS, a tabela-verdade para $\enot(A\eand B)$ requer olhar para $A$ e $B$, então olhar no meio da sentença para a conjunção, e então no início da sentença para a negação. Como a ordem das operações pode ser especificada mais mecanicamente na notação polonesa, variantes da notação polonesa são usadas como a estrutura interna para muitas linguagens de programação de computador.
