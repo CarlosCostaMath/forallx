@@ -2,7 +2,7 @@
 \chapter{Provas}
 \label{ch.proofs}
 
-Considere dois argumentos em SL:
+Considere dois argumentos em LS:
 
 \begin{multicols}{2}
 Argumento A
@@ -37,10 +37,10 @@ Por modus ponens, (1) e (2) acarretam $J \eor L$. Esta é uma \emph{conclusão i
 
 Formalmente, uma \define{prova} é uma sequência de sentenças. As primeiras sentenças da sequência são suposições; estas são as premissas do argumento. Cada sentença posterior na sequência segue de sentenças anteriores por uma das regras de prova. A sentença final da sequência é a conclusão do argumento.
 
-Este capítulo começa com um sistema de prova para SL, que é então estendido para cobrir LQ e LQ mais identidade.
+Este capítulo começa com um sistema de prova para LS, que é então estendido para cobrir LQ e LQ mais identidade.
 
 
-\section{Regras básicas para SL}
+\section{Regras básicas para LS}
 
 Ao projetar um sistema de prova, poderíamos simplesmente começar com silogismo disjuntivo e modus ponens. Sempre que descobríssemos um argumento válido que não pudesse ser provado com regras que já tínhamos, poderíamos introduzir novas regras. Procedendo dessa forma, teríamos uma coleção não sistemática de regras. Poderíamos acidentalmente adicionar algumas regras estranhas e certamente acabaríamos com mais regras do que precisamos.
 
@@ -55,7 +55,7 @@ Além das regras para cada operador lógico, também teremos uma regra de reiter
 
 Quando adicionamos uma linha a uma prova, escrevemos a regra que justifica essa linha. Também escrevemos os números das linhas às quais a regra foi aplicada. A regra de reiteração acima é justificada por uma linha, a linha que você está reiterando. Então o `R 1' na linha 2 da prova significa que a linha é justificada pela regra de reiteração (R) aplicada à linha 1.
 
-Obviamente, a regra de reiteração não nos permitirá mostrar nada \emph{novo}. Para isso, precisaremos de mais regras. O restante desta seção dará regras de introdução e eliminação para todos os conectivos sentenciais. Isso nos dará um sistema de prova completo para SL. Mais tarde no capítulo, introduziremos regras para quantificadores e identidade.
+Obviamente, a regra de reiteração não nos permitirá mostrar nada \emph{novo}. Para isso, precisaremos de mais regras. O restante desta seção dará regras de introdução e eliminação para todos os conectivos sentenciais. Isso nos dará um sistema de prova completo para LS. Mais tarde no capítulo, introduziremos regras para quantificadores e identidade.
 
 Todas as regras introduzidas neste capítulo são resumidas a partir da p.~\pageref{ProofRules}.
 
@@ -352,7 +352,7 @@ As regras básicas para negação permitirão argumentos como este. Se assumirmo
 
 Para a regra aplicar, as duas últimas linhas da subprova devem ser uma contradição explícita: alguma sentença seguida na próxima linha por sua negação. Escrevemos 'para reductio' como uma nota para nós mesmos, um lembrete de por que começamos a subprova. Não é formalmente parte da prova, e você pode omiti-lo se achar distrativo.
 
-Para ver como a regra funciona, suponha que queiramos provar a lei da não contradição: $\enot(G \eand \enot G)$. Podemos provar isso sem nenhuma premissa começando imediatamente uma subprova. Queremos aplicar {\enot}I à subprova, então assumimos $(G \eand \enot G)$. Então obtemos uma contradição explícita por {\eand}E. A prova se parece com isto:
+Para ver como a regra funciona, suponha que queiramos provar a lei da não contradição: $\enot(G \eand \enot G)$. Podemos provar isso sem nenhuma premissa começando imediatamente uma subprova. Queremos aplicar {\enot}I à subprova, então assumimos $(G\eand \enot G)$. Então obtemos uma contradição explícita por {\eand}E. A prova se parece com isto:
 
 \begin{proof}
 	\open
@@ -410,7 +410,7 @@ Vamos chamar esta regra de Dilema (DIL) Pode parecer que haverá algumas provas 
 	\have{c}{\script{C}} \ne{nc-nb}
 \end{proof}
 
-\script{A}, \script{B} e \script{C} são meta-variáveis. Elas não são símbolos de SL, mas representantes de sentenças arbitrárias de SL. Então isto não é, estritamente falando, uma prova em SL. É mais como uma receita. Ela fornece um padrão que pode provar qualquer coisa que a regra do Dilema pode provar, usando apenas as regras básicas de SL. Isso significa que a regra do Dilema não é realmente necessária. Adicioná-la à lista de regras básicas não nos permitiria derivar nada que não pudéssemos derivar sem ela.
+\script{A}, \script{B} e \script{C} são meta-variáveis. Elas não são símbolos de LS, mas representantes de sentenças arbitrárias de LS. Então isto não é, estritamente falando, uma prova em LS. É mais como uma receita. Ela fornece um padrão que pode provar qualquer coisa que a regra do Dilema pode provar, usando apenas as regras básicas de LS. Isso significa que a regra do Dilema não é realmente necessária. Adicioná-la à lista de regras básicas não nos permitiria derivar nada que não pudéssemos derivar sem ela.
 
 No entanto, a regra do Dilema seria conveniente. Ela nos permitiria fazer em uma linha o que requer onze linhas e várias subprovas aninhadas com as regras básicas. Então a adicionaremos ao sistema de prova como uma regra derivada.
 
@@ -549,9 +549,9 @@ $[(\script{A}\eif\script{B})\eand(\script{B}\eif\script{A})] \Longleftrightarrow
 
 \section{Regras para quantificadores}
 
-Para provas em LQ, usamos todas as regras básicas de SL mais quatro novas regras básicas: ambas as regras de introdução e eliminação para cada um dos quantificadores.
+Para provas em LQ, usamos todas as regras básicas de LS mais quatro novas regras básicas: ambas as regras de introdução e eliminação para cada um dos quantificadores.
 
-Como todas as regras derivadas de SL são derivadas das regras básicas, elas também valerão em LQ. Adicionaremos outra regra derivada, uma regra de substituição chamada negação de quantificador.
+Como todas as regras derivadas de LS são derivadas das regras básicas, elas também valerão em LQ. Adicionaremos outra regra derivada, uma regra de substituição chamada negação de quantificador.
 
 \subsection{Instâncias de substituição}
 
@@ -993,7 +993,7 @@ O ponto importante é que, felizmente, o sistema de prova para LQ é both sound 
 
 \solutions
 \problempart
-\label{pr.justifySLproof}
+\label{pr.justifyLSproof}
 Forneça uma justificação (regra e números de linha) para cada linha de prova que requer uma.
 \begin{multicols}{2}
 \begin{proof}
@@ -1041,8 +1041,8 @@ Forneça uma justificação (regra e números de linha) para cada linha de prova
 
 \solutions
 \problempart
-\label{pr.solvedSLproofs}
-Dê uma prova para cada argumento em SL.
+\label{pr.solvedLSproofs}
+Dê uma prova para cada argumento em LS.
 \begin{earg}
 \item $K\eand L$, \therefore $K\eiff L$
 \item $A\eif (B\eif C)$, \therefore $(A\eand B)\eif C$
@@ -1053,7 +1053,7 @@ Dê uma prova para cada argumento em SL.
 \end{earg}
 
 \problempart
-Dê uma prova para cada argumento em SL.
+Dê uma prova para cada argumento em LS.
 \begin{earg}
 \item $Q\eif(Q\eand\enot Q)$, \therefore\ $\enot Q$
 \item $J\eif\enot J$, \therefore\ $\enot J$
@@ -1068,7 +1068,7 @@ Dê uma prova para cada argumento em SL.
 
 
 \problempart
-Mostre que cada uma das seguintes sentenças é um teorema em SL.
+Mostre que cada uma das seguintes sentenças é um teorema em LS.
 \begin{earg}
 \item $O \eif O$
 \item $N \eor \enot N$
@@ -1078,7 +1078,7 @@ Mostre que cada uma das seguintes sentenças é um teorema em SL.
 \end{earg}
 
 \problempart
-Mostre que cada um dos seguintes pares de sentenças são comprovadamente equivalentes em SL.
+Mostre que cada um dos seguintes pares de sentenças são comprovadamente equivalentes em LS.
 \begin{earg}
 \item $\enot\enot\enot\enot G$, $G$
 \item $T\eif S$, $\enot S \eif \enot T$
@@ -1114,7 +1114,7 @@ Para o seguinte, forneça provas usando apenas as regras básicas. As provas ser
 \label{pr.subinstanceQL}
 \begin{earg}
 \item Identifique quais dos seguintes são instâncias de substituição de $\forall x Rcx$: $Rac$, $Rca$, $Raa$, $Rcb$, $Rbc$, $Rcc$, $Rcd$, $Rcx$
-\item Identifique quais dos seguintes são instâncias de substituição de $\exists x\forall y Lxy$:
+\item Identifique quais dos seguinitos são instâncias de substituição de $\exists x\forall y Lxy$:
 $\forall y Lby$, $\forall x Lbx$, $Lab$, $\exists x Lxa$
 \end{earg}
 
@@ -1123,7 +1123,7 @@ $\forall y Lby$, $\forall x Lbx$, $Lab$, $\exists x Lxa$
 \newpage
 \solutions
 \problempart
-\label{pr.justifyQLproof}
+\label{pr.justifyLQproof}
 Forneça uma justificação (regra e números de linha) para cada linha de prova que requer uma.
 \begin{multicols}{2}
 %$\{\forall x(\exists y)(Rxy \eor Ryx),\forall x\enot Rmx\}\vdash\exists xRxm$
@@ -1192,7 +1192,7 @@ Forneça uma justificação (regra e números de linha) para cada linha de prova
 
 \solutions
 \problempart
-\label{pr.someQLproofs}
+\label{pr.someLQproofs}
 Forneça uma prova de cada afirmação.
 \begin{earg}
 \item $\vdash \forall x Fx \eor \enot \forall x Fx$
@@ -1298,7 +1298,7 @@ Forneça uma prova de cada afirmação.
 
 
 \problempart
-Olhe de volta para a Parte \ref{pr.QLarguments} na p.~\pageref{pr.QLarguments}. Para cada argumento: Se é válido em LQ, dê uma prova. Se é inválido, construa um modelo para mostrar que é inválido.
+Olhe de volta para a Parte \ref{pr.LQarguments} na p.~\pageref{pr.LQarguments}. Para cada argumento: Se é válido em LQ, dê uma prova. Se é inválido, construa um modelo para mostrar que é inválido.
 
 \solutions
 \problempart
@@ -1315,7 +1315,7 @@ Para cada um dos seguintes pares de sentenças: Se são logicamente equivalentes
 
 \solutions
 \problempart
-\label{pr.QLvalidornot}
+\label{pr.LQvalidornot}
 Para cada um dos seguintes argumentos: Se é válido em LQ, dê uma prova. Se é inválido, construa um modelo para mostrar que é inválido.
 \begin{earg}
 \item $\forall x\exists y Rxy$, \therefore\ $\exists y\forall x Rxy$
