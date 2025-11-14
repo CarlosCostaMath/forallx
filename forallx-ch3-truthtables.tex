@@ -2,20 +2,20 @@
 \chapter{Tabelas-verdade}
 \label{ch.TruthTables}
 
-Este capítulo introduz um modo de avaliar sentenças e argumentos de SL. Embora possa ser trabalhoso, o método das tabelas-verdade é um procedimento puramente mecânico, que não exige intuição nem qualquer tipo de “insight” especial.
+Este capítulo introduz um modo de avaliar sentenças e argumentos de LS. Embora possa ser trabalhoso, o método das tabelas-verdade é um procedimento puramente mecânico, que não exige intuição nem qualquer tipo de "insight" especial.
 
 \section{Conectivos verifuncionais}
 
-Qualquer sentença não atômica de SL é composta de sentenças atômicas com conectivos sentenciais. O valor de verdade da sentença composta depende apenas dos valores de verdade das sentenças atômicas que a compõem. Para saber o valor de verdade de $(D\eiff E)$, por exemplo, você só precisa saber o valor de verdade de $D$ e o valor de verdade de $E$. Conectivos que funcionam desse modo são chamados de \define{verifuncionais} (isto é, seu comportamento depende apenas dos valores de verdade das partes).
+Qualquer sentença não atômica de LS é composta de sentenças atômicas com conectivos sentenciais. O valor de verdade da sentença composta depende apenas dos valores de verdade das sentenças atômicas que a compõem. Para saber o valor de verdade de $(D\eiff E)$, por exemplo, você só precisa saber o valor de verdade de $D$ e o valor de verdade de $E$. Conectivos que funcionam desse modo são chamados de \define{verifuncionais} (isto é, seu comportamento depende apenas dos valores de verdade das partes).
 
-Neste capítulo, exploraremos o fato de que todos os operadores lógicos de SL são verifuncionais — isso torna possível construir tabelas-verdade para determinar as propriedades lógicas das sentenças. É importante perceber, porém, que isso não vale para todas as linguagens. Em português (como em inglês), é possível formar uma nova sentença a partir de uma sentença mais simples \script{X} dizendo: “É possível que \script{X}”. O valor de verdade dessa nova sentença não depende diretamente do valor de verdade de \script{X}. Mesmo que \script{X} seja falsa, pode ser que, em algum sentido, \script{X} \emph{pudesse} ter sido verdadeira — nesse caso, a nova sentença seria verdadeira. Alguns sistemas formais, chamados de \emph{lógicas modais}, têm um operador para {possibilidade}. Em uma lógica modal, poderíamos traduzir “É possível que \script{X}” como {\large $\diamond$}\script{X}. No entanto, a possibilidade de traduzir sentenças como essa vem com um custo: o operador {\large $\diamond$} não é verifuncional, e por isso lógicas modais não são adequadas para o uso de tabelas-verdade da forma simples que veremos aqui.
+Neste capítulo, exploraremos o fato de que todos os operadores lógicos de LS são verifuncionais — isso torna possível construir tabelas-verdade para determinar as propriedades lógicas das sentenças. É importante perceber, porém, que isso não vale para todas as linguagens. Em português (como em inglês), é possível formar uma nova sentença a partir de uma sentença mais simples \script{X} dizendo: "É possível que \script{X}". O valor de verdade dessa nova sentença não depende diretamente do valor de verdade de \script{X}. Mesmo que \script{X} seja falsa, pode ser que, em algum sentido, \script{X} \emph{pudesse} ter sido verdadeira — nesse caso, a nova sentença seria verdadeira. Alguns sistemas formais, chamados de \emph{lógicas modais}, têm um operador para {possibilidade}. Em uma lógica modal, poderíamos traduzir "É possível que \script{X}" como {\large $\diamond$}\script{X}. No entanto, a possibilidade de traduzir sentenças como essa vem com um custo: o operador {\large $\diamond$} não é verifuncional, e por isso lógicas modais não são adequadas para o uso de tabelas-verdade da forma simples que veremos aqui.
 
 
 \section{Tabelas-verdade completas}
 
-O valor de verdade de sentenças que contêm apenas um conectivo é dado pela tabela-verdade característica desse conectivo. No capítulo anterior, escrevemos essas tabelas-verdade com `T' para “verdadeiro” e `F' para “falso”. É importante notar, porém, que aqui não estamos falando de “verdade” em nenhum sentido profundo ou “cosmológico”. Poetas e filósofos podem discutir longamente sobre a natureza e o significado de \emph{verdade}, mas as funções de verdade em SL são apenas regras que transformam valores de entrada em valores de saída. Para destacar isso, neste capítulo escreveremos `1' e `0' em vez de `T' e `F'. Mesmo que interpretemos `1' como “verdadeiro” e `0' como “falso”, computadores podem ser programados para preencher tabelas-verdade de modo puramente mecânico. Em uma máquina, `1' pode significar que um registrador está ligado, e `0', que o registrador está desligado. Do ponto de vista matemático, eles são apenas os dois valores possíveis que uma sentença de SL pode assumir.
+O valor de verdade de sentenças que contêm apenas um conectivo é dado pela tabela-verdade característica desse conectivo. No capítulo anterior, escrevemos essas tabelas-verdade com `T' para "verdadeiro" e `F' para "falso". É importante notar, porém, que aqui não estamos falando de "verdade" em nenhum sentido profundo ou "cosmológico". Poetas e filósofos podem discutir longamente sobre a natureza e o significado de \emph{verdade}, mas as funções de verdade em LS são apenas regras que transformam valores de entrada em valores de saída. Para destacar isso, neste capítulo escreveremos `1' e `0' em vez de `T' e `F'. Mesmo que interpretemos `1' como "verdadeiro" e `0' como "falso", computadores podem ser programados para preencher tabelas-verdade de modo puramente mecânico. Em uma máquina, `1' pode significar que um registrador está ligado, e `0', que o registrador está desligado. Do ponto de vista matemático, eles são apenas os dois valores possíveis que uma sentença de LS pode assumir.
 
-Aqui estão as tabelas-verdade dos conectivos de SL, escritas em termos de 1s e 0s.
+Aqui estão as tabelas-verdade dos conectivos de LS, escritas em termos de 1s e 0s.
 
 \begin{table}[h!]
 \begin{center}
@@ -35,11 +35,11 @@ Aqui estão as tabelas-verdade dos conectivos de SL, escritas em termos de 1s e 
 0 & 0 & 0 & 0 & 1 & 1
 \end{tabular}
 \end{center}
-\caption{As tabelas-verdade características dos conectivos de SL.}
+\caption{As tabelas-verdade características dos conectivos de LS.}
 \label{table.CharacteristicTTs}
 \end{table}
 
-A tabela-verdade característica da conjunção, por exemplo, fornece as condições de verdade de qualquer sentença da forma $(\script{A}\eand\script{B})$. Mesmo que os conjunos \script{A} e \script{B} sejam sentenças longas e complicadas, a conjunção é verdadeira se, e somente se, tanto \script{A} quanto \script{B} forem verdadeiras. Considere a sentença $(H\eand I)\eif H$. Tomamos todas as possíveis combinações de verdadeiro e falso para $H$ e $I$, o que nos dá quatro linhas. Copiamos então os valores de verdade das letras sentenciais e os escrevemos sob as letras na sentença.
+A tabela-verdade característica da conjunção, por exemplo, fornece as condições de verdade de qualquer sentença da forma $(\script{A}\eand\script{B})$. Mesmo que os conjunos \script{A} e \script{B} sejam sentenças longas e complicadas, a conjunção é verdadeira se, e somente se, tanto \script{A} quanto \script{B} forem verdadeiras. Considere a sentença $(H\eand I)\eif H$. Tomamos todas as possíveis combinações de verdadeiro e falso para $H$ e $I$, o que nos dá quatro linhas. Copiamos então os valores de verdade das letras sentenciais e os escrevemos under as letras na sentença.
 \begin{center}
 \begin{tabular}{c|c|@{\TTon}*{5}{c}@{\TToff}}
 $H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
@@ -50,7 +50,7 @@ $H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
  0 & 0 & \TTbf{0} & & \TTbf{0} & & \TTbf{0}
 \end{tabular}
 \end{center}
-Agora considere a subsentença $H\eand I$. Ela é uma conjunção \script{A}\eand\script{B} em que $H$ faz o papel de \script{A} e $I$ faz o papel de \script{B}. $H$ e $I$ são ambas verdadeiras na primeira linha. Como uma conjunção é verdadeira quando ambos os conjunos são verdadeiros, escrevemos 1 sob o símbolo de conjunção. Continuamos para as outras três linhas e obtemos:
+Agora considere a subsentença $H\eand I$. Ela é uma conjunção \script{A}\eand\script{B} em que $H$ faz o papel de \script{A} e $I$ faz o papel de \script{B}. $H$ e $I$ são ambas verdadeiras na primeira linha. Como uma conjunção é verdadeira quando ambos os conjunos são verdadeiros, escrevemos 1 under o símbolo de conjunção. Continuamos para as outras três linhas e obtemos:
 \begin{center}
 \begin{tabular}{c|c|@{\TTon}*{5}{c}@{\TToff}}
 $H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
@@ -62,7 +62,7 @@ $H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
  0 & 0 & 0 & \TTbf{0} & 0 & & 0
 \end{tabular}
 \end{center}
-A sentença inteira é um condicional \script{A}\eif\script{B}, em que $(H \eand I)$ é \script{A} e $H$ é \script{B}. Na segunda linha, por exemplo, $(H\eand I)$ é falsa e $H$ é verdadeira. Como um condicional é verdadeiro quando o antecedente é falso, escrevemos 1 na segunda linha sob o símbolo do condicional. Fazemos isso para as demais linhas e obtemos:
+A sentença inteira é um condicional \script{A}\eif\script{B}, em que $(H \eand I)$ é \script{A} e $H$ é \script{B}. Na segunda linha, por exemplo, $(H\eand I)$ é falsa e $H$ é verdadeira. Como um condicional é verdadeiro quando o antecedente é falso, escrevemos 1 na segunda linha under o símbolo do condicional. Fazemos isso para as demais linhas e obtemos:
 \begin{center}
 \begin{tabular}{c|c|@{\TTon}*{5}{c}@{\TToff}}
 $H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
@@ -74,9 +74,9 @@ $H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
  0 & 0 &  & {0} &  &\TTbf{1} & 0
 \end{tabular}
 \end{center}
-A coluna de 1s sob o condicional nos mostra que a sentença \mbox{$(H \eand I)\eif I$} é verdadeira independentemente dos valores de verdade de $H$ e $I$. Eles podem ser verdadeiros ou falsos em qualquer combinação e, ainda assim, a sentença composta sai verdadeira. É crucial que tenhamos considerado todas as combinações possíveis. Se tivéssemos apenas uma tabela de duas linhas, não poderíamos ter certeza de que a sentença não seria falsa em alguma outra combinação de valores de verdade.
+A coluna de 1s under o condicional nos mostra que a sentença \mbox{$(H \eand I)\eif I$} é verdadeira independentemente dos valores de verdade de $H$ e $I$. Eles podem ser verdadeiros ou falsos em qualquer combinação e, ainda assim, a sentença composta sai verdadeira. É crucial que tenhamos considerado todas as combinações possíveis. Se tivéssemos apenas uma tabela de duas linhas, não poderíamos ter certeza de que a sentença não seria falsa em alguma outra combinação de valores de verdade.
 
-Neste exemplo, não repetimos todas as entradas em cada tabela sucessiva. Mas, quando realmente escrevemos tabelas-verdade no papel, é impraticável apagar colunas inteiras ou reescrever a tabela toda a cada passo. Embora fique mais “apertado”, a tabela-verdade pode ser escrita assim:
+Neste exemplo, não repetimos todas as entradas em cada tabela sucessiva. Mas, quando realmente escrevemos tabelas-verdade no papel, é impraticável apagar colunas inteiras ou reescrever a tabela toda a cada passo. Embora fique mais "apertado", a tabela-verdade pode ser escrita assim:
 \begin{center}
 \begin{tabular}{c|c|@{\TTon}*{5}{c}@{\TToff}}
 $H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
@@ -87,7 +87,7 @@ $H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
  0 & 0 & 0 & {0} & 0 & 1 & 0
 \end{tabular}
 \end{center}
-A maior parte das colunas sob a sentença está ali apenas para “controle de contas”. Quando você ficar mais à vontade com tabelas-verdade, provavelmente não precisará mais copiar as colunas de cada letra sentencial. De todo modo, o valor de verdade da sentença em cada linha é apenas o valor na coluna sob o conectivo lógico principal da sentença; neste caso, a coluna sob o condicional.
+A maior parte das colunas under a sentença está ali apenas para "controle de contas". Quando você ficar mais à vontade com tabelas-verdade, provavelmente não precisará mais copiar as colunas de cada letra sentencial. De todo modo, o valor de verdade da sentença em cada linha é apenas o valor na coluna under o conectivo lógico principal da sentença; neste caso, a coluna under o condicional.
 
 Uma \define{tabela-verdade completa} tem uma linha para cada combinação possível de 1 e 0 para todas as letras sentenciais envolvidas. O tamanho da tabela-verdade completa depende do número de letras sentenciais diferentes na sentença. Uma sentença que contém apenas uma letra sentencial exige apenas duas linhas, como na tabela característica da negação. Isso continua valendo mesmo que a mesma letra apareça muitas vezes, como na sentença
 $[(C\eiff C) \eif C] \eand \enot(C \eif C)$.
@@ -100,7 +100,7 @@ $C$&$[($&$C$&\eiff&$C$&$)$&\eif&$C$&$]$&\eand&\enot&$($&$C$&\eif&$C$&$)$\\
  0 &    & 0 &  1  & 0 &   & 0  & 0 & &\TTbf{0}&  0& &   0 &  1  & 0 &   \\
 \end{tabular}
 \end{center}
-Observando a coluna sob o conectivo principal, vemos que a sentença é falsa em ambas as linhas da tabela; isto é, ela é falsa tanto se $C$ é verdadeira quanto se $C$ é falsa.
+Observando a coluna under o conectivo principal, vemos que a sentença é falsa em ambas as linhas da tabela; isto é, ela é falsa tanto se $C$ é verdadeira quanto se $C$ é falsa.
 
 Uma sentença que contém duas letras sentenciais exige quatro linhas para uma tabela-verdade completa, como nas tabelas características e na tabela de $(H \eand I)\eif I$.
 
@@ -133,18 +133,18 @@ Para preencher as colunas de uma tabela-verdade completa, comece pela letra sent
 
 Recorde que uma sentença (em linguagem natural) é uma tautologia se ela tem de ser verdadeira como questão de lógica. Com uma tabela-verdade completa, consideramos todos os modos como o mundo poderia ser. Se a sentença é verdadeira em todas as linhas de uma tabela-verdade completa, então ela é verdadeira como questão de lógica, independentemente de como o mundo de fato é.
 
-Assim, uma sentença é uma \define{tautologia em SL} se a coluna sob seu conectivo principal tem 1 em todas as linhas de uma tabela-verdade completa.
+Assim, uma sentença é uma \define{tautologia em LS} se a coluna under seu conectivo principal tem 1 em todas as linhas de uma tabela-verdade completa.
 
-De modo análogo, uma sentença é uma \define{contradição em SL} se a coluna sob seu conectivo principal tem 0 em todas as linhas de uma tabela-verdade completa.
+De modo análogo, uma sentença é uma \define{contradição em LS} se a coluna under seu conectivo principal tem 0 em todas as linhas de uma tabela-verdade completa.
 
-Uma sentença é \define{contingente em SL} se ela não é nem tautologia nem contradição; isto é, se ela tem 1 em pelo menos uma linha e 0 em pelo menos uma outra linha.
+Uma sentença é \define{contingente em LS} se ela não é nem tautologia nem contradição; isto é, se ela tem 1 em pelo menos uma linha e 0 em pelo menos uma outra linha.
 
 Pelas tabelas da seção anterior, sabemos que $(H\eand I)\eif H$ é uma tautologia, que $[(C\eiff C) \eif C] \eand \enot(C \eif C)$ é uma contradição, e que $M \eand (N \eor P)$ é contingente.
 
 
 \subsection{Equivalência lógica}
 
-Duas sentenças são logicamente equivalentes em português se elas têm o mesmo valor de verdade como questão de lógica. Mais uma vez, as tabelas-verdade nos permitem definir um conceito análogo para SL: duas sentenças são \define{logicamente equivalentes em SL} se elas têm o mesmo valor de verdade em todas as linhas de uma tabela-verdade completa.
+Duas sentenças são logicamente equivalentes em português se elas têm o mesmo valor de verdade como questão de lógica. Mais uma vez, as tabelas-verdade nos permitem definir um conceito análogo para LS: duas sentenças são \define{logicamente equivalentes em LS} se elas têm o mesmo valor de verdade em todas as linhas de uma tabela-verdade completa.
 
 Considere as sentenças $\enot(A \eor B)$ e $\enot A \eand \enot B$. Elas são logicamente equivalentes? Para descobrir, construímos uma tabela-verdade:
 \begin{center}
@@ -163,13 +163,13 @@ Observe as colunas dos conectivos principais: negação, na primeira sentença, 
 \subsection{Consistência}
 
 Um conjunto de sentenças em português é consistente se é logicamente possível que todas sejam verdadeiras ao mesmo tempo.
-Um conjunto de sentenças é \define{logicamente consistente em SL} se existe pelo menos uma linha de uma tabela-verdade completa em que todas as sentenças sejam verdadeiras (todas com valor 1). Ele é \define{inconsistente} caso contrário (isto é, se não há linha em que todas sejam verdadeiras).
+Um conjunto de sentenças é \define{logicamente consistente em LS} se existe pelo menos uma linha de uma tabela-verdade completa em que todas as sentenças sejam verdadeiras (todas com valor 1). Ele é \define{inconsistente} caso contrário (isto é, se não há linha em que todas sejam verdadeiras).
 
 
 \subsection{Validade}
 
 Um argumento em português é válido se é logicamente impossível que as premissas sejam verdadeiras e a conclusão falsa ao mesmo tempo.
-Um argumento é \define{válido em SL} se não há linha de uma tabela-verdade completa em que todas as premissas sejam 1 e a conclusão seja 0; o argumento é \define{inválido em SL} se existe uma linha assim.
+Um argumento é \define{válido em LS} se não há linha de uma tabela-verdade completa em que todas as premissas sejam 1 e a conclusão seja 0; o argumento é \define{inválido em LS} se existe uma linha assim.
 
 Considere este argumento:
 \begin{earg}
@@ -269,7 +269,7 @@ válido? & tabela-verdade completa & tabela-verdade parcial de uma linha\\
 %\section{The material conditional}
 %\label{MaterialConditional}
 
-%O condicional material tem algumas propriedades curiosas. Por exemplo, ele não exige que antecedente e consequente estejam relacionados de nenhuma forma “de conteúdo”.
+%O condicional material tem algumas propriedades curiosas. Por exemplo, ele não exige que antecedente e consequente estejam relacionados de nenhuma forma "de conteúdo".
 
 %contradição no antecedente
 
@@ -364,13 +364,13 @@ Responda cada questão abaixo e justifique sua resposta.
 \begin{earg}
 \item Suponha que \script{A} e \script{B} sejam logicamente equivalentes. O que você pode dizer sobre $\script{A}\eiff\script{B}$?
 %\script{A} e \script{B} têm o mesmo valor de verdade em todas as linhas de uma tabela-verdade completa, então $\script{A}\eiff\script{B}$ é verdadeira em todas as linhas. É uma tautologia.
-\item Suponha que $(\script{A}\eand\script{B})\eif\script{C}$ seja contingente. O que você pode dizer sobre o argumento “\script{A}, \script{B}, \therefore\script{C}”?
+\item Suponha que $(\script{A}\eand\script{B})\eif\script{C}$ seja contingente. O que você pode dizer sobre o argumento "\script{A}, \script{B}, \therefore\script{C}"?
 %A sentença é falsa em alguma linha de uma tabela-verdade completa. Nessa linha, \script{A} e \script{B} são verdadeiras e \script{C} é falsa. Logo, o argumento é inválido.
 \item Suponha que $\{\script{A},\script{B}, \script{C}\}$ seja inconsistente. O que você pode dizer sobre $(\script{A}\eand\script{B}\eand\script{C})$?
 %Como não há linha de uma tabela-verdade completa em que as três sentenças sejam verdadeiras, a conjunção é falsa em todas as linhas. Logo, é uma contradição.
-\item Suponha que \script{A} seja uma contradição. O que você pode dizer sobre o argumento “\script{A}, \script{B}, \therefore\script{C}”?
+\item Suponha que \script{A} seja uma contradição. O que você pode dizer sobre o argumento "\script{A}, \script{B}, \therefore\script{C}"?
 %Como \script{A} é falsa em todas as linhas da tabela-verdade completa, não há linha em que \script{A} e \script{B} sejam verdadeiras e \script{C} falsa. Logo, o argumento é válido.
-\item Suponha que \script{C} seja uma tautologia. O que você pode dizer sobre o argumento “\script{A}, \script{B}, \therefore\script{C}”?
+\item Suponha que \script{C} seja uma tautologia. O que você pode dizer sobre o argumento "\script{A}, \script{B}, \therefore\script{C}"?
 %Como \script{C} é verdadeira em todas as linhas de uma tabela-verdade completa, não há linha em que \script{A} e \script{B} sejam verdadeiras e \script{C} falsa. Logo, o argumento é válido.
 \item Suponha que \script{A} e \script{B} sejam logicamente equivalentes. O que você pode dizer sobre $(\script{A}\eor\script{B})$?
 %Não muito. $(\script{A}\eor\script{B})$ é uma tautologia se \script{A} e \script{B} são tautologias; é uma contradição se \script{A} e \script{B} são contradições; é contingente se \script{A} e \script{B} são contingentes.
@@ -380,7 +380,7 @@ Responda cada questão abaixo e justifique sua resposta.
 
 \problempart
 \label{pr.altConnectives}
-Poderíamos eliminar o bicondicional (\eiff) da linguagem. Se fizéssemos isso, ainda poderíamos escrever `$A\eiff B$' para tornar as sentenças mais fáceis de ler, mas isso seria apenas uma abreviação para $(A\eif B) \eand (B\eif A)$. A linguagem resultante ainda seria formalmente equivalente a SL, já que $A\eiff B$ e $(A\eif B) \eand (B\eif A)$ são logicamente equivalentes em SL. Se déssemos mais peso à simplicidade formal do que à “riqueza expressiva”, poderíamos substituir mais conectivos por convenções notacionais e ainda ter uma linguagem equivalente a SL.
+Poderíamos eliminar o bicondicional (\eiff) da linguagem. Se fizéssemos isso, ainda poderíamos escrever `$A\eiff B$' para tornar as sentenças mais fáceis de ler, mas isso seria apenas uma abreviação para $(A\eif B) \eand (B\eif A)$. A linguagem resultante ainda seria formalmente equivalente a LS, já que $A\eiff B$ e $(A\eif B) \eand (B\eif A)$ são logicamente equivalentes em LS. Se déssemos mais peso à simplicidade formal do que à "riqueza expressiva", poderíamos substituir mais conectivos por convenções notacionais e ainda ter uma linguagem equivalente a LS.
 
 Existem várias linguagens equivalentes com apenas dois conectivos. Seria suficiente ter apenas negação e o condicional material. Mostre isso escrevendo sentenças logicamente equivalentes a cada uma das seguintes, usando apenas parênteses, letras sentenciais, negação (\enot) e condicional material (\eif).
 \begin{earg}
@@ -394,7 +394,7 @@ Existem várias linguagens equivalentes com apenas dois conectivos. Seria sufici
 %...
 % Saímos do ambiente {earg} para dar novas instruções. 
 
-Podemos ter uma linguagem equivalente a SL com apenas negação e disjunção como conectivos. Mostre isso: usando apenas parênteses, letras sentenciais, negação (\enot) e disjunção (\eor), escreva sentenças logicamente equivalentes a cada uma das seguintes.
+Podemos ter uma linguagem equivalente a LS com apenas negação e disjunção como conectivos. Mostre isso: usando apenas parênteses, letras sentenciais, negação (\enot) e disjunção (\eor), escreva sentenças logicamente equivalentes a cada uma das seguintes.
 % Retomamos o ambiente {earg} e restauramos o contador.
 %...
 \begin{earg}
@@ -421,10 +421,10 @@ O \emph{traço de Sheffer} (Sheffer stroke) é um conectivo lógico com a seguin
 %...
 \begin{earg}
 \setcounter{eargnum}{\arabic{OLDeargnum}}
-\item Escreva uma sentença usando os conectivos de SL que seja logicamente equivalente a $(A|B)$.
+\item Escreva uma sentença usando os conectivos de LS que seja logicamente equivalente a $(A|B)$.
 \end{earg}
 %...
-Toda sentença escrita com um conectivo de SL pode ser reescrita como uma sentença logicamente equivalente usando um ou mais traços de Sheffer. Usando apenas o traço de Sheffer, escreva sentenças equivalentes a cada uma das seguintes. 
+Toda sentença escrita com um conectivo de LS pode ser reescrita como uma sentença logicamente equivalente usando um ou mais traços de Sheffer. Usando apenas o traço de Sheffer, escreva sentenças equivalentes a cada uma das seguintes. 
 %...
 \begin{earg}
 \setcounter{eargnum}{\arabic{OLDeargnum}}
