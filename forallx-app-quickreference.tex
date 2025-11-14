@@ -52,7 +52,7 @@ F & F & F & F & V & V
 \begin{center}
 \label{app.symbolization}
 \begin{tabular*}{\textwidth}{rl}
-\multicolumn{2}{c}{\textsc{Conectivos Sentenciais} (capítulo \ref{ch.LS})}\\ \\
+\multicolumn{2}{c}{\textsc{Conectivos Sentenciais} (capítulo \ref{ch.SL})}\\ \\
 Não é o caso que $P$. & $\enot P$\\
 Ou $P$, ou $Q$. & $(P \eor Q)$\\
 Nem $P$, nem $Q$. & $\enot(P \eor Q)$\ ou \ $(\enot P \eand \enot Q)$\\
@@ -62,7 +62,7 @@ $P$ somente se $Q$. & $(P \eif Q)$\\
 $P$ se e somente se $Q$. & $(P \eiff Q)$\\
 A menos que $P$, $Q$. $P$ a menos que $Q$. & $(P \eor Q)$\\
 \\
-\multicolumn{2}{c}{\label{SymbolizingPredicates}\textsc{Predicados} (capítulo \ref{ch.LQ})}\\ \\
+\multicolumn{2}{c}{\label{SymbolizingPredicates}\textsc{Predicados} (capítulo \ref{ch.QL})}\\ \\
 Todo $F$ é $G$. & $\forall x(Fx \eif Gx)$\\
 Algum $F$ é $G$. & $\exists x(Fx \eand Gx)$\\
 Nem todo $F$ é $G$. & $\enot\forall x(Fx \eif Gx)$\ ou\ $\exists x(Fx \eand \enot Gx)$\\
@@ -288,7 +288,7 @@ Remover $F$ das simbolizações acima produz sentenças que falam sobre o tamanh
 	\open
 		\hypo[m]{a}{\script{A}} \by{para redução ao absurdo}{}
 		\have[n][-1]{b}{\script{B}}
-		\have[nb]{\enot\script{B}}
+		\have{nb}{\enot\script{B}}
 	\close
 	\have[\ ]{na}{\enot\script{A}}\ni{a-nb}
 \end{proof}
@@ -299,7 +299,7 @@ Remover $F$ das simbolizações acima produz sentenças que falam sobre o tamanh
 	\open
 		\hypo[m]{na}{\enot\script{A}} \by{para redução ao absurdo}{}
 		\have[n][-1]{b}{\script{B}}
-		\have[nb]{\enot\script{B}}
+		\have{nb}{\enot\script{B}}
 	\close
 	\have[\ ]{a}{\script{A}}\ne{na-nb}
 \end{proof}
@@ -428,7 +428,7 @@ $\enot\enot\script{A} \Longleftrightarrow \script{A}$
 $(\script{A}\eif\script{B}) \Longleftrightarrow (\enot\script{A}\eor\script{B})$\\
 $(\script{A}\eor\script{B}) \Longleftrightarrow (\enot\script{A}\eif\script{B})$
 
-\textsc{Troca do Bicondicional} (\eiff)\\
+\textsc{Troca do Bicondicional} ({\eiff}{ex})\\
 $[(\script{A}\eif\script{B})\eand(\script{B}\eif\script{A})] \Longleftrightarrow (\script{A}\eiff\script{B})$
 
 \textsc{Negação de Quantificador} (QN)\\
