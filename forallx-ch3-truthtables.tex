@@ -4,11 +4,11 @@
 
 Este capítulo introduz um modo de avaliar sentenças e argumentos de LS. Embora possa ser trabalhoso, o método das tabelas-verdade é um procedimento puramente mecânico, que não exige intuição nem qualquer tipo de "insight" especial.
 
-\section{Conectivos verifuncionais}
+\section{Conectivos verofuncionais}
 
-Qualquer sentença não atômica de LS é composta de sentenças atômicas com conectivos sentenciais. O valor de verdade da sentença composta depende apenas dos valores de verdade das sentenças atômicas que a compõem. Para saber o valor de verdade de $(D\eiff E)$, por exemplo, você só precisa saber o valor de verdade de $D$ e o valor de verdade de $E$. Conectivos que funcionam desse modo são chamados de \define{verifuncionais} (isto é, seu comportamento depende apenas dos valores de verdade das partes).
+Qualquer sentença não atômica de LS é composta de sentenças atômicas com conectivos sentenciais. O valor de verdade da sentença composta depende apenas dos valores de verdade das sentenças atômicas que a compõem. Para saber o valor de verdade de $(D\eiff E)$, por exemplo, você só precisa saber o valor de verdade de $D$ e o valor de verdade de $E$. Conectivos que funcionam desse modo são chamados de \define{verofuncionais} (isto é, seu comportamento depende apenas dos valores de verdade das partes).
 
-Neste capítulo, exploraremos o fato de que todos os operadores lógicos de LS são verifuncionais — isso torna possível construir tabelas-verdade para determinar as propriedades lógicas das sentenças. É importante perceber, porém, que isso não vale para todas as linguagens. Em português (como em inglês), é possível formar uma nova sentença a partir de uma sentença mais simples \script{X} dizendo: "É possível que \script{X}". O valor de verdade dessa nova sentença não depende diretamente do valor de verdade de \script{X}. Mesmo que \script{X} seja falsa, pode ser que, em algum sentido, \script{X} \emph{pudesse} ter sido verdadeira — nesse caso, a nova sentença seria verdadeira. Alguns sistemas formais, chamados de \emph{lógicas modais}, têm um operador para {possibilidade}. Em uma lógica modal, poderíamos traduzir "É possível que \script{X}" como {\large $\diamond$}\script{X}. No entanto, a possibilidade de traduzir sentenças como essa vem com um custo: o operador {\large $\diamond$} não é verifuncional, e por isso lógicas modais não são adequadas para o uso de tabelas-verdade da forma simples que veremos aqui.
+Neste capítulo, exploraremos o fato de que todos os operadores lógicos de LS são verofuncionais — isso torna possível construir tabelas-verdade para determinar as propriedades lógicas das sentenças. É importante perceber, porém, que isso não vale para todas as linguagens. Em português (como em inglês), é possível formar uma nova sentença a partir de uma sentença mais simples \script{X} dizendo: "É possível que \script{X}". O valor de verdade dessa nova sentença não depende diretamente do valor de verdade de \script{X}. Mesmo que \script{X} seja falsa, pode ser que, em algum sentido, \script{X} \emph{pudesse} ter sido verdadeira — nesse caso, a nova sentença seria verdadeira. Alguns sistemas formais, chamados de \emph{lógicas modais}, têm um operador para {possibilidade}. Em uma lógica modal, poderíamos traduzir "É possível que \script{X}" como {\large $\diamond$}\script{X}. No entanto, a possibilidade de traduzir sentenças como essa vem com um custo: o operador {\large $\diamond$} não é verofuncional, e por isso lógicas modais não são adequadas para o uso de tabelas-verdade da forma simples que veremos aqui.
 
 
 \section{Tabelas-verdade completas}
@@ -39,7 +39,7 @@ Aqui estão as tabelas-verdade dos conectivos de LS, escritas em termos de 1s e 
 \label{table.CharacteristicTTs}
 \end{table}
 
-A tabela-verdade característica da conjunção, por exemplo, fornece as condições de verdade de qualquer sentença da forma $(\script{A}\eand\script{B})$. Mesmo que os conjunos \script{A} e \script{B} sejam sentenças longas e complicadas, a conjunção é verdadeira se, e somente se, tanto \script{A} quanto \script{B} forem verdadeiras. Considere a sentença $(H\eand I)\eif H$. Tomamos todas as possíveis combinações de verdadeiro e falso para $H$ e $I$, o que nos dá quatro linhas. Copiamos então os valores de verdade das letras sentenciais e os escrevemos under as letras na sentença.
+A tabela-verdade característica da conjunção, por exemplo, fornece as condições de verdade de qualquer sentença da forma $(\script{A}\eand\script{B})$. Mesmo que as conjunções \script{A} e \script{B} sejam sentenças longas e complicadas, a conjunção é verdadeira se, e somente se, tanto \script{A} quanto \script{B} forem verdadeiras. Considere a sentença $(H\eand I)\eif H$. Tomamos todas as possíveis combinações de verdadeiro e falso para $H$ e $I$, o que nos dá quatro linhas. Copiamos então os valores de verdade das letras sentenciais e os escrevemos sob as letras na sentença.
 \begin{center}
 \begin{tabular}{c|c|@{\TTon}*{5}{c}@{\TToff}}
 $H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
@@ -50,7 +50,7 @@ $H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
  0 & 0 & \TTbf{0} & & \TTbf{0} & & \TTbf{0}
 \end{tabular}
 \end{center}
-Agora considere a subsentença $H\eand I$. Ela é uma conjunção \script{A}\eand\script{B} em que $H$ faz o papel de \script{A} e $I$ faz o papel de \script{B}. $H$ e $I$ são ambas verdadeiras na primeira linha. Como uma conjunção é verdadeira quando ambos os conjunos são verdadeiros, escrevemos 1 under o símbolo de conjunção. Continuamos para as outras três linhas e obtemos:
+Agora considere a subsentença $H\eand I$. Ela é uma conjunção \script{A}\eand\script{B} em que $H$ faz o papel de \script{A} e $I$ faz o papel de \script{B}. $H$ e $I$ são ambas verdadeiras na primeira linha. Como uma conjunção é verdadeira quando ambos os conjunos são verdadeiros, escrevemos 1 sob o símbolo de conjunção. Continuamos para as outras três linhas e obtemos:
 \begin{center}
 \begin{tabular}{c|c|@{\TTon}*{5}{c}@{\TToff}}
 $H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
@@ -62,7 +62,7 @@ $H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
  0 & 0 & 0 & \TTbf{0} & 0 & & 0
 \end{tabular}
 \end{center}
-A sentença inteira é um condicional \script{A}\eif\script{B}, em que $(H \eand I)$ é \script{A} e $H$ é \script{B}. Na segunda linha, por exemplo, $(H\eand I)$ é falsa e $H$ é verdadeira. Como um condicional é verdadeiro quando o antecedente é falso, escrevemos 1 na segunda linha under o símbolo do condicional. Fazemos isso para as demais linhas e obtemos:
+A sentença inteira é um condicional \script{A}\eif\script{B}, em que $(H \eand I)$ é \script{A} e $H$ é \script{B}. Na segunda linha, por exemplo, $(H\eand I)$ é falsa e $H$ é verdadeira. Como um condicional é verdadeiro quando o antecedente é falso, escrevemos 1 na segunda linha sob o símbolo do condicional. Fazemos isso para as demais linhas e obtemos:
 \begin{center}
 \begin{tabular}{c|c|@{\TTon}*{5}{c}@{\TToff}}
 $H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
@@ -74,7 +74,7 @@ $H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
  0 & 0 &  & {0} &  &\TTbf{1} & 0
 \end{tabular}
 \end{center}
-A coluna de 1s under o condicional nos mostra que a sentença \mbox{$(H \eand I)\eif I$} é verdadeira independentemente dos valores de verdade de $H$ e $I$. Eles podem ser verdadeiros ou falsos em qualquer combinação e, ainda assim, a sentença composta sai verdadeira. É crucial que tenhamos considerado todas as combinações possíveis. Se tivéssemos apenas uma tabela de duas linhas, não poderíamos ter certeza de que a sentença não seria falsa em alguma outra combinação de valores de verdade.
+A coluna de 1s sob o condicional nos mostra que a sentença \mbox{$(H \eand I)\eif I$} é verdadeira independentemente dos valores de verdade de $H$ e $I$. Eles podem ser verdadeiros ou falsos em qualquer combinação e, ainda assim, a sentença composta sai verdadeira. É crucial que tenhamos considerado todas as combinações possíveis. Se tivéssemos apenas uma tabela de duas linhas, não poderíamos ter certeza de que a sentença não seria falsa em alguma outra combinação de valores de verdade.
 
 Neste exemplo, não repetimos todas as entradas em cada tabela sucessiva. Mas, quando realmente escrevemos tabelas-verdade no papel, é impraticável apagar colunas inteiras ou reescrever a tabela toda a cada passo. Embora fique mais "apertado", a tabela-verdade pode ser escrita assim:
 \begin{center}
@@ -87,7 +87,7 @@ $H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
  0 & 0 & 0 & {0} & 0 & 1 & 0
 \end{tabular}
 \end{center}
-A maior parte das colunas under a sentença está ali apenas para "controle de contas". Quando você ficar mais à vontade com tabelas-verdade, provavelmente não precisará mais copiar as colunas de cada letra sentencial. De todo modo, o valor de verdade da sentença em cada linha é apenas o valor na coluna under o conectivo lógico principal da sentença; neste caso, a coluna under o condicional.
+A maior parte das colunas sob a sentença está ali apenas para "controle de contas". Quando você ficar mais à vontade com tabelas-verdade, provavelmente não precisará mais copiar as colunas de cada letra sentencial. De todo modo, o valor de verdade da sentença em cada linha é apenas o valor na coluna sob o conectivo lógico principal da sentença; neste caso, a coluna sob o condicional.
 
 Uma \define{tabela-verdade completa} tem uma linha para cada combinação possível de 1 e 0 para todas as letras sentenciais envolvidas. O tamanho da tabela-verdade completa depende do número de letras sentenciais diferentes na sentença. Uma sentença que contém apenas uma letra sentencial exige apenas duas linhas, como na tabela característica da negação. Isso continua valendo mesmo que a mesma letra apareça muitas vezes, como na sentença
 $[(C\eiff C) \eif C] \eand \enot(C \eif C)$.
