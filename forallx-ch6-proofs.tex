@@ -65,7 +65,7 @@ Todas as regras introduzidas neste capítulo são resumidas a partir da p.~\page
 Pense por um momento: O que você precisaria mostrar para provar $E \eand F$?
 
 Claro, você poderia mostrar $E \eand F$ provando $E$ e separadamente provando $F$. 
-Isso vale mesmo se os dois conjunctos não forem sentenças atômicas. Se você pode provar $[(A \eor J) \eif V]$ e  $[(V \eif L) \eiff (F \eor N)]$, então você efetivamente provou
+Isso é válido mesmo que as duas conjunções não sejam sentenças atômicas. Se você pode provar $[(A \eor J) \eif V]$ e  $[(V \eif L) \eiff (F \eor N)]$, então você efetivamente provou
 $$[(A \eor J) \eif V] \eand [(V \eif L) \eiff (F \eor N)].$$
 Então esta será nossa regra de introdução da conjunção, que abreviamos {\eand}I:
 
@@ -130,7 +130,7 @@ Se $M$ fosse verdadeira, então $M \eor N$ também seria verdadeira. Então a re
 	\have[\ ]{ba}{\script{B}\eor\script{A}}\oi{a}
 \end{proof}
 
-Note que \script{B} pode ser \emph{qualquer} sentença whatsoever. Então o seguinte é uma prova legítima:
+Note que \script{B} pode ser \emph{qualquer} sentença, sem qualquer restrição. Então o seguinte é uma prova legítima:
 
 \begin{proof}
 	\hypo{m}{M}
@@ -759,7 +759,7 @@ No entanto, é sempre verdade que $a=a$. Em geral, nenhuma premissa é necessár
 
 Note que a regra {=}I não requer referência a nenhuma linha anterior da prova. Para qualquer constante \script{c}, você pode escrever $\script{c}=\script{c}$ em qualquer ponto com apenas a regra {=}I como justificação.
 
-Se você mostrou que $a=b$, então anything that is true of $a$ must also be true of $b$. Para qualquer sentença com $a$ nela, você pode substituir algumas ou todas as ocorrências de $a$ por $b$ e produzir uma sentença equivalente. Por exemplo, se você já sabe $Raa$, então você está justificado em concluir $Rab$, $Rba$, $Rbb$.
+Se você mostrou que $a=b$, então tudo o que for verdadeiro a respeito de $a$ também deve ser verdadeiro a respeito de $b$. Para qualquer sentença com $a$ nela, você pode substituir algumas ou todas as ocorrências de $a$ por $b$ e produzir uma sentença equivalente. Por exemplo, se você já sabe $Raa$, então você está justificado em concluir $Rab$, $Rba$, $Rbb$.
 
 
 A regra de eliminação da identidade ({=}E) nos permite fazer isso. Ela justifica substituir termos por outros termos que são idênticos a ele.
@@ -880,7 +880,7 @@ Quando escrevemos $\{\script{A}_1,\script{A}_2,\ldots\}\vdash\script{B}$, isso s
 
 Frequentemente, provas lógicas são chamadas de \emph{derivações}. Então $\script{A}\vdash\script{B}$ pode ser lido como `\script{B} é derivável de \script{A}.'
 
-Um \define{teorema} é uma sentença que é derivável sem any premissas; i.e., \script{T} é um teorema se e somente se $\vdash\script{T}$.
+Um \define{teorema} é uma sentença que é derivável sem sem premissas; i.e., \script{T} é um teorema se e somente se $\vdash\script{T}$.
 
 Não é muito difícil mostrar que algo é um teorema--- você apenas tem que dar uma prova disso. Como você poderia mostrar que algo \emph{não} é um teorema? Se sua negação é um teorema, então você poderia fornecer uma prova. Por exemplo, é fácil provar $\enot(Pa \eand \enot Pa)$, o que mostra que $(Pa \eand \enot Pa)$ não pode ser um teorema. Para uma sentença que não é nem um teorema nem a negação de um teorema, no entanto, não há uma maneira fácil de mostrar isso. Você teria que demonstrar não apenas que certas estratégias de prova falham, mas que nenhuma prova é possível. Mesmo se você falhar em tentar provar uma sentença de mil maneiras diferentes, talvez a prova seja apenas longa e complexa demais para você discernir.
 
@@ -963,7 +963,7 @@ Felizmente, há uma maneira de abordar isso de forma step-wise. Se usar a regra 
 
 A estratégia é mostrar para toda regra de inferência que ela sozinha não poderia tornar um argumento válido em inválido. Segue que as regras usadas em combinação não tornariam um argumento válido inválido. Como uma prova é apenas uma série de linhas, cada uma justificada por uma regra de inferência, isso mostraria que todo argumento provável é válido.
 
-Considere, por exemplo, a regra {\eand}I. Suponha que a usemos para adicionar \script{A}\eand\script{B} a um argumento válido. Para que a regra se aplique, \script{A} e \script{B} já devem estar disponíveis na prova. Como o argumento até agora é válido, \script{A} e \script{B} são ou premissas do argumento ou consequências válidas das premissas. Como tal, any model in which the premises are true must be a model in which \script{A} and \script{B} are true. De acordo com a definição de \define{verdade em LQ}, isso significa que \script{A}\eand\script{B} também é verdadeiro em tal modelo. Portanto, \script{A}\eand\script{B} segue validamente das premissas. Isso significa que usar a regra {\eand}E para estender uma prova válida produz outra prova válida.
+Considere, por exemplo, a regra {\eand}I. Suponha que a usemos para adicionar \script{A}\eand\script{B} a um argumento válido. Para que a regra seja aplicável, \script{A} e \script{B} já devem estar disponíveis na prova. Uma vez que o argumento até agora é válido, \script{A} e \script{B} são ou premissas do argumento ou consequências válidas das premissas. Como tal, qualquer modelo no qual as premissas são verdadeiras deve ser um modelo no qual \script{A} e \script{B} são verdadeiros. De acordo com a definição de \define{verdade em QL}, isso significa que \script{A}\eand\script{B} também é verdadeiro em tal modelo. Portanto, \script{A}\eand\script{B} segue validamente das premissas. Isso significa que usar a regra {\eand}E para estender uma prova válida produz outra prova válida.
 
 Para mostrar que o sistema de prova é correto, precisaríamos mostrar isso para as outras regras de inferência. Como as regras derivadas são consequências das regras básicas, seria suficiente fornecer argumentos similares para as outras 16 regras básicas. Este exercício tedioso está além do escopo deste livro.
 
