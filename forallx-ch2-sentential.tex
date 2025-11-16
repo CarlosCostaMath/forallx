@@ -60,7 +60,7 @@ Conectivos lógicos são usados para construir sentenças complexas a partir de 
 símbolo&como é chamado&o que significa\\
 \hline
 \enot&negação&`Não é o caso que$\ldots$'\\
-\eand&conjunção&`Tanto$\ldots$\ quanto $\ldots$'\\
+\eand&conjunção&`Tanto$\ldots$\ e $\ldots$'\\
 \eor&disjunção&`Ou$\ldots$\ ou $\ldots$'\\
 \eif&condicional&`Se $\ldots$\ então $\ldots$'\\
 \eiff&bicondicional&`$\ldots$ se e somente se $\ldots$'\\
@@ -301,7 +301,7 @@ O condicional é \emph{assimétrico}. Não podemos trocar antecedente e conseque
 Nem todas as sentenças da forma `Se$\ldots$ então$\ldots$' são condicionais reais. Considere esta sentença:
 
 \begin{earg}
-\item[\ex{if5}] Se alguém quiser me ver, eu estarei na varanda.
+\item[\ex{if5}] Se alguém quiser me ver, estarei na varanda.\footnote{Em português, assim como no inglês original, esta construção condicional é frequentemente usada para expressar uma declaração incondicional sobre onde a pessoa estará, daí ser traduzida simplesmente como $P$.}
 \end{earg}
 
 Se eu digo isso, quero dizer que vou estar na varanda, independentemente de alguém querer me ver ou não — mas, se alguém quiser me ver, deve me procurar lá. Se deixarmos $P$ significar `Eu estarei na varanda', então \ref{if5} pode ser traduzida simplesmente como $P$.
@@ -361,7 +361,7 @@ A sentença \ref{unless2}, em português, é logicamente equivalente à \ref{unl
 Ao simbolizar sentenças como \ref{unless1} e \ref{unless2}, é fácil se confundir. Como o condicional não é simétrico, seria errado traduzir qualquer uma delas como $J \eif \enot D$. Felizmente, há outras expressões logicamente equivalentes. Ambas as sentenças significam que você vai vestir um casaco ou — se não vestir um casaco — então vai pegar um resfriado. Assim, podemos traduzi-las como $J \eor D$. (Você poderia achar que o `ou' aqui deveria ser exclusivo. No entanto, as sentenças não excluem a possibilidade de que você \emph{vista} um casaco \emph{e ainda assim} pegue um resfriado; casacos não protegem contra todas as formas possíveis de pegar um resfriado.)
 
 \factoidbox{
-Se uma sentença puder ser parafraseada como `A menos que \script{A}, \script{B}', então ela pode ser simbolizada como $\script{A}\eor\script{B}$.
+Se uma sentença pode ser parafraseada como `A menos que \script{A}, \script{B}', então ela pode ser simbolizada como $\script{A}\eor\script{B}$ ou $\enot \script{A} \eif \script{B}$.
 }
 
 A simbolização de tipos padrão de sentença é resumida na p.~\pageref{app.symbolization}.
@@ -462,7 +462,7 @@ Se tivéssemos dado uma definição diferente de wff, poderíamos fazer com que 
 \problempart Usando a chave de simbolização dada, traduza cada sentença em português para LS.
 \label{pr.monkeysuits}
 \begin{ekey}
-\item[M:] Aqueles seres são homens fantasiados.
+\item[M:] Aqueles seres são pessoas disfarçadas.
 \item[C:] Aqueles seres são chimpanzés.
 \item[G:] Aqueles seres são gorilas.
 \end{ekey}
