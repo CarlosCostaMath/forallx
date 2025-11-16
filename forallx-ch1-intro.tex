@@ -2,7 +2,7 @@
 \chapter{O que é lógica?}
 \label{ch.intro}
 
-A lógica é o ramo que estuda a avaliação de argumentos, separando os bons dos ruins. Na linguagem do dia a dia, às vezes usamos a palavra 'argumento' para nos referir a brigas barulhentas e cheias de hostilidade. Se você e uma amiga têm um argumento nesse sentido, as coisas não vão bem entre vocês.
+A lógica é o ramo que estuda a avaliação de argumentos, separando os bons dos ruins. Na linguagem do dia a dia, às vezes usamos a palavra 'argumento' para nos referir a brigas barulhentas e cheias de hostilidade. Se você e uma amigo têm um argumento nesse sentido, as coisas não vão bem entre vocês.
 
 Em lógica, não estamos interessados nesse tipo de argumento com gritos e puxões de cabelos. Um argumento lógico é estruturado para dar a alguém uma razão para acreditar em uma certa conclusão. Eis um exemplo de argumento:
 
@@ -22,7 +22,7 @@ Quando as pessoas querem apresentar argumentos, elas frequentemente usam palavra
 
 \begin{description}
 \item[indicadores de premissa:] já que, porque, dado que
-\item[indicadores de conclusão:] portanto, logo, assim, então
+\item[indicadores de conclusão:] portanto, logo, assim, então, \textbf{por isso}
 \end{description}
 
 Para sermos perfeitamente gerais, podemos definir um \define{argumento} como uma sequência de sentenças. As sentenças no início da sequência são as premissas. A última sentença da sequência é a conclusão. Se as premissas forem verdadeiras e o argumento for bom, então você tem uma razão para aceitar a conclusão.
@@ -58,7 +58,7 @@ Suponha, por um momento, que ambas as premissas sejam verdadeiras. Você não te
 
 Para qualquer argumento, há duas maneiras pelas quais ele pode ser fraco. Primeiro, uma ou mais premissas podem ser falsas. Um argumento só lhe dá razão para acreditar na conclusão se você aceitar as premissas. Segundo, as premissas podem falhar em apoiar a conclusão. Mesmo que as premissas sejam verdadeiras, a forma do argumento pode ser fraca. O exemplo que acabamos de considerar é fraco nos dois sentidos.
 
-Quando um argumento é fraco no segundo sentido, há algo errado com a \emph{forma lógica} do argumento: premissas desse tipo não levam necessariamente a uma conclusão desse tipo. Estaremos interessados principalmente na forma lógica dos argumentos.
+Quando um argumento é fraco no segundo sentido, há algo errado com a \emph{forma lógica}\footnote{A 'forma lógica' é a estrutura subjacente de um argumento ou sentença, abstraindo-se do conteúdo específico das palavras.} do argumento: premissas desse tipo não levam necessariamente a uma conclusão desse tipo. Estaremos interessados principalmente na forma lógica dos argumentos.
 
 Considere outro exemplo:
 \begin{earg}
@@ -162,10 +162,10 @@ Se um conjunto de sentenças não puder ser verdadeiro em sua totalidade, como B
 Podemos perguntar sobre a consistência de qualquer quantidade de sentenças. Por exemplo, considere a seguinte lista:
 \label{MartianGiraffes}
 \begin{ekey}
-\item[G1] Há pelo menos quatro girafas no parque de animais selvagens.
-\item[G2] Há exatamente sete gorilas no parque de animais selvagens.
-\item[G3] Não há mais do que dois marcianos no parque de animais selvagens.
-\item[G4] Toda girafa no parque de animais selvagens é marciana.
+\item[G1] Há pelo menos quatro girafas na reserva de animais selvagens.
+\item[G2] Há exatamente sete gorilas na reserva de animais selvagens.
+\item[G3] Não há mais do que dois marcianos na reserva de animais selvagens.
+\item[G4] Toda girafa na reserva de animais selvagens é marciana.
 \end{ekey}
 G1 e G4, juntas, implicam que há pelo menos quatro girafas marcianas no parque. Isso entra em conflito com G3, que implica que não há mais do que duas girafas marcianas lá. Então o conjunto de sentenças G1--G4 é inconsistente. Note que a inconsistência não tem nada a ver com G2. G2 apenas acaba fazendo parte de um conjunto inconsistente.
 
@@ -205,7 +205,7 @@ Existem linguagens formais que funcionam de modo semelhante à simbolização qu
 
 Na lógica aristotélica, categorias são representadas por letras maiúsculas. Cada sentença de um argumento é então representada como tendo uma das quatro formas, que os lógicos medievais nomearam assim: (A) Todos os $A$s são $B$s. (E) Nenhum $A$ é $B$. (I) Algum $A$ é $B$. (O) Algum $A$ não é $B$.
 
-Isso permite descrever \emph{silogismos} válidos, isto é, argumentos de três linhas como os dois que consideramos acima. Lógicos medievais deram nomes mnemônicos a todas as formas de argumento válidas. A forma dos nossos dois argumentos, por exemplo, era chamada de \emph{Barbara}. As vogais no nome, todas As, indicam que as duas premissas e a conclusão são sentenças da forma (A).
+Isso permite descrever \emph{silogismos} válidos, isto é, argumentos de três linhas como os dois que consideramos acima. Lógicos medievais deram nomes mnemônicos a todas as formas de argumento válidas. A forma dos nossos dois argumentos, por exemplo, era chamada de \emph{Barbara}\footnote{Os nomes mnemônicos usavam vogais para indicar o tipo de proposição: A, E, I, O. "Barbara" tem três 'A's, indicando que todas as proposições são do tipo A ("Todos... são...").}. As vogais no nome, todas As, indicam que as duas premissas e a conclusão são sentenças da forma (A).
 
 Existem muitas limitações na lógica aristotélica. Uma delas é que ela não distingue claramente entre tipos (espécies, classes) e indivíduos. Assim, a primeira premissa poderia ser escrita igualmente como ``Todos os $S$s são $M$s'': todos os Sócrates\footnote{Aqui usamos o nome próprio no plural de forma intencional, tratando “Sócrates” como se fosse uma categoria de indivíduos, para ilustrar uma limitação da lógica aristotélica em distinguir indivíduos de tipos.} são homens. Apesar de sua importância histórica, a lógica aristotélica foi superada. O restante deste livro desenvolverá duas linguagens formais.
 
@@ -262,7 +262,7 @@ Quais das sentenças a seguir são 'sentenças' no sentido lógico?
 \label{pr.EnglishTautology}
 Para cada uma das sentenças a seguir: ela é uma tautologia, uma contradição ou uma sentença contingente?
 \begin{earg}
-\item César atravessou o Rubicão.
+\item César atravessou o Rubicão\footnote{"Atravessar o Rubicão" é uma expressão que significa tomar uma decisão irreversível, originada do ato de Júlio César em 49 a.C. No contexto lógico, interessa apenas a estrutura da sentença.}.
 \item Alguém já atravessou o Rubicão.
 \item Ninguém jamais atravessou o Rubicão.
 \item Se César atravessou o Rubicão, então alguém o atravessou.
