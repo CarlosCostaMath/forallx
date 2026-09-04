@@ -290,37 +290,37 @@ Suponha que queiramos mostrar que $\forall xAxx \eif Bd$ \emph{não} é uma taut
 
 Como seria tal modelo? Para que $\forall xAxx \eif Bd$ seja falsa, o antecedente ($\forall x Axx$) deve ser verdadeiro, e o consequente ($Bd$) deve ser falso.
 
-Para construir tal modelo, começamos com um UD. Será mais fácil especificar extensões para predicados se tivermos um UD pequeno, então comece com um UD que tem apenas um membro. Formalmente, este único membro pode ser qualquer coisa. Digamos que é a cidade de Paris.
+Para construir tal modelo, começamos com um UD. Será mais fácil especificar extensões para predicados se tivermos um UD pequeno, então comece com um UD que tem apenas um membro. Formalmente, este único membro pode ser qualquer coisa. Digamos que é a cidade de Maceió.
 
-Queremos que $\forall x Axx$ seja verdadeiro, então queremos que todos os membros do UD sejam pareados com eles mesmos na extensão de $A$; isso significa que a extensão de $A$ deve ser \{\ntuple{Paris,Paris}\}.
+Queremos que $\forall x Axx$ seja verdadeiro, então queremos que todos os membros do UD sejam pareados com eles mesmos na extensão de $A$; isso significa que a extensão de $A$ deve ser \{\ntuple{Maceió,Maceió}\}.
 
 Queremos que $Bd$ seja falso, então o referente de $d$ não deve estar na extensão de $B$. Damos a $B$ uma extensão vazia.
 
-Como Paris é o único membro do UD, deve ser o referente de $d$. O modelo que construímos se parece com isto:
+Como Maceió é o único membro do UD, deve ser o referente de $d$. O modelo que construímos se parece com isto:
 \begin{partialmodel}
-	UD			& \{Paris\}\\
-	\extension{A} 	& \{\ntuple{Paris,Paris}\}\\
+	UD			& \{Maceió\}\\
+	\extension{A} 	& \{\ntuple{Maceió,Maceió}\}\\
 	\extension{B}	& $\emptyset$\\
-	\referent{d}	& Paris
+	\referent{d}	& Maceió
 \end{partialmodel}
 
 Estritamente falando, um modelo especifica uma extensão para \emph{cada} predicado de LQ e um referente para \emph{cada} constante. Como tal, geralmente é impossível escrever um modelo completo. Isso exigiria escrever infinitas extensões e infinitos referentes. No entanto, não precisamos considerar todos os predicados para mostrar que há modelos nos quais $\forall xAxx \eif Bd$ é falsa. Predicados como $H$ e constantes como $f_{13}$ não fazem diferença para a verdade ou falsidade desta sentença. É suficiente especificar extensões para $A$ e $B$ e um referente para $d$, como fizemos. Isso fornece um \emph{modelo parcial} no qual a sentença é falsa.
 
 Talvez você esteja se perguntando: O que o predicado $A$ significa em português? O modelo parcial poderia corresponder a uma interpretação como esta:
 \begin{ekey}
-\item[UD:] Paris
+\item[UD:] Maceió
 \item[$Axy$:] $x$ está no mesmo país que $y$.
 \item[$Bx$:] $x$ foi fundada no século 20.
-\item[$d$:] a Cidade das Luzes
+\item[$d$:] a capital de Alagoas
 \end{ekey}
-No entanto, tudo o que o modelo parcial nos diz é que $A$ é um predicado que é verdadeiro de Paris e Paris. Há infinitos predicados em português que têm esta extensão. $Axy$ poderia, em vez disso, traduzir '$x$ tem o mesmo tamanho que $y$' ou '$x$ e $y$ são ambas cidades.' Da mesma forma, $Bx$ é algum predicado que não se aplica a Paris; poderia, em vez disso, traduzir '$x$ está em uma ilha' ou '$x$ é um carro subcompacto.' Quando especificamos as extensões de $A$ e $B$, não especificamos quais predicados em português $A$ e $B$ deveriam ser usados para traduzir. Estamos preocupados com se $\forall xAxx \eif Bd$ resulta verdadeira ou falsa, e tudo o que importa para verdade e falsidade em LQ é a informação no modelo: o UD, as extensões dos predicados e os referentes das constantes.
+No entanto, tudo o que o modelo parcial nos diz é que $A$ é um predicado que é verdadeiro de Maceió e Maceió. Há infinitos predicados em português que têm esta extensão. $Axy$ poderia, em vez disso, traduzir '$x$ tem o mesmo tamanho que $y$' ou '$x$ e $y$ são ambas cidades.' Da mesma forma, $Bx$ é algum predicado que não se aplica a Maceió; poderia, em vez disso, traduzir '$x$ está em uma ilha' ou '$x$ é um carro subcompacto.' Quando especificamos as extensões de $A$ e $B$, não especificamos quais predicados em português $A$ e $B$ deveriam ser usados para traduzir. Estamos preocupados com se $\forall xAxx \eif Bd$ resulta verdadeira ou falsa, e tudo o que importa para verdade e falsidade em LQ é a informação no modelo: o UD, as extensões dos predicados e os referentes das constantes.
 
 Podemos igualmente facilmente mostrar que $\forall xAxx \eif Bd$ não é uma contradição. Precisamos apenas especificar um modelo no qual $\forall xAxx \eif Bd$ é verdadeira; ou seja, um modelo no qual ou $\forall x Axx$ é falso ou $Bd$ é verdadeiro. Aqui está um modelo parcial:
 \begin{partialmodel}
-	UD			& \{Paris\}\\
-	\extension{A} 	& \{\ntuple{Paris,Paris}\}\\
-	\extension{B}	& \{Paris\}\\
-	\referent{d}	& Paris
+	UD			& \{Maceió\}\\
+	\extension{A} 	& \{\ntuple{Maceió,Maceió}\}\\
+	\extension{B}	& \{Maceió\}\\
+	\referent{d}	& Maceió
 \end{partialmodel}
 
 Agora mostramos que $\forall xAxx \eif Bd$ não é nem uma tautologia nem uma contradição. Pela definição de 'contingente em LQ', isso significa que 
@@ -423,7 +423,7 @@ A fórmula $Px$ é satisfeita em um modelo \model{M} por uma atribuição de var
 
 Quando $\forall x Px$ é satisfeita? Não é suficiente se $Px$ é satisfeita em \model{M} por $a$, porque isso apenas significa que $a(x)$ está em \extension{P}. $\forall x Px$ requer que todos os outros membros do UD estejam em \extension{P} também.
 
-Então precisamos de um pouco mais de notação técnica: Para qualquer membro $\Omega$ do UD e qualquer variável \script{x}, seja $a[\Omega|\script{x}]$ a atribuição de variável que atribui $\Omega$ a \script{x} mas concorda com $a$ em todos os outros aspectos. Usamos $\Omega$, a letra grega Ômega, para enfatizar que é algum membro do UD e não algum símbolo de LQ. Suponha, por exemplo, que o UD é presidentes dos Estados Unidos. A função $a[\mbox{Grover Cleveland}|x]$ atribui Grover Cleveland à variável $x$, independentemente do que $a$ atribui a $x$; para qualquer outra variável, $a[\mbox{Grover Cleveland}|x]$ concorda com $a$.
+Então precisamos de um pouco mais de notação técnica: Para qualquer membro $\Omega$ do UD e qualquer variável \script{x}, seja $a[\Omega|\script{x}]$ a atribuição de variável que atribui $\Omega$ a \script{x} mas concorda com $a$ em todos os outros aspectos. Usamos $\Omega$, a letra grega Ômega, para enfatizar que é algum membro do UD e não algum símbolo de LQ. Suponha, por exemplo, que o UD é o conjunto das capitais brasileiras. A função $a[\mbox{Maceió}|x]$ atribui Maceió à variável $x$, independentemente do que $a$ atribui a $x$; para qualquer outra variável, $a[\mbox{Maceió}|x]$ concorda com $a$.
 
 Agora podemos dizer concisamente que $\forall x Px$ é satisfeita em um modelo \model{M} por uma atribuição de variável $a$ se e somente se, para todo objeto $\Omega$ no UD de \model{M}, $Px$ é satisfeita em \model{M} por $a[\Omega|x]$.
 

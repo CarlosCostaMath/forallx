@@ -6,7 +6,7 @@ Este capítulo introduz uma linguagem lógica chamada LQ. Ela é uma versão de 
 
 
 \section{Das sentenças aos predicados}
-Considere o seguinte argumento, que é obviamente válido em inglês:
+Considere o seguinte argumento, que é obviamente válido em português:
 \begin{quote}
 Se todo mundo conhece lógica, então ou ninguém ficará confuso ou todo mundo ficará. Todo mundo ficará confuso somente se tentarmos acreditar em uma contradição. Esta é uma aula de lógica, então todo mundo conhece lógica.\\
 \therefore\ Se não tentarmos acreditar em uma contradição, então ninguém ficará confuso.
@@ -20,7 +20,7 @@ Para simbolizar esse argumento em LS, vamos precisar de uma chave de simbolizaç
 \end{ekey}
 Note que $N$ e $E$ tratam ambos de pessoas estarem confusas, mas são duas letras sentenciais diferentes. Não podemos substituir $E$ por $\enot N$. Por quê? $\enot N$ significa `Não é o caso que ninguém ficará confuso.' Isso seria verdadeiro se ao menos uma pessoa ficasse confusa, o que está bem longe de dizer que \emph{todo mundo} ficará confuso.
 
-Uma vez que usamos letras sentenciais separadas para $N$ e $E$, apagamos qualquer conexão entre as duas. Elas passam a ser apenas duas sentenças atômicas que podem ser verdadeiras ou falsas de maneira independente. Em inglês, é impossível que ao mesmo tempo ninguém e todo mundo esteja confuso. Como sentenças de LS, porém, existe uma atribuição de valores de verdade para a qual $N$ e $E$ são ambas verdadeiras.
+Uma vez que usamos letras sentenciais separadas para $N$ e $E$, apagamos qualquer conexão entre as duas. Elas passam a ser apenas duas sentenças atômicas que podem ser verdadeiras ou falsas de maneira independente. Em português, é impossível que ao mesmo tempo ninguém e todo mundo esteja confuso. Como sentenças de LS, porém, existe uma atribuição de valores de verdade para a qual $N$ e $E$ são ambas verdadeiras.
 
 Expressões como `ninguém', `todo mundo' e `alguém' são chamadas de \emph{quantificadores}. Ao traduzir $N$ e $E$ como sentenças atômicas separadas, deixamos de fora a \emph{estrutura quantificacional} das sentenças. Felizmente, a estrutura quantificacional não é o que torna esse argumento válido. Portanto, podemos ignorá-la com segurança. Para ver isso, traduzimos o argumento para LS:
 \begin{earg}
@@ -31,7 +31,7 @@ Expressões como `ninguém', `todo mundo' e `alguém' são chamadas de \emph{qua
 \end{earg}
 Esse é um argumento válido em LS. (Você pode fazer uma tabela-verdade para verificar.)
 
-Agora considere outro argumento. Este também é válido em inglês.
+Agora considere outro argumento. Este também é válido em português.
 
 \begin{quote}
 \label{willard1}
@@ -53,13 +53,13 @@ Agora simbolizamos o argumento:
 \item[\therefore] $F$
 \end{earg}
 
-Esse argumento é \emph{inválido} em LS. (Novamente, você pode confirmar isso com uma tabela-verdade.) Há algo de muito errado aqui, porque em inglês esse é claramente um argumento válido. A simbolização em LS deixou de fora toda a estrutura importante. Mais uma vez, a tradução para LS ignora a estrutura quantificacional: a sentença `Todos os lógicos usam chapéus engraçados' fala tanto de lógicos quanto do fato de usar chapéus engraçados. Ao não traduzir essa estrutura, perdemos a conexão entre o fato de Willard ser lógico e o fato de Willard usar chapéu.
+Esse argumento é \emph{inválido} em LS. (Novamente, você pode confirmar isso com uma tabela-verdade.) Há algo de muito errado aqui, porque em português esse é claramente um argumento válido. A simbolização em LS deixou de fora toda a estrutura importante. Mais uma vez, a tradução para LS ignora a estrutura quantificacional: a sentença `Todos os lógicos usam chapéus engraçados' fala tanto de lógicos quanto do fato de usar chapéus engraçados. Ao não traduzir essa estrutura, perdemos a conexão entre o fato de Willard ser lógico e o fato de Willard usar chapéu.
 
 Alguns argumentos com estrutura quantificacional podem ser capturados em LS, como o primeiro exemplo, mesmo que LS ignore essa estrutura. Outros argumentos são completamente estragados em LS, como o segundo exemplo. Note que o problema não é termos cometido algum erro ao simbolizar o segundo argumento. Essas são as melhores simbolizações que podemos dar para esses argumentos \emph{em LS}.
 
 De modo geral, se um argumento que contém quantificadores sai \emph{válido em LS}, então o argumento em linguagem natural é válido. Se o argumento sai \emph{inválido em LS}, então não podemos concluir que o argumento em linguagem natural seja inválido. Ele pode ser válido por causa de uma estrutura quantificacional que o argumento em linguagem natural tem e que o argumento em LS não tem.
 
-De forma semelhante, se uma sentença com quantificadores sai como uma \emph{tautologia em LS}, então a sentença em inglês é logicamente verdadeira. Se ela sai como \emph{contingente em LS}, isso pode ser devido à estrutura quantificacional que é perdida quando traduzimos para a linguagem formal.
+De forma semelhante, se uma sentença com quantificadores sai como uma \emph{tautologia em LS}, então a sentença em português é logicamente verdadeira. Se ela sai como \emph{contingente em LS}, isso pode ser devido à estrutura quantificacional que é perdida quando traduzimos para a linguagem formal.
 
 Para simbolizar argumentos que dependem da estrutura quantificacional, precisamos desenvolver uma linguagem lógica diferente. Chamaremos essa linguagem de lógica quantificada, LQ.
 
@@ -76,22 +76,22 @@ Isso virá mais adiante. Começaremos definindo termos singulares e predicados.
 
 
 \subsection{Termos singulares}
-Em inglês, um \define{termo singular} é uma palavra ou expressão que se refere a uma pessoa, lugar ou coisa \emph{específica}. A palavra `cachorro' não é um termo singular, porque há muitos cachorros. A expressão `o cachorro Bertie do Philip' é um termo singular, porque se refere a um terrierzinho específico.
+Em português, um \define{termo singular} é uma palavra ou expressão que se refere a uma pessoa, lugar ou coisa \emph{específica}. A palavra `cachorro' não é um termo singular, porque há muitos cachorros. A expressão `o cachorro Bertie do Philip' é um termo singular, porque se refere a um terrierzinho específico.
 
 Um \define{nome próprio} é um termo singular que seleciona um indivíduo sem descrevê-lo. O nome `Emerson' é um nome próprio, e o nome, por si só, não diz nada sobre Emerson. Claro, alguns nomes são tradicionalmente dados a meninos e outros, a meninas. Se `Jack Hathaway' é usado como termo singular, você pode supor que se refere a um homem. No entanto, o nome não significa necessariamente que a pessoa referida seja um homem — ou mesmo que a criatura referida seja uma pessoa. Jack poderia ser uma girafa, e você não teria como saber isso apenas pelo nome. Há muita discussão filosófica em torno dessa questão, mas o ponto importante aqui é que um nome é um termo singular porque seleciona um único indivíduo específico.
 
-Outros termos singulares transmitem de modo mais óbvio informações sobre aquilo a que se referem. Por exemplo, você pode saber, sem que lhe digam mais nada, que `o cachorro Bertie do Philip' é um termo singular que se refere a um cachorro. Uma \define{descrição definida} seleciona um indivíduo por meio de uma descrição única. Em inglês, descrições definidas costumam ser expressões do tipo `o tal e tal'. Elas se referem a \emph{a} coisa específica que satisfaz a descrição dada. Por exemplo, `o membro mais alto do Monty Python' e `o primeiro imperador da China' são descrições definidas. Uma descrição que não seleciona um indivíduo específico não é uma descrição definida. `Um membro do Monty Python' e `um imperador da China' não são descrições definidas.
+Outros termos singulares transmitem de modo mais óbvio informações sobre aquilo a que se referem. Por exemplo, você pode saber, sem que lhe digam mais nada, que `o cachorro Bertie do Philip' é um termo singular que se refere a um cachorro. Uma \define{descrição definida} seleciona um indivíduo por meio de uma descrição única. Em português, descrições definidas costumam ser expressões iniciadas por um artigo definido, como `o...' ou `a...'. Elas se referem a \emph{a} coisa específica que satisfaz a descrição dada. Por exemplo, `o membro mais alto do Monty Python' e `o primeiro imperador da China' são descrições definidas. Uma descrição que não seleciona um indivíduo específico não é uma descrição definida. `Um membro do Monty Python' e `um imperador da China' não são descrições definidas.
 
 Podemos usar nomes próprios e descrições definidas para nos referirmos à mesma coisa. O nome próprio `Monte Rainier' nomeia o lugar selecionado pela descrição definida `o pico mais alto do estado de Washington'. As expressões referem-se ao mesmo lugar de maneiras diferentes. Você não aprende muita coisa quando alguém diz que está indo para o Monte Rainier, a não ser que já conheça um pouco de geografia. Você até poderia supor que se trata de uma montanha, mas nem isso é garantido; por tudo o que você sabe, poderia ser uma faculdade, como o Mount Holyoke. Já se eu disser que estou indo para o pico mais alto do estado de Washington, você sabe imediatamente que estou indo para uma montanha no estado de Washington.
 
-Em inglês, a especificação de um termo singular pode depender do contexto; `Willard' significa uma pessoa específica e não apenas alguém chamado Willard; `P.D. Magnus', como termo singular lógico, significa \emph{eu} e não outro P.D. Magnus. Convivemos com esse tipo de ambiguidade em inglês, mas é importante ter em mente que termos singulares em LQ devem se referir a exatamente uma coisa específica.
+Em inglês, a especificação de um termo singular pode depender do contexto; `Willard' significa uma pessoa específica e não apenas alguém chamado Willard; `P.D. Magnus', como termo singular lógico, significa \emph{eu} e não outro P.D. Magnus. Convivemos com esse tipo de ambiguidade em português, mas é importante ter em mente que termos singulares em LQ devem se referir a exatamente uma coisa específica.
 
 Em LQ, simbolizaremos termos singulares com letras minúsculas de $a$ a $w$. Podemos adicionar subscritos se quisermos usar alguma letra mais de uma vez. Assim, $a,b,c,\ldots w, a_1, f_{32}, j_{390}$ e $m_{12}$ são todos termos em LQ.
 
 Termos singulares são chamados de \define{constantes} porque selecionam indivíduos específicos. Note que $x, y$ e $z$ não são constantes em LQ. Eles serão \define{variáveis}, letras que não representam nenhuma coisa específica. Iremos precisar delas quando introduzirmos os quantificadores.
 
 \subsection{Predicados}
-Os predicados mais simples são propriedades de indivíduos. Eles são coisas que você pode dizer sobre um objeto. `\blank\ é um cachorro' e `\blank\ é um integrante do Monty Python' são ambos predicados. Ao traduzir sentenças do inglês, o termo nem sempre aparece no começo da sentença: `Um piano caiu sobre \blank' também é um predicado. Predicados como esses são chamados de \define{monádicos} ou \define{de um lugar}, porque há apenas um espaço em branco a ser preenchido. Um predicado monádico e um termo singular se combinam para formar uma sentença.
+Os predicados mais simples são propriedades de indivíduos. Eles são coisas que você pode dizer sobre um objeto. `\blank\ é um cachorro' e `\blank\ é um integrante do Monty Python' são ambos predicados. Ao traduzir sentenças do português, o termo nem sempre aparece no começo da sentença: `Um piano caiu sobre \blank' também é um predicado. Predicados como esses são chamados de \define{monádicos} ou \define{de um lugar}, porque há apenas um espaço em branco a ser preenchido. Um predicado monádico e um termo singular se combinam para formar uma sentença.
 
 Outros predicados expressam a \emph{relação} entre duas coisas. Por exemplo, `\blank\ é maior do que \blank', `\blank\ está à esquerda de \blank' e `\blank\ deve dinheiro a \blank'. Esses são predicados \define{diádicos} ou \define{de dois lugares}, porque precisam ser preenchidos com dois termos para formar uma sentença.
 
@@ -190,20 +190,20 @@ Embora tenhamos dois quantificadores em LQ, poderíamos ter uma linguagem formal
 \subsection{Universo de discurso}
 Dada a chave de simbolização que estamos usando, $\forall xHx$ significa `Todo mundo está feliz.' Quem está incluído nesse `todo mundo'? Quando usamos sentenças assim em português, normalmente não queremos dizer todo mundo vivo na Terra neste momento. Certamente não queremos dizer todo mundo que já viveu ou que ainda viverá. Queremos algo mais modesto: todos no prédio, todos na turma, todos na sala.
 
-Para eliminar essa ambiguidade, precisaremos especificar um \define{universo de discurso} — abreviado UD. O UD é o conjunto das coisas sobre as quais estamos falando. Se quisermos falar de pessoas em Chicago, definimos o UD como sendo `pessoas em Chicago'. Escrevemos isso no início da chave de simbolização, assim:
+Para eliminar essa ambiguidade, precisaremos especificar um \define{universo de discurso} — abreviado UD. O UD é o conjunto das coisas sobre as quais estamos falando. Se quisermos falar de pessoas em Maceió, definimos o UD como sendo `pessoas em Maceió'. Escrevemos isso no início da chave de simbolização, assim:
 \begin{ekey}
-\item[UD:] pessoas em Chicago
+\item[UD:] pessoas em Maceió
 \end{ekey}
-Os quantificadores \emph{varrem} o universo de discurso. Dado esse UD, $\forall x$ significa `Todo mundo em Chicago' e $\exists x$ significa `Alguém em Chicago'. Cada constante nomeia algum membro do UD, então só podemos usar esse UD com a chave de simbolização acima se Donald, Gregor e Marybeth estiverem todos em Chicago. Se quisermos falar de pessoas em outros lugares além de Chicago, precisamos incluí-las no UD.
+Os quantificadores \emph{varrem} o universo de discurso. Dado esse UD, $\forall x$ significa `Todo mundo em Maceió' e $\exists x$ significa `Alguém em Maceió'. Cada constante nomeia algum membro do UD, então só podemos usar esse UD com a chave de simbolização acima se Donald, Gregor e Marybeth estiverem todos em Maceió. Se quisermos falar de pessoas em outros lugares além de Maceió, precisamos incluí-las no UD.
 
 Em LQ, o UD deve ser \emph{não vazio}; isto é, deve conter pelo menos uma coisa. É possível construir linguagens formais que permitam UDs vazios, mas isso introduz complicações.
 
 Mesmo permitir um UD com apenas um membro já pode produzir resultados estranhos. Suponha que tenhamos a seguinte chave de simbolização:
 \begin{ekey}
-\item[UD:] a Torre Eiffel
-\item[Px:] $x$ está em Paris.
+\item[UD:] o Cristo Redentor
+\item[Px:] $x$ está no Rio de Janeiro.
 \end{ekey}
-A sentença $\forall x Px$ poderia ser parafraseada em português como `Tudo está em Paris.' Mas isso seria enganoso. Ela significa que tudo o que está no \emph{UD} está em Paris. Como esse UD contém apenas a Torre Eiffel, com essa chave de simbolização $\forall x Px$ simplesmente significa que a Torre Eiffel está em Paris.
+A sentença $\forall x Px$ poderia ser parafraseada em português como `Tudo está no Rio de Janeiro.' Mas isso seria enganoso. Ela significa que tudo o que está no \emph{UD} está no Rio de Janeiro. Como esse UD contém apenas o Cristo Redentor, com essa chave de simbolização $\forall x Px$ simplesmente significa que o Cristo Redentor está no Rio de Janeiro.
 
 
 \subsection{Termos não referenciais}
@@ -463,7 +463,7 @@ Se começarmos com a chave de simbolização usada no argumento anterior, poder�
 \item[] $(Rc \eand Kc) \eand Tc$
 \item[\therefore] $Tc \eand Kc$
 \end{earg}
-Essa tradução é um desastre! Ela transforma o que, em inglês, é um argumento péssimo em um argumento válido em LQ. O problema é que há uma diferença entre ser \emph{habilidoso como cirurgião} e ser \emph{habilidoso como tenista}. Traduzir esse argumento corretamente exige dois predicados distintos, um para cada tipo de habilidade. Se deixarmos $K_1x$ significar `x é habilidoso como cirurgião' e $K_2x$ significar `x é habilidoso como tenista', então podemos simbolizar o argumento desta forma:
+Essa tradução é um desastre! Ela transforma o que, em português, é um argumento péssimo em um argumento válido em LQ. O problema é que há uma diferença entre ser \emph{habilidoso como cirurgião} e ser \emph{habilidoso como tenista}. Traduzir esse argumento corretamente exige dois predicados distintos, um para cada tipo de habilidade. Se deixarmos $K_1x$ significar `x é habilidoso como cirurgião' e $K_2x$ significar `x é habilidoso como tenista', então podemos simbolizar o argumento desta forma:
 \begin{earg}
 \label{surgeon3correct}
 \item[] $(Rc \eand K_1c) \eand Tc$
@@ -526,7 +526,7 @@ A sentença \ref{likes1} pode ser parcialmente traduzida como $\forall x(\mbox{K
 
 A sentença \ref{likes2} é quase um trava-língua. Há pouca esperança de escrever imediatamente a tradução completa, mas podemos proceder em pequenos passos. Uma tradução inicial e parcial poderia ser assim:
 $$\exists x\ \mbox{todo mundo que gosta de todo mundo de quem $x$ gosta é alguém de quem $x$ gosta}$$
-A parte que permanece em inglês (ou português) é uma sentença universal, então traduzimos mais um pouco:
+A parte que permanece em linguagem natural é uma sentença universal, então traduzimos mais um pouco:
 $$\exists x\forall y(\mbox{$y$ gosta de todo mundo de quem $x$ gosta}\eif\mbox{$x$ gosta de $y$}).$$
 O antecedente do condicional é estruturalmente igual à sentença \ref{likes1}, com $y$ e $x$ no lugar de Imre e Karl. Assim, a sentença \ref{likes2} pode ser completamente traduzida da seguinte forma:
 $$\exists x\forall y\bigl[\forall z(Lxz \eif Lyz) \eif Lxy\bigr]$$
@@ -733,7 +733,7 @@ O problema dos termos sem referência é mais incômodo quando tentamos traduzir
 \begin{earg}
 \item[\ex{defdesc2}] O atual rei da França não é careca.
 \end{earg}
-Segundo Russell, essa sentença é ambígua em inglês. Ela poderia significar duas coisas diferentes:
+Segundo Russell, a formulação original dessa sentença é ambígua em inglês. Ela poderia significar duas coisas diferentes:
 \begin{earg}
 \item[\ref{defdesc2}a.] Não é o caso que o atual rei da França seja careca.
 \item[\ref{defdesc2}b.] O atual rei da França é não-careca.
@@ -759,7 +759,7 @@ Para uma discussão mais detalhada da teoria das descrições definidas de Russe
 \solutions
 \problempart
 \label{pr.QLalligators}
-Usando a chave de simbolização dada, traduza cada sentença em inglês para LQ.
+Usando a chave de simbolização dada, traduza cada sentença em português para LQ.
 \begin{ekey}
 \item[UD:] todos os animais
 \item[Ax:] $x$ é um jacaré.
@@ -831,7 +831,7 @@ Estas são figuras silogísticas identificadas por Aristóteles e seus sucessore
 
 
 
-\problempart Usando a chave de simbolização dada, traduza cada sentença em inglês para LQ.
+\problempart Usando a chave de simbolização dada, traduza cada sentença em português para LQ.
 \begin{ekey}
 \item[UD:] todos os animais
 \item[Dx:] $x$ é um cachorro.
@@ -876,7 +876,7 @@ Para cada argumento, escreva uma chave de simbolização e traduza o argumento p
 \solutions
 \problempart
 \label{pr.QLcandies}
-Usando a chave de simbolização dada, traduza cada sentença em inglês para LQ.
+Usando a chave de simbolização dada, traduza cada sentença em português para LQ.
 \begin{ekey}
 \item[UD:] doces
 \item[Cx:] $x$ tem chocolate.
@@ -901,9 +901,9 @@ Usando a chave de simbolização dada, traduza cada sentença em inglês para LQ
 
 
 \problempart
-Usando a chave de simbolização dada, traduza cada sentença em inglês para LQ.
+Usando a chave de simbolização dada, traduza cada sentença em português para LQ.
 \begin{ekey}
-\item[UD:] pessoas e pratos em um potluck
+\item[UD:] pessoas e pratos em um almoço comunitário
 \item[Rx:] $x$ acabou.
 \item[Tx:] $x$ está na mesa.
 \item[Fx:] $x$ é comida.
@@ -911,16 +911,16 @@ Usando a chave de simbolização dada, traduza cada sentença em inglês para LQ
 \item[Lxy:] $x$ gosta de $y$.
 \item[e:] Eli
 \item[f:] Francesca
-\item[g:] o guacamole
+\item[g:] a farofa
 \end{ekey}
 \begin{earg}
 \item Toda a comida está sobre a mesa.
-\item Se o guacamole não acabou, então ele está na mesa.
-\item Todo mundo gosta do guacamole.
-\item Se alguém gosta do guacamole, então Eli gosta.
+\item Se a farofa não acabou, então ela está na mesa.
+\item Todo mundo gosta da farofa.
+\item Se alguém gosta da farofa, então Eli gosta.
 \item Francesca só gosta dos pratos que já acabaram.
 \item Francesca não gosta de ninguém, e ninguém gosta de Francesca.
-\item Eli gosta de qualquer pessoa que goste do guacamole.
+\item Eli gosta de qualquer pessoa que goste da farofa.
 \item Eli gosta de qualquer pessoa que goste das pessoas de quem ele gosta.
 \item Se já houver uma pessoa em cima da mesa, então toda a comida já deve ter acabado.
 \end{earg}
@@ -929,7 +929,7 @@ Usando a chave de simbolização dada, traduza cada sentença em inglês para LQ
 \solutions
 \problempart
 \label{pr.QLballet}
-Usando a chave de simbolização dada, traduza cada sentença em inglês para LQ.
+Usando a chave de simbolização dada, traduza cada sentença em português para LQ.
 \begin{ekey}
 \item[UD:] pessoas
 \item[Dx:] $x$ dança balé.
@@ -969,7 +969,7 @@ Identifique quais variáveis estão ligadas e quais estão livres.
 
 
 \problempart
-Usando a chave de simbolização dada, traduza cada sentença em inglês para LQ com identidade. A última sentença é ambígua e pode ser traduzida de duas maneiras; você deve fornecer ambas as traduções. (Dica: a identidade só é necessária para as quatro últimas sentenças.)
+Usando a chave de simbolização dada, traduza cada sentença em português para LQ com identidade. A última sentença é ambígua e pode ser traduzida de duas maneiras; você deve fornecer ambas as traduções. (Dica: a identidade só é necessária para as quatro últimas sentenças.)
 \begin{ekey}
 \item[UD:] pessoas
 \item[Kx:] $x$ conhece a combinação do cofre.
@@ -996,7 +996,7 @@ Usando a chave de simbolização dada, traduza cada sentença em inglês para LQ
 \solutions
 \problempart
 \label{pr.QLcards}
-Usando a chave de simbolização dada, traduza cada sentença em inglês para LQ com identidade. As duas últimas sentenças são ambíguas e podem ser traduzidas de duas maneiras; você deve fornecer ambas as traduções para cada uma delas.
+Usando a chave de simbolização dada, traduza cada sentença em português para LQ com identidade. As duas últimas sentenças são ambíguas e podem ser traduzidas de duas maneiras; você deve fornecer ambas as traduções para cada uma delas.
 \begin{ekey}
 \item[UD:] cartas de um baralho padrão
 \item[Bx:] $x$ é preta.
@@ -1023,7 +1023,7 @@ Usando a chave de simbolização dada, traduza cada sentença em inglês para LQ
 \end{earg}
 
 
-\problempart Usando a chave de simbolização dada, traduza cada sentença em inglês para LQ com identidade. As duas últimas sentenças são ambíguas e podem ser traduzidas de duas maneiras; você deve fornecer ambas as traduções para cada uma delas.
+\problempart Usando a chave de simbolização dada, traduza cada sentença em português para LQ com identidade. As duas últimas sentenças são ambíguas e podem ser traduzidas de duas maneiras; você deve fornecer ambas as traduções para cada uma delas.
 \begin{ekey}
 \item[UD:] animais no mundo
 \item[Bx:] $x$ está no campo do fazendeiro Brown.
