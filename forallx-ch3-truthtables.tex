@@ -2,7 +2,7 @@
 \chapter{Tabelas-verdade}
 \label{ch.TruthTables}
 
-Este capítulo introduz um modo de avaliar sentenças e argumentos de LS. Embora possa ser trabalhoso, o método das tabelas-verdade é um procedimento puramente mecânico, que não exige intuição nem qualquer tipo de "insight" especial.
+Este capítulo introduz um modo de avaliar sentenças e argumentos de LS. Embora possa ser trabalhoso, o método das tabelas-verdade é um procedimento puramente mecânico, que não exige intuição nem qualquer tipo de "percepção" especial.
 
 \section{Conectivos verofuncionais}
 
@@ -50,7 +50,7 @@ $H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
  0 & 0 & \TTbf{0} & & \TTbf{0} & & \TTbf{0}
 \end{tabular}
 \end{center}
-Agora considere a subsentença $H\eand I$. Ela é uma conjunção \script{A}\eand\script{B} em que $H$ faz o papel de \script{A} e $I$ faz o papel de \script{B}. $H$ e $I$ são ambas verdadeiras na primeira linha. Como uma conjunção é verdadeira quando ambos os conjuntos são verdadeiros, escrevemos 1 sob o símbolo de conjunção. Continuamos para as outras três linhas e obtemos:
+Agora considere a subsentença $H\eand I$. Ela é uma conjunção \script{A}\eand\script{B} em que $H$ faz o papel de \script{A} e $I$ faz o papel de \script{B}. $H$ e $I$ são ambas verdadeiras na primeira linha. Como uma conjunção é verdadeira quando ambos os componentes da conjunção são verdadeiros, escrevemos 1 sob o símbolo de conjunção. Continuamos para as outras três linhas e obtemos:
 \begin{center}
 \begin{tabular}{c|c|@{\TTon}*{5}{c}@{\TToff}}
 $H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
@@ -100,7 +100,7 @@ $C$&$[($&$C$&\eiff&$C$&$)$&\eif&$C$&$]$&\eand&\enot&$($&$C$&\eif&$C$&$)$\\
  0 &    & 0 &  1  & 0 &   & 0  & 0 & &\TTbf{0}&  0& &   0 &  1  & 0 &   \\
 \end{tabular}
 \end{center}
-Observando a coluna under o conectivo principal, vemos que a sentença é falsa em ambas as linhas da tabela; isto é, ela é falsa tanto se $C$ é verdadeira quanto se $C$ é falsa.
+Observando a coluna sob o conectivo principal, vemos que a sentença é falsa em ambas as linhas da tabela; isto é, ela é falsa tanto se $C$ é verdadeira quanto se $C$ é falsa.
 
 Uma sentença que contém duas letras sentenciais exige quatro linhas para uma tabela-verdade completa, como nas tabelas características e na tabela de $(H \eand I)\eif I$.
 
@@ -133,9 +133,9 @@ Para preencher as colunas de uma tabela-verdade completa, comece pela letra sent
 
 Recorde que uma sentença (em linguagem natural) é uma tautologia se ela tem de ser verdadeira como questão de lógica. Com uma tabela-verdade completa, consideramos todos os modos como o mundo poderia ser. Se a sentença é verdadeira em todas as linhas de uma tabela-verdade completa, então ela é verdadeira como questão de lógica, independentemente de como o mundo de fato é.
 
-Assim, uma sentença é uma \define{tautologia em LS} se a coluna under seu conectivo principal tem 1 em todas as linhas de uma tabela-verdade completa.
+Assim, uma sentença é uma \define{tautologia em LS} se a coluna sob seu conectivo principal tem 1 em todas as linhas de uma tabela-verdade completa.
 
-De modo análogo, uma sentença é uma \define{contradição em LS} se a coluna under seu conectivo principal tem 0 em todas as linhas de uma tabela-verdade completa.
+De modo análogo, uma sentença é uma \define{contradição em LS} se a coluna sob seu conectivo principal tem 0 em todas as linhas de uma tabela-verdade completa.
 
 Uma sentença é \define{contingente em LS} se ela não é nem tautologia nem contradição; isto é, se ela tem 1 em pelo menos uma linha e 0 em pelo menos uma outra linha.
 
