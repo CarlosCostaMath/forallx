@@ -9,10 +9,10 @@ A tradução está em revisão editorial. Sugestões e correções são bem-vind
 ## Arquivos principais
 
 - [Fonte principal em LaTeX](forallx.tex)
-- [PDF versionado](forallx.pdf)
+- [PDF versionado (instantâneo)](forallx.pdf)
 - [Execuções do workflow de compilação](https://github.com/CarlosCostaMath/forallx/actions)
 
-Cada execução aprovada do GitHub Actions também publica o PDF compilado como artefato para download.
+O PDF versionado é um instantâneo do repositório e pode não corresponder ao commit mais recente. Para obter o PDF compilado a partir de um commit específico, abra a execução aprovada do workflow e baixe o artefato `forallx-pdf-<commit>`.
 
 ## Compilação local
 
