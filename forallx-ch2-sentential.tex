@@ -43,7 +43,7 @@ Há apenas vinte e seis letras no alfabeto, mas não há limite lógico para o n
 \begin{ekey}
 \item[A$_1$:] A maçã está embaixo do armário.
 \item[A$_2$:] Argumentos em LS sempre contêm sentenças atômicas.
-\item[A$_3$:] Adam Ant está pegando um avião de Anchorage para Albany.
+\item[A$_3$:] Aline Alves está pegando um avião de Aracaju para Altamira.
 \item[$\vdots$]
 \item[A$_{294}$:] Aliterações aborrecem astronautas afáveis.
 \end{ekey}
@@ -71,24 +71,24 @@ símbolo&como é chamado&o que significa\\
 \subsection{Negação}
 Considere como poderíamos simbolizar estas sentenças:
 \begin{earg}
-\item[\ex{not1}] Mary está em Barcelona.
-\item[\ex{not2}] Mary não está em Barcelona.
-\item[\ex{not3}] Mary está em algum lugar diferente de Barcelona.
+\item[\ex{not1}] Bruna está em Brasília.
+\item[\ex{not2}] Bruna não está em Brasília.
+\item[\ex{not3}] Bruna está em algum lugar diferente de Brasília.
 \end{earg}
 
 Para simbolizar a sentença \ref{not1}, precisamos de uma letra de sentença. Podemos fornecer a seguinte chave de simbolização:
 
 \begin{ekey}
-\item[B:] Mary está em Barcelona.
+\item[B:] Bruna está em Brasília.
 \end{ekey}
 
-Observe que aqui estamos dando a $B$ uma interpretação diferente daquela usada na seção anterior. A chave de simbolização só especifica o que $B$ significa \emph{em um contexto específico}. É fundamental que continuemos a usar esse significado de $B$ enquanto estivermos falando sobre Mary e Barcelona. Mais tarde, ao simbolizar sentenças diferentes, podemos escrever uma nova chave de simbolização e usar $B$ para significar outra coisa.
+Observe que aqui estamos dando a $B$ uma interpretação diferente daquela usada na seção anterior. A chave de simbolização só especifica o que $B$ significa \emph{em um contexto específico}. É fundamental que continuemos a usar esse significado de $B$ enquanto estivermos falando sobre Bruna e Brasília. Mais tarde, ao simbolizar sentenças diferentes, podemos escrever uma nova chave de simbolização e usar $B$ para significar outra coisa.
 
 Agora, a sentença \ref{not1} é simplesmente $B$.
 
 Como a sentença \ref{not2} é obviamente relacionada à sentença \ref{not1}, não queremos introduzir outra letra de sentença. Em parte em português, a sentença significa ``não $B$''. Para simbolizá-la, precisamos de um símbolo para a negação lógica. Usaremos `\enot'. Assim, podemos traduzir ``não $B$'' por $\enot B$.
 
-A sentença \ref{not3} fala sobre se Mary está ou não em Barcelona, embora não contenha a palavra ``não''. Ainda assim, ela é claramente logicamente equivalente à sentença \ref{not2}. Ambas significam: Não é o caso que Mary está em Barcelona. Portanto, podemos traduzir tanto a sentença \ref{not2} quanto a \ref{not3} como $\enot B$.
+A sentença \ref{not3} fala sobre se Bruna está ou não em Brasília, embora não contenha a palavra ``não''. Ainda assim, ela é claramente logicamente equivalente à sentença \ref{not2}. Ambas significam: Não é o caso que Bruna está em Brasília. Portanto, podemos traduzir tanto a sentença \ref{not2} quanto a \ref{not3} como $\enot B$.
 
 \factoidbox{
 Uma sentença pode ser simbolizada como $\enot\script{A}$ se puder ser parafraseada em português como `Não é o caso que \script{A}.'
@@ -539,19 +539,19 @@ Dê uma chave de simbolização e simbolize as sentenças a seguir em LS.
 \item Alice e Bob são ambos espiões.
 \item Se ou Alice ou Bob é espião, então o código foi decifrado.
 \item Se nem Alice nem Bob é espião, então o código permanece indecifrado.
-\item A embaixada alemã ficará em alvoroço, a menos que alguém tenha decifrado o código.
-\item Ou o código foi decifrado ou não foi, mas a embaixada alemã ficará em alvoroço de qualquer forma.
+\item A embaixada brasileira ficará em alvoroço, a menos que alguém tenha decifrado o código.
+\item Ou o código foi decifrado ou não foi, mas a embaixada brasileira ficará em alvoroço de qualquer forma.
 \item Ou Alice ou Bob é espião, mas não ambos.
 \end{earg}
 
 
 \problempart Dê uma chave de simbolização e simbolize as sentenças a seguir em LS.
 \begin{earg}
-\item Se Gregor jogar na primeira base, então o time vai perder.
+\item Se Gregor jogar como goleiro, então o time vai perder.
 \item O time vai perder, a menos que aconteça um milagre.
-\item O time ou vai perder ou não vai, mas Gregor vai jogar na primeira base de qualquer forma.
-\item A mãe de Gregor vai assar biscoitos se e somente se Gregor jogar na primeira base.
-\item Se acontecer um milagre, então a mãe de Gregor não vai assar biscoitos.
+\item O time ou vai perder ou não vai, mas Gregor vai jogar como goleiro de qualquer forma.
+\item A mãe de Gregor vai fazer um bolo se e somente se Gregor jogar como goleiro.
+\item Se acontecer um milagre, então a mãe de Gregor não vai fazer um bolo.
 \end{earg}
 
 
@@ -559,7 +559,7 @@ Dê uma chave de simbolização e simbolize as sentenças a seguir em LS.
 Para cada argumento, escreva uma chave de simbolização e traduza o argumento o melhor possível em LS.
 \begin{earg}
 \item Se Dorothy toca piano de manhã, então Roger acorda mal-humorado. Dorothy toca piano de manhã, a menos que esteja distraída. Logo, se Roger não acorda mal-humorado, então Dorothy deve estar distraída.
-\item Ou vai chover ou vai nevar na terça-feira. Se chover, Neville ficará triste. Se nevar, Neville sentirá frio. Portanto, Neville ficará ou triste ou com frio na terça-feira.
+\item Ou vai chover ou fará sol na terça-feira. Se chover, Neville ficará triste. Se fizer sol, Neville sentirá calor. Portanto, Neville ficará ou triste ou com calor na terça-feira.
 \item Se Zoog lembrou de fazer os afazeres, então as coisas estão limpas, mas não arrumadas. Se ele se esqueceu, então as coisas estão arrumadas, mas não limpas. Portanto, as coisas estão ou arrumadas ou limpas — mas não ambas.
 \end{earg}
 
