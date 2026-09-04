@@ -107,6 +107,8 @@ Agora definimos a função verdade, $v$, usando a mesma estrutura recursiva que 
 \end{displaymath}
 \end{enumerate}
 
+Pode parecer que essa definição é circular, porque usa a palavra `e' ao tentar definir `e'. Observe, contudo, que esta não é uma definição da palavra `e'; é uma definição de verdade para sentenças de LS que contêm o símbolo lógico `\eand'. Definimos a verdade de sentenças da linguagem-objeto que contêm o símbolo `\eand' usando a palavra `e' da metalinguagem. Não há nada de circular nisso.
+
 Como a definição de $v$ tem a mesma estrutura que a definição de uma fbf, sabemos que $v$ atribui um valor a \emph{toda} fbf de LS. Como as sentenças de LS e as fbfs de LS são as mesmas, isso significa que $v$ retorna o valor-verdade de toda sentença de LS.
 
 Verdade em LS é sempre verdade \emph{relativa a} alguma atribuição de valor-verdade, porque a definição de verdade para LS não diz se uma dada sentença é verdadeira ou falsa. Em vez disso, diz como a verdade dessa sentença se relaciona com uma atribuição de valor-verdade.
