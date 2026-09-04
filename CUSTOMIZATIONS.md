@@ -6,7 +6,8 @@ Este repositório contém uma tradução e adaptação brasileira de *forall x: 
 
 - **Tradutor e adaptador:** Carlos André Duarte Costa, Universidade Estadual de Alagoas (UNEAL).
 - **Fonte desta edição:** [CarlosCostaMath/forallx](https://github.com/CarlosCostaMath/forallx).
-- **PDF:** [forallx.pdf](forallx.pdf).
+- **PDF versionado (instantâneo):** [forallx.pdf](forallx.pdf).
+- **Compilação:** consulte as [instruções no README](README.md#compilação-local).
 - **Licença:** [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/), com atribuição ao autor original e ao tradutor.
 
 Esta edição não é uma publicação oficial do Open Logic Project. Ela é uma obra derivada que preserva a atribuição e os termos da licença da obra original.
