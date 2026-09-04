@@ -5,7 +5,7 @@
 Este capítulo apresenta uma linguagem lógica chamada LS. Ela é uma versão de \emph{lógica sentencial}, porque as unidades básicas da linguagem vão representar sentenças inteiras.
 
 \section{Letras de sentença}
-Em LS, letras maiúsculas são usadas para representar sentenças básicas. Considerada apenas como um símbolo de LS, a letra $A$ pode significar qualquer sentença. Portanto, ao traduzir do inglês para LS, é importante fornecer uma \emph{chave de simbolização}. A chave associa a cada letra de sentença usada uma sentença em linguagem natural (aqui, originalmente, em inglês).
+Em LS, letras maiúsculas são usadas para representar sentenças básicas. Considerada apenas como um símbolo de LS, a letra $A$ pode significar qualquer sentença. Portanto, ao traduzir do português para LS, é importante fornecer uma \emph{chave de simbolização}. A chave associa a cada letra de sentença usada uma sentença em linguagem natural (aqui, em português).
 
 Por exemplo, considere este argumento:
 \begin{earg}
@@ -13,7 +13,7 @@ Por exemplo, considere este argumento:
 \item[] Se há uma maçã sobre a mesa, então Jenny chegou à aula.
 \item[\therefore] Jenny chegou à aula.
 \end{earg}
-Este é obviamente um argumento válido em inglês. Ao simbolizá-lo, queremos preservar a estrutura do argumento que o torna válido.
+Este é obviamente um argumento válido em português. Ao simbolizá-lo, queremos preservar a estrutura do argumento que o torna válido.
 O que acontece se simplesmente substituirmos cada sentença por uma letra? Nossa chave de simbolização ficaria assim:
 \begin{ekey}
 \item[A:] Há uma maçã sobre a mesa.
@@ -35,7 +35,7 @@ O ponto importante sobre o argumento é que a segunda premissa não é apenas \e
 \item[] Se $A$, então $C$.
 \item[\therefore] $C$
 \end{earg}
-Isso preserva a estrutura do argumento que o torna válido, mas ainda faz uso da expressão em inglês `If$\ldots$ then$\ldots$'. Embora queiramos, ao final, substituir todas as expressões do inglês por notação lógica, este já é um bom começo.
+Isso preserva a estrutura do argumento que o torna válido, mas ainda faz uso da expressão em português `Se$\ldots$ então$\ldots$'. Embora queiramos, ao final, substituir todas as expressões da linguagem natural por notação lógica, este já é um bom começo.
 
 As sentenças que podem ser simbolizadas por letras de sentença são chamadas de \emph{sentenças atômicas}, porque elas são os blocos básicos a partir dos quais sentenças mais complexas podem ser construídas. Qualquer estrutura lógica interna de uma sentença é perdida quando ela é traduzida como sentença atômica. Do ponto de vista de LS, a sentença vira apenas uma letra. Ela pode ser usada para construir sentenças mais complexas, mas não pode ser "desmontada".
 
@@ -301,7 +301,7 @@ O condicional é \emph{assimétrico}. Não podemos trocar antecedente e conseque
 Nem todas as sentenças da forma `Se$\ldots$ então$\ldots$' são condicionais reais. Considere esta sentença:
 
 \begin{earg}
-\item[\ex{if5}] Se alguém quiser me ver, estarei na varanda.\footnote{Em português, assim como no inglês original, esta construção condicional é frequentemente usada para expressar uma declaração incondicional sobre onde a pessoa estará, daí ser traduzida simplesmente como $P$.}
+\item[\ex{if5}] Se alguém quiser me ver, estarei na varanda.\footnote{Em português, assim como na formulação original, esta construção condicional é frequentemente usada para expressar uma declaração incondicional sobre onde a pessoa estará, daí ser traduzida simplesmente como $P$.}
 \end{earg}
 
 Se eu digo isso, quero dizer que vou estar na varanda, independentemente de alguém querer me ver ou não — mas, se alguém quiser me ver, deve me procurar lá. Se deixarmos $P$ significar `Eu estarei na varanda', então \ref{if5} pode ser traduzida simplesmente como $P$.
@@ -374,9 +374,9 @@ A sentença `Maçãs são vermelhas, ou frutas vermelhas são azuis' é uma sent
 É importante distinguir entre a linguagem lógica LS, que estamos desenvolvendo, e a linguagem que usamos para falar sobre LS. Quando falamos sobre uma linguagem, a linguagem \emph{de que estamos falando} é chamada de \define{linguagem-objeto}. A linguagem que usamos para falar sobre a linguagem-objeto é chamada de \define{metalinguagem}.
 \label{def.metalanguage}
 
-A linguagem-objeto neste capítulo é LS. A metalinguagem é o inglês matemático — aqui vertido para o português, mas ainda suplementado com vocabulário lógico e matemático. A expressão `$(A\eor B)$' é uma sentença na linguagem-objeto, porque usa apenas símbolos de LS. Já a palavra `sentença' não faz parte de LS; assim, a frase `Esta expressão é uma sentença de LS' não é uma sentença de LS. É uma sentença na metalinguagem, usada para falar \emph{sobre} LS.
+A linguagem-objeto neste capítulo é LS. A metalinguagem é o português matemático, suplementado com vocabulário lógico e matemático. A expressão `$(A\eor B)$' é uma sentença na linguagem-objeto, porque usa apenas símbolos de LS. Já a palavra `sentença' não faz parte de LS; assim, a frase `Esta expressão é uma sentença de LS' não é uma sentença de LS. É uma sentença na metalinguagem, usada para falar \emph{sobre} LS.
 
-Nesta seção, daremos uma definição formal de `sentença de LS'. A definição será dada em inglês matemático (metalinguagem), aqui traduzido para o português.
+Nesta seção, daremos uma definição formal de `sentença de LS'. A definição será dada em português matemático (a metalinguagem).
 
 
 \subsection{Expressões}
