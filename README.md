@@ -2,7 +2,7 @@
 
 Este repositório contém uma tradução e adaptação brasileira de *forall x: An Introduction to Formal Logic*, de P.D. Magnus, baseada na edição mantida pelo [Open Logic Project](https://github.com/OpenLogicProject/forallx).
 
-**Tradutor e adaptador:** Carlos André Duarte Costa, Universidade Estadual de Alagoas (UNEAL).
+**Tradutor e adaptador:** Carlos André Duarte Costa.
 
 A tradução está em revisão editorial. Sugestões e correções são bem-vindas por meio das [issues](https://github.com/CarlosCostaMath/forallx/issues) e dos *pull requests*.
 
