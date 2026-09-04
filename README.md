@@ -1,8 +1,35 @@
-# forallx
-an introductory logic textbook by P.D. Magnus
+# forallx — Introdução à lógica formal
 
-link: [original website](http://www.fecundity.com/logic)
+Este repositório contém uma tradução e adaptação brasileira de *forall x: An Introduction to Formal Logic*, de P.D. Magnus, baseada na edição mantida pelo [Open Logic Project](https://github.com/OpenLogicProject/forallx).
 
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
+**Tradutor e adaptador:** Carlos André Duarte Costa, Universidade Estadual de Alagoas (UNEAL).
 
-This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
+A tradução está em revisão editorial. Sugestões e correções são bem-vindas por meio das [issues](https://github.com/CarlosCostaMath/forallx/issues) e dos *pull requests*.
+
+## Arquivos principais
+
+- [Fonte principal em LaTeX](forallx.tex)
+- [PDF versionado](forallx.pdf)
+- [Execuções do workflow de compilação](https://github.com/CarlosCostaMath/forallx/actions)
+
+Cada execução aprovada do GitHub Actions também publica o PDF compilado como artefato para download.
+
+## Compilação local
+
+Com uma instalação do TeX Live que inclua XeLaTeX e `latexmk`, execute na raiz do repositório:
+
+```sh
+latexmk -xelatex -interaction=nonstopmode -halt-on-error forallx.tex
+```
+
+O comando gera `forallx.pdf` e os arquivos auxiliares da compilação. Para limpar esses arquivos, use:
+
+```sh
+latexmk -C forallx.tex
+```
+
+## Créditos e licença
+
+A obra original é de P.D. Magnus e foi disponibilizada sob a [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/). Esta tradução e adaptação deve manter a atribuição ao autor original e ao tradutor.
+
+A edição brasileira não é uma publicação oficial do Open Logic Project; ela é uma obra derivada distribuída sob os termos da licença aplicável.
