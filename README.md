@@ -9,10 +9,11 @@ A tradução está em revisão editorial. Sugestões e correções são bem-vind
 ## Arquivos principais
 
 - [Fonte principal em LaTeX](forallx.tex)
-- [PDF versionado (instantâneo)](forallx.pdf)
-- [Execuções do workflow de compilação](https://github.com/CarlosCostaMath/forallx/actions)
+- [PDF da última versão publicada](https://github.com/CarlosCostaMath/forallx/releases/latest/download/forallx.pdf)
+- [Releases e versões anteriores](https://github.com/CarlosCostaMath/forallx/releases)
+- [Execuções dos workflows](https://github.com/CarlosCostaMath/forallx/actions)
 
-O PDF versionado é um instantâneo do repositório e pode não corresponder ao commit mais recente. Para obter o PDF compilado a partir de um commit específico, abra a execução aprovada do workflow e baixe o artefato `forallx-pdf-<commit>`.
+O PDF oficial é publicado automaticamente em uma Release quando uma tag de versão, como `v0.1.0`, é criada. O link acima sempre aponta para a Release marcada pelo GitHub como mais recente. O arquivo `forallx.pdf` é produzido durante a compilação e não é mantido como arquivo versionado na raiz do repositório.
 
 ## Compilação local
 
@@ -27,6 +28,17 @@ O comando gera `forallx.pdf` e os arquivos auxiliares da compilação. Para limp
 ```sh
 latexmk -C forallx.tex
 ```
+
+## Publicação de uma versão
+
+Depois de revisar e mesclar as alterações na `master`, crie uma tag começando por `v`:
+
+```sh
+git tag v0.1.0
+git push origin v0.1.0
+```
+
+O workflow `Publish PDF Release` será executado automaticamente. Se a compilação passar, o GitHub criará a Release, anexará o arquivo `forallx.pdf` e gerará as notas da versão.
 
 ## Créditos e licença
 
