@@ -1,7 +1,10 @@
 name: Build and Validate PDF
 
 on:
+  # Branch pushes only; release tags use release-pdf.yml.
   push:
+    branches:
+      - "**"
   pull_request:
     branches:
       - main
