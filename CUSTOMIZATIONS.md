@@ -6,7 +6,9 @@ Este repositório contém uma tradução e adaptação brasileira de *forall x: 
 
 - **Tradutor e adaptador:** Carlos André Duarte Costa, Universidade Estadual de Alagoas (UNEAL).
 - **Fonte desta edição:** [CarlosCostaMath/forallx](https://github.com/CarlosCostaMath/forallx).
-- **PDF versionado (instantâneo):** [forallx.pdf](forallx.pdf).
+- **PDF da última versão publicada:** [baixar o PDF](https://github.com/CarlosCostaMath/forallx/releases/latest/download/forallx.pdf).
+- **Versões publicadas e arquivos-fonte:** consulte as [Releases](https://github.com/CarlosCostaMath/forallx/releases). Cada Release preserva o PDF e os arquivos-fonte da respectiva tag; as Releases futuras também anexarão o pacote-fonte reproduzível usado na compilação.
+- **Metadados da edição:** [forallx-metadata.tex](forallx-metadata.tex).
 - **Compilação:** consulte as [instruções no README](README.md#compilação-local).
 - **Licença:** [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/), com atribuição ao autor original e ao tradutor.
 
@@ -25,7 +27,7 @@ O ano indicado é o da primeira derivação (*fork*). Muitas edições foram rev
 5. **[em espanhol]** José Ángel Gascón, Universidad Nacional de Educación a Distancia, Espanha, [paratodo x: Una Introducción a la Lógica Formal](https://scholarsarchive.library.albany.edu/cas_philosophy_scholar_books/4/) (2015)
 6. E.J.R. Elliott, University of Leeds, [forall x Leeds](http://www.edwardjrelliott.com/misc-resources.html) (2016)
 7. Aaron Thomas-Bolduc e Richard Zach, University of Calgary, [forall x: Calgary remix](https://forallx.openlogicproject.org/) (2017)
-8. Anthony Eagle, University of Adelaide, [forall x Adelaide](https://github.com/antonyeagle/forallx-adl) (2017)
+8. Anthony Eagle, University of Adelaide, [forallx Adelaide](https://github.com/antonyeagle/forallx-adl) (2017)
 9. Jonathan Jenkins Ichikawa, University of British Columbia, [forall x UBC edition](https://philpapers.org/rec/MAGFXU) (2017)
 10. Kathryn Lindeman, Saint Louis University, [forall x: SLU](http://www.klindeman.com/forallx.html) (2017)
 11. Kenneth Winkler, Yale University, *forall x: Yale* (2019)
