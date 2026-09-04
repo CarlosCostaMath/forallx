@@ -21,7 +21,7 @@ Argumento B
 
 \end{multicols}
 
-Claramente, estes são argumentos válidos. Você pode confirmar que são válidos construindo tabelas-verdade de quatro linhas. O argumento A faz uso de uma forma de inferência que é sempre válida: Dada uma disjunção e a negação de um dos disjunctos, o outro disjuncto segue como uma consequência válida. Esta regra é chamada de \emph{silogismo disjuntivo}.
+Claramente, estes são argumentos válidos. Você pode confirmar que são válidos construindo tabelas-verdade de quatro linhas. O argumento A faz uso de uma forma de inferência que é sempre válida: Dada uma disjunção e a negação de um dos componentes da disjunção, o outro componente segue como uma consequência válida. Esta regra é chamada de \emph{silogismo disjuntivo}.
 
 O argumento B faz uso de uma forma válida diferente: Dado um condicional e seu antecedente, o consequente segue como uma consequência válida. Isso é chamado de \emph{modus ponens}.
 
@@ -85,7 +85,7 @@ Agora, considere a regra de eliminação para conjunção. O que você tem o dir
 	\have[\ ]{b}{\script{B}} \ae{ab}
 \end{proof}
 
-Quando você tem uma conjunção em alguma linha de uma prova, você pode usar {\eand}E para derivar qualquer um dos conjunctos. A regra {\eand}E requer apenas uma sentença, então escrevemos um número de linha como justificação para aplicá-la.
+Quando você tem uma conjunção em alguma linha de uma prova, você pode usar {\eand}E para derivar qualquer um dos componentes. A regra {\eand}E requer apenas uma sentença, então escrevemos um número de linha como justificação para aplicá-la.
 
 Mesmo com apenas estas duas regras, podemos fornecer algumas provas. Considere este argumento.
 \begin{earg}
@@ -98,7 +98,7 @@ O operador lógico principal tanto na premissa quanto na conclusão é a conjun�
 	\hypo{ab}{{[}(A\eor B)\eif(C\eor D){]} \eand {[}(E \eor F) \eif (G\eor H){]}}
 \end{proof}
 
-Da premissa, podemos obter cada um dos conjunctos por {\eand}E. A prova agora se parece com isto:
+Da premissa, podemos obter cada um dos componentes por {\eand}E. A prova agora se parece com isto:
 
 \begin{proof}
 	\hypo{ab}{{[}(A\eor B)\eif(C\eor D){]} \eand {[}(E \eor F) \eif (G\eor H){]}}
@@ -106,7 +106,7 @@ Da premissa, podemos obter cada um dos conjunctos por {\eand}E. A prova agora se
 	\have{b}{{[}(E \eor F) \eif (G\eor H){]}} \ae{ab}
 \end{proof}
 
-A regra {\eand}I requer que tenhamos cada um dos conjunctos disponíveis em algum lugar da prova. Eles podem estar separados um do outro e podem aparecer em qualquer ordem. Então, aplicando a regra {\eand}I às linhas 3 e 2, chegamos à conclusão desejada. A prova finalizada se parece com isto:
+A regra {\eand}I requer que tenhamos cada um dos componentes disponíveis em algum lugar da prova. Eles podem estar separados um do outro e podem aparecer em qualquer ordem. Então, aplicando a regra {\eand}I às linhas 3 e 2, chegamos à conclusão desejada. A prova finalizada se parece com isto:
 
 \begin{proof}
 	\hypo{ab}{{[}(A\eor B)\eif(C\eor D){]} \eand {[}(E \eor F) \eif (G\eor H){]}}
@@ -118,11 +118,11 @@ A regra {\eand}I requer que tenhamos cada um dos conjunctos disponíveis em algu
 
 Esta prova é trivial, mas mostra como podemos usar regras de prova juntas para demonstrar a validade de uma forma de argumento. Além disso: Usar uma tabela-verdade para mostrar que este argumento é válido exigiria uma impressionante tabela de 256 linhas, já que há oito letras de sentença no argumento.
 
-%Quando definimos uma fbf, não permitimos conjunções com mais de dois conjunctos. Se tivéssemos feito isso, então poderíamos definir uma versão mais geral das regras de prova para conjunção.
+%Quando definimos uma fbf, não permitimos conjunções com mais de dois componentes. Se tivéssemos feito isso, então poderíamos definir uma versão mais geral das regras de prova para conjunção.
 
 
 \subsection{Disjunção}
-Se $M$ fosse verdadeira, então $M \eor N$ também seria verdadeira. Então a regra de introdução da disjunção ({\eor}I) nos permite derivar uma disjunção se tivermos um dos dois disjunctos:
+Se $M$ fosse verdadeira, então $M \eor N$ também seria verdadeira. Então a regra de introdução da disjunção ({\eor}I) nos permite derivar uma disjunção se tivermos um dos dois componentes:
 
 \begin{proof}
 	\have[m]{a}{\script{A}}
@@ -451,7 +451,7 @@ Talvez seja tentador escrever a premissa e aplicar a regra {\eand}E à conjunç�
 	\have{fg}{F \eif G}\ci{f-g}
 \end{proof}
 
-Agora introduziremos algumas regras derivadas que podem ser aplicadas a parte de uma sentença. Estas são chamadas \define{regras de substituição}, porque podem ser usadas para substituir parte de uma sentença por uma expressão logicamente equivalente. Uma regra de substituição simples é comutatividade (abreviada Comm), que diz que podemos trocar a ordem dos conjunctos em uma conjunção ou a ordem dos disjunctos em uma disjunção. Definimos a regra assim:
+Agora introduziremos algumas regras derivadas que podem ser aplicadas a parte de uma sentença. Estas são chamadas \define{regras de substituição}, porque podem ser usadas para substituir parte de uma sentença por uma expressão logicamente equivalente. Uma regra de substituição simples é comutatividade (abreviada Comm), que diz que podemos trocar a ordem dos componentes em uma conjunção ou a ordem dos componentes em uma disjunção. Definimos a regra assim:
 
 \begin{center}
 \begin{tabular}{rl}
@@ -764,7 +764,7 @@ Se você mostrou que $a=b$, então tudo o que for verdadeiro a respeito de $a$ t
 
 A regra de eliminação da identidade ({=}E) nos permite fazer isso. Ela justifica substituir termos por outros termos que são idênticos a ele.
 
-Para escrever a regra, introduziremos um novo bit de simbolismo. Para uma sentença \script{A} e constantes \script{c} e \script{d}, \script{A}{\script{c}$\circlearrowleft$\script{d}} é uma sentença produzida substituindo algumas ou todas as instâncias de \script{c} em \script{A} por \script{d} ou substituindo instâncias de \script{d} por \script{c}. Isso não é o mesmo que uma instância de substituição, porque uma constante não precisa substituir todas as ocorrências da outra (embora possa).
+Para escrever a regra, introduziremos um novo recurso de notação. Para uma sentença \script{A} e constantes \script{c} e \script{d}, \script{A}{\script{c}$\circlearrowleft$\script{d}} é uma sentença produzida substituindo algumas ou todas as instâncias de \script{c} em \script{A} por \script{d} ou substituindo instâncias de \script{d} por \script{c}. Isso não é o mesmo que uma instância de substituição, porque uma constante não precisa substituir todas as ocorrências da outra (embora possa).
 
 Agora podemos escrever concisamente {=}E desta forma:
 \begin{proof}
