@@ -21,7 +21,7 @@ Argumento B
 
 \end{multicols}
 
-Claramente, estes são argumentos válidos. Você pode confirmar que são válidos construindo tabelas-verdade de quatro linhas. O argumento A faz uso de uma forma de inferência que é sempre válida: Dada uma disjunção e a negação de um dos disjunctos, o outro disjuncto segue como uma consequência válida. Esta regra é chamada de \emph{silogismo disjuntivo}.
+Claramente, estes são argumentos válidos. Você pode confirmar que são válidos construindo tabelas-verdade de quatro linhas. O argumento A faz uso de uma forma de inferência que é sempre válida: Dada uma disjunção e a negação de um dos componentes da disjunção, o outro componente segue como uma consequência válida. Esta regra é chamada de \emph{silogismo disjuntivo}.
 
 O argumento B faz uso de uma forma válida diferente: Dado um condicional e seu antecedente, o consequente segue como uma consequência válida. Isso é chamado de \emph{modus ponens}.
 
@@ -85,7 +85,7 @@ Agora, considere a regra de eliminação para conjunção. O que você tem o dir
 	\have[\ ]{b}{\script{B}} \ae{ab}
 \end{proof}
 
-Quando você tem uma conjunção em alguma linha de uma prova, você pode usar {\eand}E para derivar qualquer um dos conjunctos. A regra {\eand}E requer apenas uma sentença, então escrevemos um número de linha como justificação para aplicá-la.
+Quando você tem uma conjunção em alguma linha de uma prova, você pode usar {\eand}E para derivar qualquer um dos componentes. A regra {\eand}E requer apenas uma sentença, então escrevemos um número de linha como justificação para aplicá-la.
 
 Mesmo com apenas estas duas regras, podemos fornecer algumas provas. Considere este argumento.
 \begin{earg}
@@ -98,7 +98,7 @@ O operador lógico principal tanto na premissa quanto na conclusão é a conjun�
 	\hypo{ab}{{[}(A\eor B)\eif(C\eor D){]} \eand {[}(E \eor F) \eif (G\eor H){]}}
 \end{proof}
 
-Da premissa, podemos obter cada um dos conjunctos por {\eand}E. A prova agora se parece com isto:
+Da premissa, podemos obter cada um dos componentes por {\eand}E. A prova agora se parece com isto:
 
 \begin{proof}
 	\hypo{ab}{{[}(A\eor B)\eif(C\eor D){]} \eand {[}(E \eor F) \eif (G\eor H){]}}
@@ -106,7 +106,7 @@ Da premissa, podemos obter cada um dos conjunctos por {\eand}E. A prova agora se
 	\have{b}{{[}(E \eor F) \eif (G\eor H){]}} \ae{ab}
 \end{proof}
 
-A regra {\eand}I requer que tenhamos cada um dos conjunctos disponíveis em algum lugar da prova. Eles podem estar separados um do outro e podem aparecer em qualquer ordem. Então, aplicando a regra {\eand}I às linhas 3 e 2, chegamos à conclusão desejada. A prova finalizada se parece com isto:
+A regra {\eand}I requer que tenhamos cada um dos componentes disponíveis em algum lugar da prova. Eles podem estar separados um do outro e podem aparecer em qualquer ordem. Então, aplicando a regra {\eand}I às linhas 3 e 2, chegamos à conclusão desejada. A prova finalizada se parece com isto:
 
 \begin{proof}
 	\hypo{ab}{{[}(A\eor B)\eif(C\eor D){]} \eand {[}(E \eor F) \eif (G\eor H){]}}
@@ -118,11 +118,11 @@ A regra {\eand}I requer que tenhamos cada um dos conjunctos disponíveis em algu
 
 Esta prova é trivial, mas mostra como podemos usar regras de prova juntas para demonstrar a validade de uma forma de argumento. Além disso: Usar uma tabela-verdade para mostrar que este argumento é válido exigiria uma impressionante tabela de 256 linhas, já que há oito letras de sentença no argumento.
 
-%Quando definimos uma fbf, não permitimos conjunções com mais de dois conjunctos. Se tivéssemos feito isso, então poderíamos definir uma versão mais geral das regras de prova para conjunção.
+%Quando definimos uma fbf, não permitimos conjunções com mais de dois componentes. Se tivéssemos feito isso, então poderíamos definir uma versão mais geral das regras de prova para conjunção.
 
 
 \subsection{Disjunção}
-Se $M$ fosse verdadeira, então $M \eor N$ também seria verdadeira. Então a regra de introdução da disjunção ({\eor}I) nos permite derivar uma disjunção se tivermos um dos dois disjunctos:
+Se $M$ fosse verdadeira, então $M \eor N$ também seria verdadeira. Então a regra de introdução da disjunção ({\eor}I) nos permite derivar uma disjunção se tivermos um dos dois componentes:
 
 \begin{proof}
 	\have[m]{a}{\script{A}}
@@ -451,7 +451,7 @@ Talvez seja tentador escrever a premissa e aplicar a regra {\eand}E à conjunç�
 	\have{fg}{F \eif G}\ci{f-g}
 \end{proof}
 
-Agora introduziremos algumas regras derivadas que podem ser aplicadas a parte de uma sentença. Estas são chamadas \define{regras de substituição}, porque podem ser usadas para substituir parte de uma sentença por uma expressão logicamente equivalente. Uma regra de substituição simples é comutatividade (abreviada Comm), que diz que podemos trocar a ordem dos conjunctos em uma conjunção ou a ordem dos disjunctos em uma disjunção. Definimos a regra assim:
+Agora introduziremos algumas regras derivadas que podem ser aplicadas a parte de uma sentença. Estas são chamadas \define{regras de substituição}, porque podem ser usadas para substituir parte de uma sentença por uma expressão logicamente equivalente. Uma regra de substituição simples é comutatividade (abreviada Comm), que diz que podemos trocar a ordem dos componentes em uma conjunção ou a ordem dos componentes em uma disjunção. Definimos a regra assim:
 
 \begin{center}
 \begin{tabular}{rl}
@@ -764,7 +764,7 @@ Se você mostrou que $a=b$, então tudo o que for verdadeiro a respeito de $a$ t
 
 A regra de eliminação da identidade ({=}E) nos permite fazer isso. Ela justifica substituir termos por outros termos que são idênticos a ele.
 
-Para escrever a regra, introduziremos um novo bit de simbolismo. Para uma sentença \script{A} e constantes \script{c} e \script{d}, \script{A}{\script{c}$\circlearrowleft$\script{d}} é uma sentença produzida substituindo algumas ou todas as instâncias de \script{c} em \script{A} por \script{d} ou substituindo instâncias de \script{d} por \script{c}. Isso não é o mesmo que uma instância de substituição, porque uma constante não precisa substituir every occurrence of the other (embora possa).
+Para escrever a regra, introduziremos um novo recurso de notação. Para uma sentença \script{A} e constantes \script{c} e \script{d}, \script{A}{\script{c}$\circlearrowleft$\script{d}} é uma sentença produzida substituindo algumas ou todas as instâncias de \script{c} em \script{A} por \script{d} ou substituindo instâncias de \script{d} por \script{c}. Isso não é o mesmo que uma instância de substituição, porque uma constante não precisa substituir todas as ocorrências da outra (embora possa).
 
 Agora podemos escrever concisamente {=}E desta forma:
 \begin{proof}
@@ -872,15 +872,15 @@ Tente coisas diferentes. Se uma abordagem falhar, então tente outra.
 
 
 
-\section{Conceitos proof-theoretic}
+\section{Conceitos da teoria da prova}
 
-Usaremos o símbolo `$\vdash$' para indicar que uma prova é possível. Este símbolo é chamado de \emph{turnstile}. Às vezes é chamado de \emph{single turnstile}, para enfatizar que este não é o símbolo {double turnstile} ($\models$) que usamos para representar consequência semântica no cap.~\ref{ch.semantics}.
+Usaremos o símbolo `$\vdash$' para indicar que uma prova é possível. Este símbolo é chamado de \emph{torniquete}. Às vezes é chamado de \emph{torniquete simples}, para enfatizar que não é o símbolo do \emph{torniquete duplo} ($\models$), que usamos para representar a consequência semântica no cap.~\ref{ch.semantics}.
 
 Quando escrevemos $\{\script{A}_1,\script{A}_2,\ldots\}\vdash\script{B}$, isso significa que é possível dar uma prova de \script{B} com $\script{A}_1$,$\script{A}_2$,$\ldots$ como premissas. Com apenas uma premissa, omitimos as chaves, então $\script{A}\vdash\script{B}$ significa que há uma prova de \script{B} com \script{A} como premissa. Naturalmente, $\vdash\script{C}$ significa que há uma prova de \script{C} que não tem premissas.
 
 Frequentemente, provas lógicas são chamadas de \emph{derivações}. Então $\script{A}\vdash\script{B}$ pode ser lido como `\script{B} é derivável de \script{A}.'
 
-Um \define{teorema} é uma sentença que é derivável sem sem premissas; i.e., \script{T} é um teorema se e somente se $\vdash\script{T}$.
+Um \define{teorema} é uma sentença que é derivável sem premissas; i.e., \script{T} é um teorema se e somente se $\vdash\script{T}$.
 
 Não é muito difícil mostrar que algo é um teorema--- você apenas tem que dar uma prova disso. Como você poderia mostrar que algo \emph{não} é um teorema? Se sua negação é um teorema, então você poderia fornecer uma prova. Por exemplo, é fácil provar $\enot(Pa \eand \enot Pa)$, o que mostra que $(Pa \eand \enot Pa)$ não pode ser um teorema. Para uma sentença que não é nem um teorema nem a negação de um teorema, no entanto, não há uma maneira fácil de mostrar isso. Você teria que demonstrar não apenas que certas estratégias de prova falham, mas que nenhuma prova é possível. Mesmo se você falhar em tentar provar uma sentença de mil maneiras diferentes, talvez a prova seja apenas longa e complexa demais para você discernir.
 
@@ -959,7 +959,7 @@ Por que deveríamos pensar que um argumento que \emph{pode ser provado} é neces
 
 Este é o problema da \define{corretude}. Um sistema de prova é \define{correto} se não há provas de argumentos inválidos. Demonstrar que o sistema de prova é correto exigiria mostrar que \emph{qualquer} prova possível é a prova de um argumento válido. Não seria suficiente simplesmente ter sucesso ao tentar provar muitos argumentos válidos e falhar ao tentar provar inválidos.
 
-Felizmente, há uma maneira de abordar isso de forma step-wise. Se usar a regra {\eand}E na última linha de uma prova nunca pudesse mudar um argumento válido em um inválido, então usar a regra muitas vezes não poderia tornar um argumento inválido. Similarmente, se usar as regras {\eand}E e {\eor}E individualmente na última linha de uma prova nunca pudesse mudar um argumento válido em um inválido, então usá-las em combinação também não poderia.
+Felizmente, há uma maneira de abordar isso passo a passo. Se usar a regra {\eand}E na última linha de uma prova nunca pudesse mudar um argumento válido em um inválido, então usar a regra muitas vezes não poderia tornar um argumento inválido. Similarmente, se usar as regras {\eand}E e {\eor}E individualmente na última linha de uma prova nunca pudesse mudar um argumento válido em um inválido, então usá-las em combinação também não poderia.
 
 A estratégia é mostrar para toda regra de inferência que ela sozinha não poderia tornar um argumento válido em inválido. Segue que as regras usadas em combinação não tornariam um argumento válido inválido. Como uma prova é apenas uma série de linhas, cada uma justificada por uma regra de inferência, isso mostraria que todo argumento provável é válido.
 
@@ -967,13 +967,13 @@ Considere, por exemplo, a regra {\eand}I. Suponha que a usemos para adicionar \s
 
 Para mostrar que o sistema de prova é correto, precisaríamos mostrar isso para as outras regras de inferência. Como as regras derivadas são consequências das regras básicas, seria suficiente fornecer argumentos similares para as outras 16 regras básicas. Este exercício tedioso está além do escopo deste livro.
 
-Dada uma prova de que o sistema de prova é correto, segue que every theorem is a tautology.
+Dada uma prova de que o sistema de prova é correto, segue que todo teorema é uma tautologia.
 
 Ainda é possível perguntar: Por que pensar que \emph{todo} argumento válido é um argumento que pode ser provado?  Isto é, por que pensar que $\script{A}\models\script{B}$ implica $\script{A}\vdash\script{B}$?
 
 Este é o problema da \define{completude}. Um sistema de prova é \define{completo} se há uma prova de todo argumento válido. A completude para uma linguagem como LQ foi primeiro provada por Kurt G\"odel em 1929. A prova está além do escopo deste livro.
 
-O ponto importante é que, felizmente, o sistema de prova para LQ é both sound and complete. Este não é o caso para todos os sistemas de prova e todas as linguagens formais. Porque é verdade para LQ, podemos escolher dar provas ou construir modelos--- whichever is easier for the task at hand.
+O ponto importante é que, felizmente, o sistema de prova para LQ é simultaneamente correto e completo. Este não é o caso para todos os sistemas de prova e todas as linguagens formais. Porque é verdade para LQ, podemos escolher dar provas ou construir modelos--- o que for mais fácil para a tarefa em questão.
 
 
 
@@ -1298,7 +1298,7 @@ Forneça uma prova de cada afirmação.
 
 
 \problempart
-Olhe de volta para a Parte \ref{pr.LQarguments} na p.~\pageref{pr.LQarguments}. Para cada argumento: Se é válido em LQ, dê uma prova. Se é inválido, construa um modelo para mostrar que é inválido.
+Olhe de volta para a Parte \ref{pr.QLarguments} na p.~\pageref{pr.QLarguments}. Para cada argumento: Se é válido em LQ, dê uma prova. Se é inválido, construa um modelo para mostrar que é inválido.
 
 \solutions
 \problempart

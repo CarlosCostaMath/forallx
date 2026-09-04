@@ -1,24 +1,27 @@
-name: Build and Commit PDF
+name: Build and Validate PDF
 
 on:
   push:
+  pull_request:
     branches:
       - main
       - master
   workflow_dispatch:
 
+permissions:
+  contents: read
+
+concurrency:
+  group: latex-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
-    runs-on: ubuntu-latest
-
-    permissions:
-      contents: write   # permite o GitHub Actions commitar no repo
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Install TeX Live with XeLaTeX
         run: |
@@ -36,12 +39,18 @@ jobs:
 
       - name: Compile forallx.tex with XeLaTeX
         run: |
-          latexmk -xelatex -interaction=nonstopmode forallx.tex
+          latexmk -xelatex -interaction=nonstopmode -halt-on-error -file-line-error forallx.tex
 
-      - name: Commit updated PDF
+      - name: Fail on unresolved references
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add forallx.pdf
-          git commit -m "Update PDF [skip ci]" || echo "No changes to commit"
-          git push
+          if grep -nE 'Reference .* undefined|There were undefined references' forallx.log; then
+            echo 'Unresolved LaTeX references detected.'
+            exit 1
+          fi
+
+      - name: Upload compiled PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: forallx-pdf-${{ github.sha }}
+          path: forallx.pdf
+          if-no-files-found: error

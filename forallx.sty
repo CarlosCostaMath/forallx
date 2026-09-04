@@ -50,12 +50,12 @@
 }  
 
 % table of contents
-\renewcommand{\contentsname}{\forallx\ contents}
+\renewcommand{\contentsname}{\forallx\ Sumário}
 % chapter
 \usepackage{titlesec}
 \titleformat{\chapter}[display]
 {\normalfont\bfseries}
-{{\titlerule[2pt]}\LARGE Chapter \thechapter}
+{{\titlerule[2pt]}\LARGE Capítulo \thechapter}
 {1ex}
 {\Huge}
 [\vspace{1ex}{\titlerule[2pt]}]
@@ -76,8 +76,8 @@
 \newcommand*{\blank}{\underline{\hspace*{2.5em}}}
 % These are included for discussing formal semantics in predicate logic.
 \newcommand*{\model}[1]{\ensuremath{\mathbb{#1}}}
-\newcommand*{\extension}[1]{\ensuremath{\mbox{extension}(#1)}}
-\newcommand*{\referent}[1]{\ensuremath{\mbox{referent}(#1)}}
+\newcommand*{\extension}[1]{\ensuremath{\mbox{extensão}(#1)}}
+\newcommand*{\referent}[1]{\ensuremath{\mbox{referente}(#1)}}
   % I personally dislike the default LaTeX angle brackets. I think that
   % they are too narrow. If you want to use them, though, you can
   % replace < and > in the commands below with \langle and \rangle
@@ -134,12 +134,12 @@
 \renewcommand{\theProbPart}{\Alph{ProbPart}}
 % This inserts a heading and resets the counter:
 \newcommand*{\practiceproblems}{
-	\setcounter{ProbPart}{0}\section*{Practice Exercises}%
-	\addcontentsline{toc}{section}{Practice Exercises}
+	\setcounter{ProbPart}{0}\section*{Exercícios}%
+	\addcontentsline{toc}{section}{Exercícios}
 }
 % This starts a new section which is automatically numbered:
 \newcommand*{\problempart}{
-	\refstepcounter{ProbPart}\textbf{Part \Alph{ProbPart}}\ 
+	\refstepcounter{ProbPart}\textbf{Parte \Alph{ProbPart}}\ 
 }
 % This bullet is used to indicate that solutions appear at the end of
 % the book.
@@ -151,8 +151,8 @@
 % This is used at the beginning of a section in the solutions
 % appendix.
 \newcommand*{\solutionsection}[2]{%
-	\textbf{\textsc{Chapter {\ref{#1}} Part {\ref{#2}}}}%
-	\markright{solutions for ch.~\ref{#1}}%
+	\textbf{\textsc{Capítulo {\ref{#1}} Parte {\ref{#2}}}}%
+	\markright{soluções do cap.~\ref{#1}}%
 	\setcounter{countSeq}{0}
 }
 
@@ -162,7 +162,7 @@
 \newcounter{countSeq}
 \newcommand*{\nextSeq}{\stepcounter{countSeq}\arabic{countSeq}, }
 \newcommand*{\noSeq}{\stepcounter{countSeq}}
-\newcommand*{\lastSeq}{and \stepcounter{countSeq}\arabic{countSeq} }
+\newcommand*{\lastSeq}{e \stepcounter{countSeq}\arabic{countSeq} }
 
 % This is used to place (eg) a partial model or proof as an item
 % in a list. Without it, the item tag will be vertically centered next
@@ -182,7 +182,7 @@
 
 \renewcommand{\chaptermark}[1]{\markboth%
 {\forallx}%
-{\textrm{ch.~\thechapter\ \lowercase{#1}}}%
+{\textrm{cap.~\thechapter\ \lowercase{#1}}}%
 }
 \renewcommand{\sectionmark}[1]{}
 

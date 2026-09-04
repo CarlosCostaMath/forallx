@@ -107,6 +107,8 @@ Agora definimos a função verdade, $v$, usando a mesma estrutura recursiva que 
 \end{displaymath}
 \end{enumerate}
 
+Pode parecer que essa definição é circular, porque usa a palavra `e' ao tentar definir `e'. Observe, contudo, que esta não é uma definição da palavra `e'; é uma definição de verdade para sentenças de LS que contêm o símbolo lógico `\eand'. Definimos a verdade de sentenças da linguagem-objeto que contêm o símbolo `\eand' usando a palavra `e' da metalinguagem. Não há nada de circular nisso.
+
 Como a definição de $v$ tem a mesma estrutura que a definição de uma fbf, sabemos que $v$ atribui um valor a \emph{toda} fbf de LS. Como as sentenças de LS e as fbfs de LS são as mesmas, isso significa que $v$ retorna o valor-verdade de toda sentença de LS.
 
 Verdade em LS é sempre verdade \emph{relativa a} alguma atribuição de valor-verdade, porque a definição de verdade para LS não diz se uma dada sentença é verdadeira ou falsa. Em vez disso, diz como a verdade dessa sentença se relaciona com uma atribuição de valor-verdade.
@@ -168,7 +170,7 @@ Muitos predicados têm extensões indefinidamente grandes. Seria impraticável t
 
 Às vezes é possível listar todas as coisas que estão na extensão de um predicado. Em vez de escrever uma sentença esquemática em português, podemos escrever a extensão como um conjunto de coisas. Suponha que quiséssemos adicionar um predicado de um lugar $M$ à chave acima. Queremos que $Mx$ signifique '$x$ mora na Mansão Wayne', então escrevemos a extensão como um conjunto de personagens:
 \begin{partialmodel}
-	\extension{M} & \{Bruce Wayne, Alfred the butler, Dick Grayson\}
+	\extension{M} & \{Bruce Wayne, Alfred (o mordomo), Dick Grayson\}
 \end{partialmodel}
 Você não precisa saber nada sobre quadrinhos para ser capaz de determinar que, nesta interpretação, $Mw$ é verdadeira: Bruce Wayne é apenas especificado como uma das coisas que é $M$. Da mesma forma, $\exists x Mx$ é obviamente verdadeira nesta interpretação: Há pelo menos um membro do UD que é um $M$ - de fato, há três deles.
 
@@ -707,7 +709,7 @@ Construa modelos para mostrar que os seguintes argumentos são inválidos.
 \item Muitos livros de lógica definem consistência e inconsistência desta forma:
 `` Um conjunto $\{\script{A}_1,\script{A}_2,\script{A}_3,\cdots\}$ é inconsistente se e somente se $\{\script{A}_1,\script{A}_2,\script{A}_3,\cdots\}\models(\script{B}\eand\enot\script{B})$ para alguma sentença \script{B}. Um conjunto é consistente se não for inconsistente.''
 
-Esta definição leva a quaisquer conjuntos diferentes sendo consistentes do que a definição na p.~\pageref{def.consistencyLS}? Explique sua resposta.
+Esta definição leva a quaisquer conjuntos diferentes sendo consistentes do que a definição na p.~\pageref{def.consistencySL}? Explique sua resposta.
 
 \item\leftsolutions\ Nossa definição de verdade diz que uma sentença \script{A} é \define{verdadeira em} \model{M} se e somente se alguma atribuição de variável satisfaz \script{A} em $M$. Faria alguma diferença se disséssemos, em vez disso, que \script{A} é \define{verdadeira em} \model{M} se e somente se \emph{toda} atribuição de variável satisfaz \script{A} em $M$? Explique sua resposta.
 \end{earg}
